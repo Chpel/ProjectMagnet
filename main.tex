@@ -53,6 +53,7 @@
 \newcommand{\pbc}{_{PBC}}
 \newcommand{\obc}{_{OBC}}
 \newcommand{\dzdb}{\frac{\partial Z}{\partial \beta}}
+\newcommand{\dzdh}{\frac{\partial Z}{\partial h}}
 \newcommand{\prpb}{^{'}_{\beta}}
 \newcommand{\vprpb}{^{''}_{\beta}}
 \newcommand{\la}{\langle}
@@ -74,16 +75,20 @@
 
 Энергией взаимодействия внешнего поля с моделью будем считать сумму взаимодействий поля \textit{h} с каждым из N моментов со спином $\sigma_{j}$
 
-\[ H_{h} = - \sum_{j = 1}^{N} h  \sigma_{j} \]
+\begin{equation}\label{Hh}
+  H_{h} = - \sum_{j = 1}^{N} h  \sigma_{j}   
+\end{equation}
 
 Внутренним взаимодействией между двумя соседними моментами считаем:
 
-\[ H_{J} = - \sum_{(i,j)} J  \sigma_{i}  \sigma_{j} \]
+\begin{equation}\label{Hj}
+  H_{J} = - \sum_{(i,j)} J  \sigma_{i}  \sigma_{j}
+\end{equation}
 
-Тогда Гамильтонианом системы будет:
+Тогда Гамильтонианом системы из N спинов будет:
 
 \begin{equation}\label{eq:Ham} 
-   H = - h\sum_{j = 1}^{N}  \sigma_{j} - J \sum_{(i,j)} \sigma_{i}  \sigma_{j} 
+   H = - h\sum_{j = 1}^{N}  \sigma_{j} - J \sum_{(i,j)} (\sigma_{1} \sigma_{2} + \sigma_{2} \sigma_{3} + \cdots + \sigma_{N-1} \sigma_{N})
 \end{equation}
 
 \subsection{Cтатсумма цепи Изинга общего случая ($h, J \neq 0 $) : периодич. гран. условия и Трансфер-матрица}
@@ -222,7 +227,20 @@ Z\pbc = \lambda_{+}^{N} + \lambda _{-} ^{N}
 где S - сумма всех моментов в цепи. С другой стороны: 
 
 \begin{equation}\label{MeanMagnJ02}
-    \frac{1}{ZN} \int S\ e^{-\beta H} = \frac{\partial Log[Z_{J = 0}]}{\partial h} \frac{1}{\beta N} = \frac{1}{Z \beta N}  \frac{\partial Z}{\partial h} = \tanh{(\bh)}
+    \frac{1}{ZN} \int S\ e^{-\beta H} = \frac{\partial Log[Z_{J = 0}]}{\partial h} \frac{1}{\beta N} = \frac{1}{Z \beta N}  \dzdh
+\end{equation}
+
+В этом случае Z берется сразу при условии (J = 0), её гамильтонианом для N спинов при периодичном и открытом гран. условии будет \eqref{Hh}, а статсуммой будет формула (30.8) при (30.10) из учебника Свендсена \cite{Swen}:
+
+\begin{gather}
+    \label{Zh0} Z_{h = 0} = (2\cosh{\bj})^N \\
+    \label{Z'hh0} \dzdh_{h = 0} = \beta N 2^{N}(\cosh{\bj})^{N-1}\sinh{\bj}
+\end{gather}
+
+Следовательно, при подстановке в \eqref{MeanMagnJ02}, получим:
+
+\begin{equation}\label{MeanMagnJ0Final}
+    \la\sigma\ra = \frac{1}{Z \beta N}  \dzdh = \tanh{(\bh)}  
 \end{equation}
 
 Применим эту операцию для статсуммы общего случая.
@@ -249,7 +267,7 @@ Z\pbc = \lambda_{+}^{N} + \lambda _{-} ^{N}
 Таким образом: 
 
 \begin{equation}\label{MeanMagnH0PBC}
-    \la\sigma_{PBC}\ra = \frac{1}{Z  \beta  N}  \frac{\partial Z}{\partial h} = \frac{1}{Z  \beta  N}  \left( N  \lambda^{N-1}_{+}(\lambda_{+})^{'}_{h} +   \lambda^{N-1}_{-}(\lambda_{-})^{'}_{h}\right) = 0
+    \la\sigma\pbc\ra = \frac{1}{Z  \beta  N}  \frac{\partial Z}{\partial h} = \frac{1}{Z  \beta  N}  \left( N  \lambda^{N-1}_{+}(\lambda_{+})^{'}_{h} +   \lambda^{N-1}_{-}(\lambda_{-})^{'}_{h}\right) = 0
 \end{equation}
 
 \subsection{Открытые гран. условия}
@@ -265,13 +283,15 @@ $Q_{h = 0} = e^{-\bj}$
 
 Тогда $ \lambda_{+ (h = 0)} = 2\cosh{\bj} $ и $ \lambda_{- (h = 0)} = 2\sinh{\bj} $
 
-Рассмотрим производную $Z_{OBC}$ по h, учитывая дифференцирование произведения и все полученные ранее результаты (\eqref{Q'h}, \eqref{lpm'h}, \eqref{lpmH0})
+Рассмотрим производную $Z\obc$ по h, учитывая дифференцирование произведения и все полученные ранее результаты (\eqref{Q'h}, \eqref{lpm'h}, \eqref{lpmH0})
 
 \begin{multline}\label{Zobc'h}
     \frac{\partial Z}{\partial h} = \lp^{N-1}(\frac{e^{\bj}2\sinh{\bh}\ \cosh{\bh}\ \beta Q - (Q)^{'}_{h}e^{\bj}\sinh{\bh}^{2}}{Q^{2}} - \frac{(Q)^{'}_{h}}{e^{\bj}Q^{2}} + \beta\sinh{\bh}) - 
     \\
     - \lm^{N-1}(\frac{e^{\bj}2\sinh{\bh}\ \cosh{\bh}\ \beta Q - (Q)^{'}_{h}e^{\bj}\sinh{\bh}^{2}}{Q^{2}} - \frac{(Q)^{'}_{h}}{e^{\bj}Q^{2}} - \beta\sinh{\bh}) =_{h=0} 0
 \end{multline} 
+
+Следовательно, $ \la\sigma\obc\ra = 0 $
 
 
 \subsection{Магнитная воприимчивость}
@@ -372,7 +392,7 @@ $Q_{h = 0} = e^{-\bj}$
     \end{align*}}
 
 \section{Теплоёмкость на спин при h = 0}
-Теперь, поскольку наша формула статсуммы $Z_{OBC}$ (для крайних случаев) и её производная (для средних наблюдаемых) полностью верна, проверим правильность статсуммы до второй производной по $\beta$ для нахождения темплоёмкости на спин С в случае нулевого поля.
+Теперь, поскольку наша формула статсуммы $Z\obc$ (для крайних случаев) и её производная (для средних наблюдаемых) полностью верна, проверим правильность статсуммы до второй производной по $\beta$ для нахождения темплоёмкости на спин С в случае нулевого поля.
 
 \subsection{Открытое гран. условие}
 
@@ -452,36 +472,71 @@ $Q_{h = 0} = e^{-\bj}$
 
 Будем рассматривать разность между различными энергетическими величинами при разных случаев.
 
-\subsection{Средняя энергия системы}
+\subsection{Средняя энергия системы (равное число спинов)}
 
 
 Найдём разность средней энергии открытого и периодичного случая:
 
-\[ \la U_{OBC} \ra - \la U_{OBC} \ra = -\frac{\partial Log[Z_{OBC}]}{\partial \beta} + \frac{\partial Log[Z_{PBC}]}{\partial \beta} = -\frac{\partial Log[\frac{Z_{OBC}}{Z_{PBC}}]}{\partial \beta} \]
+\begin{equation}
+    \la U\obc \ra - \la U\obc \ra = -\frac{\partial Log[Z\obc]}{\partial \beta} + \frac{\partial Log[Z\pbc]}{\partial \beta} = -\frac{\partial Log[\frac{Z\obc}{Z\pbc}]}{\partial \beta}
+\end{equation}
 
-\[ \frac{Z_{OBC}}{Z_{PBC}} = \frac{A_{+}\left( 1 + (\frac{\lambda_{-}}{\lambda_{+}})^{N - 1}  \frac{A_{-}}{A_{+}}\right)}{\lambda{+}(1 + (\frac{\lambda_{-}}{\lambda_{+}})^{N})} \]
+\[ \frac{Z\obc}{Z\pbc} = \frac{A_{+}\left( 1 + (\frac{\lambda_{-}}{\lambda_{+}})^{N - 1}  \frac{A_{-}}{A_{+}}\right)}{\lambda{+}(1 + (\frac{\lambda_{-}}{\lambda_{+}})^{N})} \]
+
+\[ \apm = \frac{e^{\bj} \sinh{\bh}^2}{Q} + \frac{1}{e^{\bj}Q} \pm \cosh{\bh} \]
 
 Учитывая что мы рассматриваем системы при $N \rightarrow \infty$,
 все скобки вида $ Log[ 1 + (<1)^{N} ] \approx (<1)^{N} $ 
 
 Тогда
 
-\[ \la U_{OBC} \ra - \la U_{PBC} \ra =  -\frac{\partial ( Log[\frac{Z_{OBC}}{Z_{PBC}}])}{\partial \beta} = -\frac{\partial Log[\frac{A_{+}}{\lambda{+}}] + O((\frac{\lambda_{-}}{\lambda_{+}})^{N - 1})}{\partial \beta}\]
+\begin{equation}\label{LogPrPB}
+     \la U\obc \ra - \la U\pbc \ra =  -\frac{\partial ( Log[\frac{Z\obc}{Z\pbc}])}{\partial \beta} = -\frac{\partial}{\partial \beta} \left(Log[\frac{A_{+}}{\lambda{+}}] + (\frac{\lambda_{-}}{\lambda_{+}})^{N - 1}(\frac{A_{-}}{A_{+}} - \frac{\lm}{\lp}) + o((\frac{\lambda_{-}}{\lambda_{+}})^{N-1})\right)
+\end{equation}
 
-Здесь не имеет значения рассматривать правое слагаемое, т.к. при $N \to \infty$ оно останется бесконечно малой. Тогда формула примет вид 
+Перед тем, как продолжить расчёты, стоит заранее найти производные отношений $\frac{\lm}{\lm}$ и $\frac{\am}{\ap}$. 
+
+Тогда производная их частного будет выглядеть как:
+
+\[ (\frac{\lm}{\lp})\prpb = \frac{(\lm)\prpb\lp-\lm(\lp)\prpb}{\lp^{2}}\]
+
+Все значения для крайних случаев можно легко взять из нашей таблицы.
+
+\[ h = 0: \frac{J}{\cosh^{2}\bj} \]
+
+\[ J = 0: 0 \]
+
+Теперь перейдём к $\apm$. Поскольку они имеют одинаковые слагаемые, отличающиеся по знаку, то для упрощения можно представить их как:
+
+\[ \apm = A_{0} \pm \cosh{\bh} \]
+
+Тогда при дифференцировании частного половина слагаемых в числителе сократится, а другая сложится:
+
+\[ (\frac{\am}{\ap})\prpb = \frac{(\am)\prpb\ap-\am(\ap)\prpb}{\ap^{2}} = \frac{(A_{0}' - h\sinh{\bh})(A_{0} + \cosh{\bh}) - (A_{0} - \cosh{\bh})(A_{0}'+ h\sinh{\bh})}{\ap^{2}} = \]
+
+\[ = 2\frac{A_{0}'\cosh{\bh} - A_{0}h\sinh{\bh}}{\ap^{2}}\]
+
+Формулу $A_{0}'$ и значения $\apm$ для предельных значении можно взять из расчётов производной статсуммы и средней энергии. При предельных случаях производная частного $\am$ и $\ap$ обращается в ноль.
+
+Теперь вернёмся к формуле \eqref{LogPrPB} и продифференцируем всю скобку по $\beta$
 
 \begin{equation}\label{diffMeanE1}
-    \la U_{OBC} \ra - \la U_{PBC} \ra = \frac{(\ap)\prpb}{\ap} - \frac{(\lp)\prpb}{\lp}
+    \la U\obc \ra - \la U\pbc \ra = -\frac{(\ap)\prpb}{\ap} + \frac{(\lp)\prpb}{\lp} + N(\frac{\lm}{\lp})^{N-1}(\frac{\lm}{\lp})\prpb - (N-1)(\frac{\lm}{\lp})^{N-2}(\frac{\lm}{\lp})\prpb(\frac{\am}{\ap}) - (\frac{\lm}{\lp})^{N-1}(\frac{\am}{\ap})\prpb
 \end{equation}
 
 Рассмотрим все значения и значения производных по $\beta$ $ \lambda_{+}$ и $A_{+}$ при h = 0 и J = 0 из таблицы.
 
 Путём подстановки в полученную формулу производной \eqref{diffMeanE1}, получим:
 
-При $h = 0:$ = -J
+\[ h = 0:\ \ J + JN\frac{(\tanh{\bj})^{N-1}}{(\cosh{\bj})^{2}} \approx_{N\to\infty} J\ \ \footnotemark\]
 
-При $J = 0:$ = 0 
+\[J = 0: 0\]
 
+\footnotetext{
+\begin{align*}
+    \frac{(\tanh{x})^{N-1}}{(\cosh{x})^{2}} &= x^{N-1} + o(x^{N}) \approx 0,\ x\to 0 \\
+    &= \frac{\to1}{\to\infty} \approx 0,\ x\to\infty
+\end{align*}}
 \begin{thebibliography}{9}
 \bibitem[1]{Swen} Swendsen R. An introduction to statistical mechanics and thermodynamics. – Oxford University Press, USA, 2020.
 \end{thebibliography}
