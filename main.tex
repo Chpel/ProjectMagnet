@@ -477,7 +477,7 @@ $Q_{h = 0} = e^{-\bj}$
 
 Найдём разность средней энергии открытого и периодичного случая:
 
-\begin{equation}
+\begin{equation}\label{DiffMeanE1}
     \la U\obc \ra - \la U\obc \ra = -\frac{\partial Log[Z\obc]}{\partial \beta} + \frac{\partial Log[Z\pbc]}{\partial \beta} = -\frac{\partial Log[\frac{Z\obc}{Z\pbc}]}{\partial \beta}
 \end{equation}
 
@@ -490,7 +490,7 @@ $Q_{h = 0} = e^{-\bj}$
 
 Тогда
 
-\begin{equation}\label{LogPrPB}
+\begin{equation}\label{diffMeanE2}
      \la U\obc \ra - \la U\pbc \ra =  -\frac{\partial ( Log[\frac{Z\obc}{Z\pbc}])}{\partial \beta} = -\frac{\partial}{\partial \beta} \left(Log[\frac{A_{+}}{\lambda{+}}] + (\frac{\lambda_{-}}{\lambda_{+}})^{N - 1}(\frac{A_{-}}{A_{+}} - \frac{\lm}{\lp}) + o((\frac{\lambda_{-}}{\lambda_{+}})^{N-1})\right)
 \end{equation}
 
@@ -518,15 +518,15 @@ $Q_{h = 0} = e^{-\bj}$
 
 Формулу $A_{0}'$ и значения $\apm$ для предельных значении можно взять из расчётов производной статсуммы и средней энергии. При предельных случаях производная частного $\am$ и $\ap$ обращается в ноль.
 
-Теперь вернёмся к формуле \eqref{LogPrPB} и продифференцируем всю скобку по $\beta$
+Теперь вернёмся к формуле \eqref{diffMeanE2} и продифференцируем всю скобку по $\beta$
 
-\begin{equation}\label{diffMeanE1}
+\begin{equation}\label{diffMeanE3}
     \la U\obc \ra - \la U\pbc \ra = -\frac{(\ap)\prpb}{\ap} + \frac{(\lp)\prpb}{\lp} + N(\frac{\lm}{\lp})^{N-1}(\frac{\lm}{\lp})\prpb - (N-1)(\frac{\lm}{\lp})^{N-2}(\frac{\lm}{\lp})\prpb(\frac{\am}{\ap}) - (\frac{\lm}{\lp})^{N-1}(\frac{\am}{\ap})\prpb
 \end{equation}
 
 Рассмотрим все значения и значения производных по $\beta$ $ \lambda_{+}$ и $A_{+}$ при h = 0 и J = 0 из таблицы.
 
-Путём подстановки в полученную формулу производной \eqref{diffMeanE1}, получим:
+Путём подстановки в полученную формулу производной \eqref{diffMeanE3}, получим:
 
 \[ h = 0:\ \ J + JN\frac{(\tanh{\bj})^{N-1}}{(\cosh{\bj})^{2}} \approx_{N\to\infty} J\ \ \footnotemark\]
 
@@ -537,6 +537,25 @@ $Q_{h = 0} = e^{-\bj}$
     \frac{(\tanh{x})^{N-1}}{(\cosh{x})^{2}} &= x^{N-1} + o(x^{N}) \approx 0,\ x\to 0 \\
     &= \frac{\to1}{\to\infty} \approx 0,\ x\to\infty
 \end{align*}}
+
+\subsection{Средняя энергия системы (равное число спинов)}
+
+Рассмотрим теперь случай с равным числом ребёр - он достигается при сравнении моделей с периодическим гран. условием с N спинами и с открытым гран. условием с N+1 спинами, тогда формула \eqref{diffMeanE2} станет:
+
+\begin{equation}\label{diffMeanER1}
+    \la U\obc \ra - \la U\pbc \ra = -\frac{\partial}{\partial \beta}\left(Log[\ap]+(\frac{\lm}{\lp})^{N}(\frac{\am}{\ap} - 1) + o((\frac{\lambda_{-}}{\lambda_{+}})^{N})\right)    
+\end{equation}
+
+Все дополнительные расчёты производных мы сделали в предыдущем подразделе, поэтому перейдём к изменённой формуле, аналогичной \eqref{diffMeanE3}, и затем сразу к предельным случаям:
+
+\begin{equation}\label{diffMeanER2}
+    \la U\obc \ra - \la U\pbc \ra = -\frac{(\ap)\prpb}{\ap} - N(\frac{\lm}{\lp})^{N-1}(\frac{\lm}{\lp})\prpb (\frac{\am}{\ap} - 1) - (\frac{\lm}{\lp})^{N}(\frac{\am}{\ap})\prpb
+\end{equation}
+
+\[ h = 0: JN\frac{(\tanh{\bj})^{N-1}}{(\cosh{\bj})^{2}} \approx_{N\to\infty} 0 \]
+
+\[ J = 0: -h\tanh{\bh}\]
+
 \begin{thebibliography}{9}
 \bibitem[1]{Swen} Swendsen R. An introduction to statistical mechanics and thermodynamics. – Oxford University Press, USA, 2020.
 \end{thebibliography}
