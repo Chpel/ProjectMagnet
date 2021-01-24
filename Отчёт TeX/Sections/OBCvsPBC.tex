@@ -1,0 +1,141 @@
+\section{Разница между открытым и периодичным случаем}
+
+Будем рассматривать разность между различными энергетическими величинами при разных случаев.
+
+\subsection{Средняя энергия системы (равное число спинов)}
+
+
+Найдём разность средней энергии открытого и периодичного случая:
+
+\begin{equation}\label{DiffMeanE1}
+    \la U\obc \ra - \la U\obc \ra = -\frac{\partial Log[Z\obc]}{\partial \beta} + \frac{\partial Log[Z\pbc]}{\partial \beta} = -\frac{\partial Log[\frac{Z\obc}{Z\pbc}]}{\partial \beta}
+\end{equation}
+
+\[ \frac{Z\obc}{Z\pbc} = \frac{A_{+}\left( 1 + (\frac{\lambda_{-}}{\lambda_{+}})^{N - 1}  \frac{A_{-}}{A_{+}}\right)}{\lambda{+}(1 + (\frac{\lambda_{-}}{\lambda_{+}})^{N})} \]
+
+\[ \apm = \frac{e^{\bj} \sinh{\bh}^2}{Q} + \frac{1}{e^{\bj}Q} \pm \cosh{\bh} \]
+
+Учитывая что мы рассматриваем системы при $N \rightarrow \infty$,
+все скобки вида $ Log[ 1 + (<1)^{N} ] \approx (<1)^{N} $ 
+
+Тогда
+
+\begin{equation}\label{diffMeanE2}
+     \la U\obc \ra - \la U\pbc \ra =  -\frac{\partial ( Log[\frac{Z\obc}{Z\pbc}])}{\partial \beta} = -\frac{\partial}{\partial \beta} \left(Log[\frac{A_{+}}{\lambda{+}}] + (\frac{\lambda_{-}}{\lambda_{+}})^{N - 1}(\frac{A_{-}}{A_{+}} - \frac{\lm}{\lp}) + o((\frac{\lambda_{-}}{\lambda_{+}})^{N-1})\right)
+\end{equation}
+
+Перед тем, как продолжить расчёты, стоит заранее найти производные отношений $\frac{\lm}{\lm}$ и $\frac{\am}{\ap}$. 
+
+Тогда производная их частного будет выглядеть как:
+
+\[ (\frac{\lm}{\lp})\prpb = \frac{(\lm)\prpb\lp-\lm(\lp)\prpb}{\lp^{2}}\]
+
+Все значения для крайних случаев можно легко взять из нашей таблицы.
+
+\[ h = 0: \frac{J}{\cosh^{2}\bj} \]
+
+\[ J = 0: 0 \]
+
+Теперь перейдём к $\apm$. Поскольку они имеют одинаковые слагаемые, отличающиеся по знаку, то для упрощения можно представить их как:
+
+\[ \apm = A_{0} \pm \cosh{\bh} \]
+
+Тогда при дифференцировании частного половина слагаемых в числителе сократится, а другая сложится:
+
+\[ (\frac{\am}{\ap})\prpb = \frac{(\am)\prpb\ap-\am(\ap)\prpb}{\ap^{2}} = \frac{(A_{0}' - h\sinh{\bh})(A_{0} + \cosh{\bh}) - (A_{0} - \cosh{\bh})(A_{0}'+ h\sinh{\bh})}{\ap^{2}} = \]
+
+\[ = 2\frac{A_{0}'\cosh{\bh} - A_{0}h\sinh{\bh}}{\ap^{2}}\]
+
+Формулу $A_{0}'$ и значения $\apm$ для предельных значении можно взять из расчётов производной статсуммы и средней энергии. При предельных случаях производная частного $\am$ и $\ap$ обращается в ноль.
+
+Теперь вернёмся к формуле \eqref{diffMeanE2} и продифференцируем всю скобку по $\beta$
+
+\begin{equation}\label{diffMeanE3}
+    \la U\obc \ra - \la U\pbc \ra = -\frac{(\ap)\prpb}{\ap} + \frac{(\lp)\prpb}{\lp} + N(\frac{\lm}{\lp})^{N-1}(\frac{\lm}{\lp})\prpb - (N-1)(\frac{\lm}{\lp})^{N-2}(\frac{\lm}{\lp})\prpb(\frac{\am}{\ap}) - (\frac{\lm}{\lp})^{N-1}(\frac{\am}{\ap})\prpb
+\end{equation}
+
+Рассмотрим все значения и значения производных по $\beta$ $ \lambda_{+}$ и $A_{+}$ при h = 0 и J = 0 из таблицы.
+
+Путём подстановки в полученную формулу производной \eqref{diffMeanE3}, получим:
+
+\[ h = 0:\ \ J + JN\frac{(\tanh{\bj})^{N-1}}{(\cosh{\bj})^{2}} \approx_{N\to\infty} J\ \ \footnotemark\]
+
+\[J = 0: 0\]
+
+\footnotetext{
+\begin{align*}
+    \frac{(\tanh{x})^{N-1}}{(\cosh{x})^{2}} &= x^{N-1} + o(x^{N}) \approx 0,\ x\to 0 \\
+    &= \frac{\to1}{\to\infty} \approx 0,\ x\to\infty
+\end{align*}}
+
+\subsection{Средняя энергия системы (равное число рёбер)}
+
+Рассмотрим теперь случай с равным числом ребёр - он достигается при сравнении моделей с периодическим гран. условием с N спинами и с открытым гран. условием с N+1 спинами, тогда формула \eqref{diffMeanE2} станет:
+
+\begin{equation}\label{diffMeanER1}
+    \la U\obc \ra - \la U\pbc \ra = -\frac{\partial}{\partial \beta}\left(Log[\ap]+(\frac{\lm}{\lp})^{N}(\frac{\am}{\ap} - 1) + o((\frac{\lambda_{-}}{\lambda_{+}})^{N})\right)    
+\end{equation}
+
+Все дополнительные расчёты производных мы сделали в предыдущем подразделе, поэтому перейдём к изменённой формуле, аналогичной \eqref{diffMeanE3}, и затем сразу к предельным случаям:
+
+\begin{equation}\label{diffMeanER2}
+    \la U\obc \ra - \la U\pbc \ra = -\frac{(\ap)\prpb}{\ap} - N(\frac{\lm}{\lp})^{N-1}(\frac{\lm}{\lp})\prpb (\frac{\am}{\ap} - 1) - (\frac{\lm}{\lp})^{N}(\frac{\am}{\ap})\prpb
+\end{equation}
+
+\[ h = 0: JN\frac{(\tanh{\bj})^{N-1}}{(\cosh{\bj})^{2}} \approx_{N\to\infty} 0 \]
+
+\[ J = 0: -h\tanh{\bh}\]
+
+\subsection{Теплоёмкость системы (равное число рёбер)}
+
+Формулу для теплоёмкости системы возьмём из \eqref{HeatCapH0} без деления на N:
+
+\begin{equation}\label{eq:HeatCap}
+c=\frac{\partial U}{\partial T} = -\frac{1}{k_{B}T^{2}}\frac{\partial U}{\partial \beta} = \frac{1}{k_{B}T^{2}}\frac{\partial^{2} Log[Z]}{\partial \beta^{2}}
+\end{equation}
+
+Так как мы рассматриваем случай равных ребёр, то как и в прошлый раз, возьмём систему из N спинов для модели с периодическим гран. условием и систему из N+1 спинов для модели с открытым гран. условием - таким образом мы получим вторую производную знакомого нам выражения из формулы \eqref{diffMeanER1}: 
+
+\begin{equation}\label{diffHeatCapER1}
+  c\obc^{N+1} - c\pbc^{N} = \frac{1}{k_{B}T^{2}} \frac{\partial^{2}}{\partial \beta^{2}} Log[\frac{Z\obc}{Z\pbc}] = \frac{1}{k_{B}T^{2}} \frac{\partial^{2}}{\partial \beta^{2}} \left(Log[\ap]+(\frac{\lm}{\lp})^{N}(\frac{\am}{\ap} - 1) + o((\frac{\lambda_{-}}{\lambda_{+}})^{N})\right)  
+\end{equation}
+
+Рассмотрим первые два слагаемых выражения в скобках по отдельности, чтобы не запутаться в расчётах:
+
+\begin{equation*}
+    (Log[\ap])\vprpb = \frac{(\ap)\vprpb}{\ap} - (\frac{(\ap)\prpb}{\ap})^{2}
+\end{equation*}
+
+\[ ((\frac{\lm}{\lp})^{N}(\frac{\am}{\ap} - 1))\vprpb = \]
+\[ = N(N-1)(\frac{\lm}{\lp})^{N-2}(\frac{\lm}{\lp})^{'2}(\frac{\am}{\ap} - 1) + N(\frac{\lm}{\lp})^{N-1}(\frac{\lm}{\lp})\vprpb(\frac{\am}{\ap} - 1) + 2N(\frac{\lm}{\lp})^{N-1}(\frac{\lm}{\lp})\prpb(\frac{\am}{\ap})\prpb + (\frac{\lm}{\lp})^{N}(\frac{\am}{\ap})\vprpb \]
+
+Все вспомогательные расчёты для предльных случаев были сделаны в Wolfram Mathematica (Проект2.pdf, Теплоёмкость)\cite{Git}, поэтому пропустим этот шаг и перейдём к итоговым выражениям:
+
+\[ h = 0:\ -N(N-1)J^{2}\frac{(\tanh{\bj})^{N-2}}{(\cosh{\bj})^{2}} \]
+\[ J = 0:\ 0\]
+
+\subsection{Квадрат намагниченности системы (равное число рёбер)}
+
+Формула среднего квадрата намагниченности во многом схожа с формулой теплоёмкости при предельных случаях. С одной стороны, по определению средней наблюдаемой величины, квадрат намагничесности представима в виде:
+
+\begin{equation}
+    \la M^{2} \ra = \frac{1}{Z} \sum_{\{\sigma\}} M^{2} e^{-\beta H},
+\end{equation}
+где H - гамильтониан системы \eqref{eq:Ham}.
+
+С другой стороны:
+
+\begin{equation}
+    \frac{1}{Z} \sum_{\{\sigma\}} M^{2} e^{-\beta H} = \frac{1}{\beta^{2}}(\frac{\partial^{2} \log{Z}}{\partial h^{2}} + (\frac{\partial \log{Z}}{\partial h})^{2}) = \la M^{2} \ra
+\end{equation}
+
+Правое слагаемое в скобке является квадратом средней намагниченности, который при предельных случаях равна нулю, поэтому нам достаточно только левого. Это значит, что в формуле разности будет то же самое выражение под знаком дифференцирования, что и в формулах \eqref{diffMeanER1} и \eqref{diffHeatCapER1}. Опять же, мы берём N+1 спин для открытого условия, и N для периодического. Тогда:
+
+\begin{equation}\label{eq:diffSqMagnER1}
+    \la M^{2}\obc \ra - \la M^{2}\pbc \ra = \frac{1}{\beta^{2}} \frac{\partial^{2}}{\partial h^{2}} Log[\frac{Z\obc}{Z\pbc}] = \frac{1}{\beta^{2}} \frac{\partial^{2}}{\partial h^{2}} \left(Log[\ap]+(\frac{\lm}{\lp})^{N}(\frac{\am}{\ap} - 1) + o((\frac{\lambda_{-}}{\lambda_{+}})^{N})\right)  
+\end{equation}
+
+Воспользуемся расчётами Wolfram Mathematica (Проект2.pdf, Квадрат намагниченности), и получим: 
+
+\[ h = 0:\ \frac{1}{2}(2e^{2\bj}-e^{4\bj}+1)+2N(\tanh{\bj})^{N}-2e^{2\bj}(\sinh{\bj})^{2}(\tanh{\bj})^{n}\]
+\[ J = 0:\ 1-(\tanh{\bj})^{2}\]

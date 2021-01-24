@@ -1,0 +1,150 @@
+\section{Введение}
+
+\subsection{Одномерная модель Изинга}
+
+Модель Изинга представляет собой решетку, в узлах которой расположены магнитные моменты, направленные "вверх"  или "вниз" , чему соответствует значение "cпина" на j-ом месте в решетке.
+
+\[ \sigma_{j} = \pm1 \]
+
+Энергией взаимодействия внешнего поля с моделью будем считать сумму взаимодействий поля \textit{h} с каждым из N моментов со спином $\sigma_{j}$
+
+\begin{equation}\label{Hh}
+  H_{h} = - \sum_{j = 1}^{N} h  \sigma_{j}   
+\end{equation}
+
+Внутренним взаимодействией между двумя соседними моментами считаем:
+
+\begin{equation}\label{Hj}
+  H_{J} = - \sum_{(i,j)} J  \sigma_{i}  \sigma_{j}
+\end{equation}
+
+Тогда Гамильтонианом системы из N спинов будет:
+
+\begin{equation}\label{eq:Ham} 
+   H = - h\sum_{j = 1}^{N}  \sigma_{j} - J \sum_{(i,j)} (\sigma_{1} \sigma_{2} + \sigma_{2} \sigma_{3} + \cdots + \sigma_{N-1} \sigma_{N})
+\end{equation}
+
+\subsection{Cтатсумма цепи Изинга общего случая ($h, J \neq 0 $) : периодич. гран. условия и Трансфер-матрица}
+
+Для поиска решения данного случая воспользуемся методом \textbf{трансфер-матриц}.
+
+Для начала перепишем формулу \eqref{eq:Ham} в другой форме:
+\begin{equation}\label{eq:HamTrM}
+    H = - \frac{h}{2}\sum_{j = 1}^{N}  (\sigma_{j} + \sigma_{j+1}) - J \sum_{j = 1}^{N} \sigma_{j}  \sigma_{j+1} 
+\end{equation}
+
+Учитывая периодические гран. условия ($\sigma_{N+1} = \sigma_{1}$), то формулы \eqref{eq:Ham} и \eqref{eq:HamTrM} тождественно равны.
+
+Тогда статсумма такой модели будет равна:
+
+\begin{equation}\label{ZTrM}
+    Z = \sum_{\sigma} e^{-\beta H} = \sum_{\sigma} \prod_{j=1}^{N} \exp{(\bj\sigma_{j}\sigma_{j+1} + \frac{1}{2}\bh(\sigma_{j} + \sigma_{j+1}))} = \sum_{\sigma} \prod_{j=1}^{N} T(\sigma_{j}, \sigma_{j+1})
+\end{equation}
+    
+Где $T(\sigma_{j}, \sigma_{j+1})$ - трансфер-матрица для двух соседних моментов. Поскольку один момент принимают лишь два значения ($\pm1$), а пара - уже четыре - (1,1),(1,-1),(-1,1),(-1,-1) - то, их матрица представляет с собой матрицу с элементами, соответствующими этим парам значений:
+\begin{align}\label{TrM}
+  T(\sigma_{j}, \sigma_{j+1}) = &
+  \begin{pmatrix}
+    \exp{(\bj+\bh)} & \exp(-\bj) \\
+    \exp{(-\bj)} & \exp{(\bj-\bh)}
+  \end{pmatrix}  
+\end{align}
+
+Если рассмотреть сумму произведений двух соседних матриц от j-1, j и j+1 внутри цепи при всевозможных значениях моментов, мы получим:
+
+\[\sum_{\sigma = \pm 1} T(\sigma_{j-1}, \sigma_{j})T(\sigma_{j}, \sigma_{j+1}) = T^{2}(\sigma_{j-1}, \sigma_{j+1})\]
+
+\subsection{Диагонализация Трансфер-матрицы}
+
+Попробуем диагонализировать Трансфер-матрицу ($ T = R T^{D} R^{-1} $), тогда полное произведение матриц будет:
+
+\[ \sum_{\sigma}\prod_{j}^{N} T(\sigma_{j}, \sigma_{j+1}) = R (T^{D})^{N} R^{-1} (\sigma_{1},\sigma_{N+1} = \sigma_{1})\]
+
+Диагонализированная матрица будет выглядеть как:
+
+\begin{align}
+T^{D} = &
+\begin{pmatrix}\label{Td}
+  \lp & 0 \\
+  0 & \lm
+\end{pmatrix} \\ 
+(T^{D})^{N} = &
+\begin{pmatrix}
+  \lp^{N} & 0 \\
+  0 & \lm^{N}
+\end{pmatrix}
+\end{align}
+
+Найдём собственные значения $\lpm$ и их собственные вектора:
+
+\[ \lpm = e^{\bj}  \cosh{(\bh)} \pm Q\]
+\[ Q = \sqrt{e^{2\bj} \cosh{(\bh)}^{2} - 2 \sinh{(2\bj)}} \]
+
+\begin{align}\label{R}
+R = &
+\begin{pmatrix*}
+  e^{\bj}\lpd & e^{\bj}\lmd \\
+  1 & 1
+\end{pmatrix*}\\
+\label{RInv}
+R^{-1} = &
+\begin{pmatrix*}
+  \frac{1}{2e^{\bj}Q} & 1-\frac{\lpd}{2Q} \\
+  -\frac{1}{2e^{\bj}Q} & \frac{\lpd}{2Q}
+\end{pmatrix*}
+\end{align}
+
+\[ \lpmd = e^{\bj}  \sinh{(\bh)} \pm Q\]
+
+Эти формулы понадобятся нам позднее.
+
+Поскольку нам нужен инвариантный след данной матрицы, т.к. матрица зависит от одного элемента, то достаточно $ Z = Tr(T^{D})^{N} $
+
+Таким образом:
+
+\begin{equation}\label{Zpbc}
+Z\pbc = \lambda_{+}^{N} + \lambda _{-} ^{N}     
+\end{equation}
+
+\subsection{Cтатсумма цепи Изинга общего случая ($h, J \neq 0 $) : открытые гран. условия}
+
+Расчёт статсуммы в данном случае сложнее, т.к. система не замкнута, и крайние значения не имеют внутреннего взаимодействия между с собой. Попробуем воспользоваться формулой \eqref{eq:HamTrM} с корректировкой под открытые условия:
+
+\begin{equation}\label{eq:HamTrM2}
+    H = - \frac{h}{2}\sum_{j = 1}^{N-1}  (\sigma_{j} + \sigma_{j+1}) - J \sum_{j = 1}^{N-1} \sigma_{j}  \sigma_{j+1} - \frac{h}{2}(\sigma_{1} + \sigma_{N})
+\end{equation}
+
+\begin{align*}\label{ZTrM}
+    Z = \sum_{\sigma} e^{-\beta H} = \sum_{\sigma} \prod_{j=1}^{N-1} \exp{(\bj\sigma_{j}\sigma_{j+1} + \frac{1}{2}\bh(\sigma_{j} + \sigma_{j+1}))} exp(\frac{1}{2}\bh(\sigma_{1}+\sigma_{N})) = \\
+    = \sum_{\sigma} \prod_{j=1}^{N-1} T(\sigma_{j}, \sigma_{j+1}) T^{'}(\sigma_{1}, \sigma_{N})
+\end{align*}
+
+Где $T'(\sigma_{1}, \sigma_{N})$ - трансфер-матрица для крайних моментов. От ранее расмотренных матриц она отличается отсутствием внутреннего взаимодействия, поэтому она представима в виде:
+\begin{align*}
+  T(\sigma_{1}, \sigma_{N}) = &
+  \begin{pmatrix}
+    \exp{(\bh)} & 1 \\
+    1 & \exp{(-\bh)}
+  \end{pmatrix}  
+\end{align*}
+
+К полному произведению применимы те же рассуждения, что и в периодическом случае: воспользовшись диагонализацией трансфер-матрицы T, мы получим:
+
+\[ Z = \sum_{\sigma}\prod_{j}^{N-1} T(\sigma_{j}, \sigma_{j+1})T^{'}(\sigma_{1}, \sigma_{N}) = R (T^{D})^{N-1} R^{-1} T^{'}(\sigma_{1}, \sigma_{N})\]
+
+Просуммировав элементы матрицы, полученной из данного произведения, мы получим:
+
+\begin{equation}\label{Zobc}
+    Z\obc = \lp^{N-1}(\frac{e^{\bj} \sinh{\bh}^2}{Q} + \frac{1}{e^{\bj}Q} +  \cosh{\bh}) - \lm^{N-1}(\frac{e^{\bj} \sinh{\bh}^2}{Q} + \frac{1}{e^{\bj}Q} -  \cosh{\bh}) 
+\end{equation}
+
+\subsection{Итоги}
+Нам известна статсумма модели для общего случая: 
+\[ Z\pbc = \lambda_{+}^{N} + \lambda _{-} ^{N} \]
+ - для периодичного граничного условия
+ 
+\[ Z\obc = \lp^{N-1}(\frac{e^{\bj} \sinh{\bh}^2}{Q} + \frac{1}{e^{\bj}Q} +  \cosh{\bh}) - \lm^{N-1}(\frac{e^{\bj} \sinh{\bh}^2}{Q} + \frac{1}{e^{\bj}Q} -  \cosh{\bh}) \]
+- для открытого погран. случая, где 
+
+\[ \lambda_{\pm} = e^{\bj}  \cosh{(\bh)} \pm Q\]
+\[ Q = \sqrt{e^{2\bj} \cosh{(\bh)}^{2} - 2 \sinh{(2\bj)}} \]

@@ -1,0 +1,91 @@
+\section{Средняя намагнинченность случая h = 0}
+
+По предыдущим расчетам мы знаем формулу ср. намагниченности, с самого начала считая J = 0. С одной стороны, по определению среднего:
+
+\begin{equation}\label{MeanMagnJ01}
+    \la\sigma\ra = \frac{1}{ZN} \int S\ e^{-\beta H},\  H = -h\sum_{j=1}^{N}\sigma_{j} = -h S
+\end{equation}
+
+где S - сумма всех моментов в цепи. С другой стороны: 
+
+\begin{equation}\label{MeanMagnJ02}
+    \frac{1}{ZN} \int S\ e^{-\beta H} = \frac{\partial Log[Z_{J = 0}]}{\partial h} \frac{1}{\beta N} = \frac{1}{Z \beta N}  \dzdh
+\end{equation}
+
+В этом случае Z берется сразу при условии (J = 0), её гамильтонианом для N спинов при периодичном и открытом гран. условии будет \eqref{Hh}, а статсуммой будет формула (30.8) при (30.10) из учебника Свендсена \cite{Swen}:
+
+\begin{gather}
+    \label{Zh0} Z_{j = 0} = (2\cosh{\bh})^N \\
+    \label{Z'hh0} \dzdh_{j = 0} = \beta N 2^{N}(\cosh{\bh})^{N-1}\sinh{\bh}
+\end{gather}
+
+Следовательно, при подстановке в \eqref{MeanMagnJ02}, получим:
+
+\begin{equation}\label{MeanMagnJ0Final}
+    \la\sigma\ra = \frac{1}{Z \beta N}  \dzdh = \tanh{(\bh)}  
+\end{equation}
+
+Применим эту операцию для статсуммы общего случая.
+Для упрощения задачи будем рассматривать случай h = 0.
+
+\subsection{Периодичные гран. условия}
+
+Перед этим для простоты найдём производные всех составляющих статсумм:
+
+\begin{equation}\label{Q'h}
+    (Q)^{'}_{h} = \frac{1}{2\sqrt{e^{2\bj} \cosh{(\bh)}^{2} - 2 \sinh{(2\bj)}}}  \left( e^{2\bj}2\cosh{(\bh)} \sinh{(\bh)}  \beta\right)
+\end{equation}
+
+и при (h = 0) = 0
+
+Тогда:
+
+\begin{equation}\label{lpm'h}
+    (\lpm)^{'}_{h} = e^{\bj}  \sinh{(\bh)} \beta \pm (Q)^{'}_{h}
+\end{equation}
+
+и при (h = 0) так же = 0
+
+Таким образом: 
+
+\begin{equation}\label{MeanMagnH0PBC}
+    \la\sigma\pbc\ra = \frac{1}{Z  \beta  N}  \frac{\partial Z}{\partial h} = \frac{1}{Z  \beta  N}  \left( N  \lambda^{N-1}_{+}(\lambda_{+})^{'}_{h} +   \lambda^{N-1}_{-}(\lambda_{-})^{'}_{h}\right) = 0
+\end{equation}
+
+\subsection{Открытые гран. условия}
+
+Найдём дополнительные значения составляющих $Z\obc$
+
+$Q_{h = 0} = e^{-\bj}$
+
+Также найдём значения $\lambda_{\pm}$ при h = 0
+\begin{equation}\label{lpmH0}
+    \lambda_{\pm (h=0)} = e^{\bj} \pm \sqrt{e^{2\bj} - \left( e^{2\bj} - e^{-2\bj} \right)} = e^{\bj} \pm e^{-\bj}
+\end{equation}
+
+Тогда $ \lambda_{+ (h = 0)} = 2\cosh{\bj} $ и $ \lambda_{- (h = 0)} = 2\sinh{\bj} $
+
+Рассмотрим производную $Z\obc$ по h, учитывая дифференцирование произведения и все полученные ранее результаты (\eqref{Q'h}, \eqref{lpm'h}, \eqref{lpmH0})
+
+\begin{multline}\label{Zobc'h}
+    \frac{\partial Z}{\partial h} = \lp^{N-1}(\frac{e^{\bj}2\sinh{\bh}\ \cosh{\bh}\ \beta Q - (Q)^{'}_{h}e^{\bj}\sinh{\bh}^{2}}{Q^{2}} - \frac{(Q)^{'}_{h}}{e^{\bj}Q^{2}} + \beta\sinh{\bh}) - 
+    \\
+    - \lm^{N-1}(\frac{e^{\bj}2\sinh{\bh}\ \cosh{\bh}\ \beta Q - (Q)^{'}_{h}e^{\bj}\sinh{\bh}^{2}}{Q^{2}} - \frac{(Q)^{'}_{h}}{e^{\bj}Q^{2}} - \beta\sinh{\bh}) =_{h=0} 0
+\end{multline} 
+
+Следовательно, $ \la\sigma\obc\ra = 0 $
+
+
+\subsection{Магнитная воприимчивость}
+
+Мы выяснили, что средняя намагниченность одномерной цепи при любом гран. условии равна нулю. Рассмотрим в таком случае магнитную восприимчивость $ X = \frac{\partial \langle m \rangle}{\partial h}$
+
+Учитывая формулу намагниченности \eqref{MeanMagnJ01} и то, что первая производная статсуммы \eqref{Zobc'h} равна нулю:
+
+\[ X = (\frac{1}{Z \beta} \dzdb)^{'}_{h} = \frac{1}{\beta} (\dzdb (- \frac{1}{Z^{2}} \dzdb) + \frac{1}{Z} \frac{\partial^{2} Z}{\partial h^{2}}) = \frac{1}{Z \beta} \frac{\partial^{2} Z}{\partial h^{2}}\]
+
+После расчётов, представленных в .nb файле (раздел 21.10.2020 (поиск X)) получим:
+
+\[ X = \frac{\beta}{2} (2Ne^{2\bj} - e^{4\bj} + 1) + \frac{\beta}{2} \tanh^{N-1}\bj (e^{4\bj} - 2 e^{2\bj} + 1)\]
+
+Подстановка $ T = 0, \infty$ приведёт к одинаковому результату и обратной зависимости от T, что говорит о парамагнетических свойствах одномерной модели Изинга.
