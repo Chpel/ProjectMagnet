@@ -68,6 +68,7 @@ $m_{02}$ обладает следующими свойствами:
     m^{2} = L^{-2\beta/\upsilon} \Tilde{m}_{02}(L^{1/\upsilon}|t|)
 \end{equation}
 
+\subsection{Расчёты крит. экспонент при наблюдении коллапса данных}
 Для того, чтобы найти крит. экспоненты $\beta$ и $\upsilon$, а также крит. температуру модели, достаточно определить, при каких их значениях графики шкалирующих функций $\Tilde{m}_{02}$ для разных размеров L системы сливаются к как можно более однородному графику. Для этого значение шкал. функции расчитывается из \eqref{eq:m2_2}:
 
 \begin{equation}\label{eq:m02}
@@ -100,3 +101,81 @@ $m_{02}$ обладает следующими свойствами:
     \label{fig:DatColM2_3}
 \end{figure}
 
+\subsection{Определение погрешностей измерений экспонент}
+
+Разумеется, поскольку мы не можем численно определить качество коллапса данных, а лишь визуально определить при каких значениях он будет лучше, необходимо задать погрешность - область значений критических экспонент и температур, при которых качество коллапса данных наблюдаемой величины при измерении "на глаз" не меняется.
+
+Таким образом, мы уточняем возможные критические значения для сравнения с расчётов в других источниках, для определения модели по её поведению.
+
+Для начала рассмотрим погрешность измерений критической температуры при зафиксированных значениях крит. экспонент, взятых из лекций Янке \cite{Yanke}:
+$\beta = 1/8,\ \ \nu = 1$
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=150mm]{Sections/Images/ErrTc2_1.png}
+    \label{fig:ErrTc2_1}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=150mm]{Sections/Images/ErrTc2_2.png}
+    \label{fig:ErrTc2_2}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=150mm]{Sections/Images/ErrTc2_3.png}
+    \label{fig:ErrTc2_3}
+\end{figure}
+
+Последующие изменения значения крит. температуры вне данных граничных значений приводят к заметному развлетвлению графиков и, следовательно, к ухудшению качества коллапса данных.
+
+Теперь рассмотрим погрешность для экспоненты при фиксированных Tc и $\beta$ $(Tc = 1.195)$
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=150mm]{Sections/Images/ErrV2_1.png}
+    \label{fig:ErrV2_1}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=150mm]{Sections/Images/ErrV2_2.png}
+    \label{fig:ErrV2_2}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=150mm]{Sections/Images/ErrV2_3.png}
+    \label{fig:ErrV2_3}
+\end{figure}
+
+Изменение $\nu$ ведёт к тому, что коллапс данных наблюдается всё дальше и дальше от области критической температуры. Крайние значения для $\beta$, в свою очередь:
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=150mm]{Sections/Images/ErrB2_1.png}
+    \label{fig:DatColM2_1}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=150mm]{Sections/Images/ErrB2_2.png}
+    \label{fig:DatColM2_2}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=150mm]{Sections/Images/ErrB2_3.png}
+    \label{fig:DatColM2_3}
+\end{figure}
+
+(Рекомендуется оставить один вид графиков и трёх предложенных)
+
+Таким образом, крит. экспоненты и температура имеют вид:
+
+\begin{align*}
+    T_{C} = 1.195 \pm 0.005 \\
+    \beta = 0.12 \pm 0.01 \\
+    \nu = 1 \pm 0.05
+\end{align*}
