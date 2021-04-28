@@ -19,25 +19,25 @@ int ndim3() { return 6; }
 
 Lattice::Lattice(long int max_seq_size) {
     lattice_side = max_seq_size;
-    //создается одномерный массив соседей на квадратной решетке
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     long int x, y, z;
-    ldiv_t n;
+    div_t n;
     map_of_contacts_int.resize(lattice_side * lattice_side * lattice_side * ndim3());
     for (long int i = 0; i < lattice_side * lattice_side * lattice_side; i++) {
         map_of_contacts_int[ndim3() * i] = i + 1;
         map_of_contacts_int[ndim3() * i + 1] = i - 1;
         map_of_contacts_int[ndim3() * i + 2] = i + lattice_side;
         map_of_contacts_int[ndim3() * i + 3] = i - lattice_side;
-        //добавим к этому соседей из смежных плоскостей:
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
         map_of_contacts_int[ndim3() * i + 4] = i + lattice_side * lattice_side;
         map_of_contacts_int[ndim3() * i + 5] = i - lattice_side * lattice_side;
-        //у нас появляется z: i = z * l_s^2 + y * l_s + x
-        //поэтому:
+        //пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ z: i = z * l_s^2 + y * l_s + x
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
         n = div(i, lattice_side * lattice_side);
-        z = n.quot;
-        n = div(n.rem, lattice_side);
-        x = n.rem;
-        y = n.quot;
+        z = i / (lattice_side * lattice_side)  ;
+        //n = div( (long)n.rem, lattice_side);
+        x = n.rem % lattice_side;
+        y = n.rem / lattice_side;
         for (int j = 0; j < ndim3(); j++) {
             if (x == 0) {
                 map_of_contacts_int[6 * i + 1] = i + lattice_side - 1;
@@ -51,12 +51,14 @@ Lattice::Lattice(long int max_seq_size) {
             if (y == (lattice_side - 1)) {
                 map_of_contacts_int[6 * i + 2] = x;
             }
-            //и случай для крайних плоскостей:
+            //пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
             if (z == 0) {
-                map_of_contacts_int[6 * i + 5] = x + lattice_side * y + lattice_side * lattice_side * (lattice_side - 1);
+                //map_of_contacts_int[6 * i + 5] = x + lattice_side * y + lattice_side * lattice_side * (lattice_side - 1);
+                map_of_contacts_int[6 * i + 5] = i + lattice_side * lattice_side * (lattice_side - 1);
             }
             if (z == lattice_side - 1) {
-                map_of_contacts_int[6 * i + 4] = x + lattice_side * y;
+                //map_of_contacts_int[6 * i + 4] = x + lattice_side * y;
+                map_of_contacts_int[6 * i + 4] = i - lattice_side * lattice_side * (lattice_side - 1);
             }
         }
     }
@@ -76,16 +78,18 @@ void Lattice::create_lattice(long int max_seq_size) {
         map_of_contacts_int[ndim3() * i + 1] = i - 1;
         map_of_contacts_int[ndim3() * i + 2] = i + lattice_side;
         map_of_contacts_int[ndim3() * i + 3] = i - lattice_side;
-        //добавим к этому соседей из смежных плоскостей:
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
         map_of_contacts_int[ndim3() * i + 4] = i + lattice_side * lattice_side;
         map_of_contacts_int[ndim3() * i + 5] = i - lattice_side * lattice_side;
-        //у нас появляется z: i = z * l_s^2 + y * l_s + x
-        //поэтому:
-        n = div(i, lattice_side * lattice_side);
+        //пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ z: i = z * l_s^2 + y * l_s + x
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        n = std::div(i, lattice_side * lattice_side);
         z = n.quot;
-        n = div(n.rem, lattice_side);
+        n = std::div( n.rem, lattice_side);
         x = n.rem;
         y = n.quot;
+        //x = n.rem % lattice_side; //n.rem;
+        //y = n.rem / lattice_side; //n.quot;
         for (int j = 0; j < ndim3(); j++) {
             if (x == 0) {
                 map_of_contacts_int[6 * i + 1] = i + lattice_side - 1;
@@ -94,17 +98,21 @@ void Lattice::create_lattice(long int max_seq_size) {
                 map_of_contacts_int[6 * i] = i - (lattice_side - 1);
             }
             if (y == 0) {
-                map_of_contacts_int[6 * i + 3] = lattice_side * (lattice_side - 1) + x;
+                //map_of_contacts_int[6 * i + 3] = lattice_side * (lattice_side - 1) + x;
+                map_of_contacts_int[6 * i + 3] =  lattice_side * (lattice_side - 1) + i;
             }
             if (y == (lattice_side - 1)) {
-                map_of_contacts_int[6 * i + 2] = x;
+                //map_of_contacts_int[6 * i + 2] = x;
+                map_of_contacts_int[6 * i + 2] = i - lattice_side * (lattice_side - 1) ;
             }
-            //и случай для крайних плоскостей:
+            //пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
             if (z == 0) {
-                map_of_contacts_int[6 * i + 5] = x + lattice_side * y + lattice_side * lattice_side * (lattice_side - 1);
+                //map_of_contacts_int[6 * i + 5] = x + lattice_side * y + lattice_side * lattice_side * (lattice_side - 1);
+                map_of_contacts_int[6 * i + 5] = i + lattice_side * lattice_side * (lattice_side - 1);
             }
             if (z == lattice_side - 1) {
-                map_of_contacts_int[6 * i + 4] = x + lattice_side * y;
+                //map_of_contacts_int[6 * i + 4] = x + lattice_side * y;
+                map_of_contacts_int[6 * i + 4] = i - lattice_side * lattice_side * (lattice_side - 1);
             }
         }
         x_coords[i] = x;
@@ -121,15 +129,15 @@ Protein::Protein() {}
 Protein::Protein(long int n) {
 
     /** type | previous | next   **/
-    lattice.create_lattice(n + 5); //создание решетки, на 5 больше, чем длина цепочки
-    // 0 - отстуттвие элемента на решетке
-    sequence_on_lattice.resize(lattice.lattice_side * lattice.lattice_side * lattice.lattice_side, 0); //последовательность мономеров
-    next_monomers.resize(lattice.lattice_side * lattice.lattice_side * lattice.lattice_side, -1); //номер-ссылка на следующий узел
-    previous_monomers.resize(lattice.lattice_side * lattice.lattice_side * lattice.lattice_side, -1); //номер-ссылка на предыдующий узел
+    lattice.create_lattice(n + 5); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ 5 пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    // 0 - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    sequence_on_lattice.resize(lattice.lattice_side * lattice.lattice_side * lattice.lattice_side, 0); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    next_monomers.resize(lattice.lattice_side * lattice.lattice_side * lattice.lattice_side, -1); //пїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+    previous_monomers.resize(lattice.lattice_side * lattice.lattice_side * lattice.lattice_side, -1); //пїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 
-    directions.resize(lattice.lattice_side * lattice.lattice_side * lattice.lattice_side, -1); //направления из {0,1,2,3}
+    directions.resize(lattice.lattice_side * lattice.lattice_side * lattice.lattice_side, -1); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ {0,1,2,3}
 
-    ordered_coords.resize(lattice.lattice_side * lattice.lattice_side * lattice.lattice_side, -1); //пока что для последовательной нумерации
+    ordered_coords.resize(lattice.lattice_side * lattice.lattice_side * lattice.lattice_side, -1); //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
     number_of_monomers = n;
     start_conformation = 0;
@@ -153,7 +161,7 @@ Protein::Protein(long int n) {
     ordered_coords[n - 1] = 0;
 
     sequence_on_lattice[0] = 1;
-    sequence_on_lattice[end_conformation] = 1; //начальная последовательность
+    sequence_on_lattice[end_conformation] = 1; //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
     next_monomers[0] = 1;
     previous_monomers[n - 1] = n - 2;
@@ -162,7 +170,7 @@ Protein::Protein(long int n) {
     E = -(n - 1);
 
 
-    //сначала все направления - движение вправо
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     for (int i = 0; i < n - 1; i++)
     {
         directions[i] = 0;
@@ -197,12 +205,12 @@ void Protein::Reconnect1(int j) {
      {5, 4, 2, 3, 0, 1}, //0, 90
      {1, 0, 2, 3, 5, 4}, //0, 180
      {4, 5, 2, 3, 1, 0} //0, 270
-        //возможны ещё, но пока недописал
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     };
 
-    //int j = directions[previous_monomers[end_conformation]]; //направление последнего ребра
+    //int j = directions[previous_monomers[end_conformation]]; //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 
-    long int step = lattice.map_of_contacts_int[lattice.ndim2() * end_conformation + j];
+    long int step = lattice.map_of_contacts_int[lattice.ndim3() * end_conformation + j];
     long int new_end = next_monomers[step];
 
     next_monomers[step] = end_conformation;
@@ -331,7 +339,7 @@ void Protein::MC(double J_in, double h_in, int nSumulation, long int steps_to_eq
 {
     J = J_in;
     h = h_in;
-    //[i,j]: i-поворот, j-направление (против часовой)
+    //[i,j]: i-пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, j-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
     int reflect_directions[4][4] =
     { {3, 2, 0, 1 }, //90
      {1,0,3,2 }, //180
@@ -339,13 +347,13 @@ void Protein::MC(double J_in, double h_in, int nSumulation, long int steps_to_eq
     { 0, 1, 2, 3}
     };
 
-    int inverse_steps[6] = { 1,0,3,2,5,4 }; //для сохранения направлений в апдейте "перенести конец в начало"
-    //double step_rd; //Для выбора апдейта: обычный или реконнект
-    double q_rd, p1, p_metropolis; //Для вероятности принятия шага
-    int rand_path; // = distribution1(generators1); //выбирается направление: 0 - переставляем начало в конец
-    double typeOfUpdate; //0 - простой; 1 - реконнект
+    int inverse_steps[6] = { 1,0,3,2,5,4 }; //пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ"
+    //double step_rd; //пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    double q_rd, p1, p_metropolis; //пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+    int rand_path; // = distribution1(generators1); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 0 - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ
+    double typeOfUpdate; //0 - пїЅпїЅпїЅпїЅпїЅпїЅпїЅ; 1 - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     int step;
-    int step_on_lattice;//выбор одного из соседей
+    int step_on_lattice;//пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     long int new_point;
     long int new_E, new_H;
     int hh;
@@ -362,41 +370,43 @@ void Protein::MC(double J_in, double h_in, int nSumulation, long int steps_to_eq
             hh = 0;
             rand_path = distribution2(generators3);
 
-            if (rand_path == 0) {//переставляем начало в конец
+            if (rand_path == 0) {//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ
 
                 step_on_lattice = distribution1(generators1);
                 new_point = lattice.map_of_contacts_int[lattice.ndim3() * end_conformation + step_on_lattice];
                 oldspin = sequence_on_lattice[start_conformation];
 
-                if (sequence_on_lattice[new_point] == 0) { //проверка, что в узле нет мономеров
+                if (sequence_on_lattice[new_point] == 0) { //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
-                    //делаем апдейт
+                    //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 
-                    //добавляем в конец
+                    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ
                     next_monomers[end_conformation] = new_point;
-                    sequence_on_lattice[new_point] = 3 * distribution2(generators3) - 1; //выбор спина //!!!!!!!!!
+                    sequence_on_lattice[new_point] = 2 * distribution2(generators3) - 1; //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ //!!!!!!!!!
                     previous_monomers[new_point] = end_conformation;
                     end_conformation = new_point;
 
-                    //удаляем начало
+                    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
                     temp = start_conformation;
                     start_conformation = next_monomers[start_conformation];
                     next_monomers[temp] = -1;
                     previous_monomers[start_conformation] = -1;
 
-                    //смотрим потери
+                    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
                     for (int j = 0; j < lattice.ndim3(); j++) {
                         step = lattice.map_of_contacts_int[lattice.ndim3() * temp + j];
                         if (sequence_on_lattice[step] != 0) {
                             hh = hh - sequence_on_lattice[temp] * sequence_on_lattice[step];
+                            //std::cout << sequence_on_lattice[temp] * sequence_on_lattice[step] <<std::endl;
                         }
                     }
 
-                    //смотрим выигрыш
+                    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                     for (int j = 0; j < lattice.ndim3(); j++) {
                         step = lattice.map_of_contacts_int[lattice.ndim3() * end_conformation + j];
                         if (sequence_on_lattice[step] != 0) {
                             hh = hh + sequence_on_lattice[end_conformation] * sequence_on_lattice[step];
+                            //std::cout << sequence_on_lattice[end_conformation] * sequence_on_lattice[step] <<std::endl;
                         }
                     }
 
@@ -404,30 +414,36 @@ void Protein::MC(double J_in, double h_in, int nSumulation, long int steps_to_eq
                     //new_H = current_H_counts + sequence_on_lattice[new_point] - sequence_on_lattice[start_conformation];
                     new_H = current_H_counts + sequence_on_lattice[new_point] - sequence_on_lattice[temp];
 
+
                     p1 = exp(-(-(new_E - E) * J - (new_H - current_H_counts) * h));
+
+
+                   //std::cout << p1 << std::endl;
+
                     p_metropolis = std::min(1.0, p1);
                     q_rd = distribution(generator);
                     if (q_rd < p_metropolis) {
+                        //std::cout << E << " " << new_E << " " << hh <<std::endl;
                         E = new_E;
                         current_H_counts = new_H;
-                        sequence_on_lattice[temp] = 0; //делаю здесь, так как проще считать энергию(!!!)
+                        sequence_on_lattice[temp] = 0; //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ(!!!)
                         sum_X = sum_X + lattice.x_coords[end_conformation] - lattice.x_coords[temp];
                         sum_Y = sum_Y + lattice.y_coords[end_conformation] - lattice.y_coords[temp];
                         sum_Z = sum_Z + lattice.z_coords[end_conformation] - lattice.z_coords[temp];
-                        //корректируем информацию о направлениях
+                        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                         directions[temp] = -1;
                         directions[previous_monomers[end_conformation]] = step_on_lattice;
 
                     }
-                    else {//отменяем изменения
-                        //удаляем конец
+                    else {//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+                        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
                         del = end_conformation;
                         end_conformation = previous_monomers[end_conformation];
                         next_monomers[end_conformation] = -1;
                         previous_monomers[del] = -1;
                         sequence_on_lattice[del] = 0;
 
-                        //возвращаем начало
+                        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
                         previous_monomers[start_conformation] = temp;
                         next_monomers[temp] = start_conformation;
                         start_conformation = temp;
@@ -436,27 +452,27 @@ void Protein::MC(double J_in, double h_in, int nSumulation, long int steps_to_eq
                     }
 
                 }
-                else {//места нет, выходим из шага
+                else {//пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
                     //continue;
                 }
 
             }
-            else {//переставляем конец в начало
+            else {//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 
                 step_on_lattice = distribution1(generators1);
                 new_point = lattice.map_of_contacts_int[lattice.ndim3() * start_conformation + step_on_lattice];
                 oldspin = sequence_on_lattice[end_conformation];
 
-                if (sequence_on_lattice[new_point] == 0) { //проверка, что в узле нет мономеров
+                if (sequence_on_lattice[new_point] == 0) { //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
-                    //делаем апдейт
-                    //добавляем в начало
+                    //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+                    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
                     previous_monomers[start_conformation] = new_point;
-                    sequence_on_lattice[new_point] = 3 * distribution2(generators3) - 1; //выбор спина //!!!!!!!!!
+                    sequence_on_lattice[new_point] = 2 * distribution2(generators3) - 1; //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ //!!!!!!!!!
                     next_monomers[new_point] = start_conformation;
                     start_conformation = new_point;
 
-                    //удаляем конец
+                    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
                     temp = end_conformation;
                     end_conformation = previous_monomers[end_conformation];
                     if (previous_monomers[end_conformation] < 0) {
@@ -465,19 +481,21 @@ void Protein::MC(double J_in, double h_in, int nSumulation, long int steps_to_eq
                     previous_monomers[temp] = -1;
                     next_monomers[end_conformation] = -1;
 
-                    //смотрим потери
+                    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
                     for (int j = 0; j < lattice.ndim3(); j++) {
                         step = lattice.map_of_contacts_int[lattice.ndim3() * temp + j];
                         if (sequence_on_lattice[step] != 0) {
                             hh = hh - sequence_on_lattice[temp] * sequence_on_lattice[step];
+                            //std::cout << sequence_on_lattice[temp] * sequence_on_lattice[step] <<std::endl;
                         }
                     }
 
-                    //смотрим выигрыш
+                    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                     for (int j = 0; j < lattice.ndim3(); j++) {
                         step = lattice.map_of_contacts_int[lattice.ndim3() * start_conformation + j];
                         if (sequence_on_lattice[step] != 0) {
                             hh = hh + sequence_on_lattice[start_conformation] * sequence_on_lattice[step];
+                            //std::cout << sequence_on_lattice[start_conformation] * sequence_on_lattice[step] <<std::endl;
                         }
                     }
 
@@ -493,27 +511,27 @@ void Protein::MC(double J_in, double h_in, int nSumulation, long int steps_to_eq
                     if (q_rd < p_metropolis) {
                         E = new_E;
                         current_H_counts = new_H;
-                        sequence_on_lattice[temp] = 0; //делаю здесь, так как проще считать энергию(!!!)
+                        sequence_on_lattice[temp] = 0; //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ(!!!)
                         sum_X = sum_X + lattice.x_coords[start_conformation] - lattice.x_coords[temp];
                         sum_Y = sum_Y + lattice.y_coords[start_conformation] - lattice.y_coords[temp];
                         sum_Z = sum_Z + lattice.z_coords[start_conformation] - lattice.z_coords[temp];
                         //sum_X = sum_X + lattice.x_coords[start_conformation];
                         //sum_Y = sum_Y + lattice.y_coords[start_conformation];
 
-                        //корректируем информацию о направлениях
+                        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                         directions[end_conformation] = -1;
                         directions[start_conformation] = inverse_steps[step_on_lattice];
 
                     }
-                    else {//отменяем изменения
-                     //удаляем начало
+                    else {//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+                     //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
                         del = start_conformation;
                         start_conformation = next_monomers[start_conformation];
                         previous_monomers[start_conformation] = -1;
                         next_monomers[del] = -1;
                         sequence_on_lattice[del] = 0;
 
-                        //возвращаем конец
+                        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
                         next_monomers[end_conformation] = temp;
                         previous_monomers[temp] = end_conformation;
                         end_conformation = temp;
@@ -528,7 +546,7 @@ void Protein::MC(double J_in, double h_in, int nSumulation, long int steps_to_eq
                     }
                 }
                 else {
-                    //некуда идти
+                    //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
                 }
 
             }
@@ -538,13 +556,25 @@ void Protein::MC(double J_in, double h_in, int nSumulation, long int steps_to_eq
 
             new_point = lattice.map_of_contacts_int[lattice.ndim3() * end_conformation + step_on_lattice];
 
-            //проверка, что проверенный узел занят спином
+            //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
             if (sequence_on_lattice[new_point] != 0 && next_monomers[new_point] != -1 && new_point != previous_monomers[end_conformation])
             {
                 Reconnect(step_on_lattice);
             }
 
         }
+
+
+        /*long int c = start_conformation;
+        std::cout<<start_conformation << ", " ;
+        for (int e = 0; e < number_of_monomers; e++)
+        {
+            std::cout<< next_monomers[c] << ", " ;
+            c = next_monomers[c];
+        }
+        std::cout<<std::endl;
+        std::cout << E << std::endl; */
+        //if (i>100) break;
 
         if (i > steps_to_equilibrium) {
             save_calcs();
@@ -558,8 +588,8 @@ void Protein::MC(double J_in, double h_in, int nSumulation, long int steps_to_eq
             //std::cout << i << std::endl;
         }
 
-        if (i > steps_to_equilibrium && i % 5000000000 == 0)
-            //if ( i> steps_to_equilibrium && i%1000==0 )
+        if (i > steps_to_equilibrium && i % 1000000000 == 0)
+        //if ( i> steps_to_equilibrium && i%1000==0 )
         {
             std::string filename;
             std::ofstream out_result;
@@ -636,7 +666,7 @@ void Protein::radius()
     long int point1xs = start_conformation % lattice.lattice_side;
     long int point1zs = start_conformation / (lattice.lattice_side * lattice.lattice_side);
     long int point1ys = (start_conformation % (lattice.lattice_side * lattice.lattice_side)) / lattice.lattice_side;
-    //расстояние на торе
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
     long int xdiff = abs(point1x - point1xs);
     if (xdiff > (lattice.lattice_side / 2))
         xdiff = lattice.lattice_side - xdiff;
@@ -650,6 +680,7 @@ void Protein::radius()
         zdiff = lattice.lattice_side - zdiff;
 
     long int r = xdiff * xdiff + ydiff * ydiff + zdiff * zdiff;
+
     dists << r;
 
 }
@@ -689,7 +720,7 @@ void Protein::radius_gyration()
             point1ys = lattice.y_coords[second_current];
             point1zs = lattice.z_coords[second_current];
 
-            //расстояние на торе
+            //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
             xdiff = abs(point1x - point1xs);
             if (xdiff > (lattice.lattice_side / 2))
                 xdiff = lattice.lattice_side - xdiff;
@@ -743,7 +774,7 @@ void Protein::radius_gyration1()
         long int point1zs = lattice.z_coords[current];
 
 
-        //расстояние на торе
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
         xdiff = abs(point1x - point1xs);
         if (xdiff > (lattice.lattice_side / 2))
             xdiff = lattice.lattice_side - xdiff;
@@ -782,7 +813,7 @@ void Protein::radius_gyration1()
         point1ys = lattice.y_coords[current];
         point1zs = lattice.z_coords[current];
 
-        //расстояние на торе
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
         xdiff = abs(point1x - point1xs);
         if (xdiff > (lattice.lattice_side / 2))
             xdiff = lattice.lattice_side - xdiff;

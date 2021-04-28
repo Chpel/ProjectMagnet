@@ -27,7 +27,7 @@ class Lattice {
 public:
     long int lattice_side;
     int ndim() { return 2; }
-    int ndim2() { return 4; }
+    //int ndim2() { return 4; }
     int ndim3() { return 6; }
     Lattice(long int max_seq_size = 10);
     void create_lattice(long int max_seq_size = 100);
@@ -48,8 +48,8 @@ public:
     void Reconnect1(int j);
     bool IsEndInStuck();
 
-    void MC(double J_in = 0, double h_in = 0, int nSimulation = 0, long int steps_to_equilibrium = 40000000000, long int mc_steps = 50000000000, bool bradius = false);
-    //void MC(  double J=0, double h=0, long int steps_to_equilibrium = 100000, long int mc_steps = 10000000, bool radius = false);
+    void MC(double J_in = 0, double h_in = 0, int nSimulation = 0, long int steps_to_equilibrium = 400000000, long int mc_steps = 5000000000000000, bool bradius = false);
+    //void MC(  double J=0, double h=0, int nSimulation = 0, long int steps_to_equilibrium = 1000000, long int mc_steps = 100000000, bool radius = false);
 
     void save_calcs();
     void radius();
@@ -65,8 +65,8 @@ public:
 
     std::valarray<long int> ordered_coords;
 
-    std::valarray<int> directions; //их n-1;
-    //если в directions[10] стоит 0, значит, двигаемся вправо из координаты 10
+    std::valarray<int> directions; //пїЅпїЅ n-1;
+    //пїЅпїЅпїЅпїЅ пїЅ directions[10] пїЅпїЅпїЅпїЅпїЅ 0, пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 10
 
     std::valarray< int> sequence_on_lattice;
     std::valarray<long int> next_monomers;
@@ -75,19 +75,19 @@ public:
 
     std::queue<long int>  spins_in_cluster;
 
-    mc_stats::ScalarObservable<long int> dists;
+    mc_stats::ScalarObservable<double> dists;
     mc_stats::ScalarObservable<double> gyration;
 
-    mc_stats::ScalarObservable<long double> energy; //сохранение энергии
+    mc_stats::ScalarObservable<long double> energy; //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     mc_stats::ScalarObservable<long double> energy_sq;
     mc_stats::ScalarObservable<long double> energy_4;
 
-    mc_stats::ScalarObservable<long double> magnetization; //сохранение намагниченности
+    mc_stats::ScalarObservable<long double> magnetization; //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     mc_stats::ScalarObservable<long double> magnetization_sq;
     mc_stats::ScalarObservable<long double> magnetization_4;
 
     long int number_of_monomers = 0;
-    long int E = 0; // -1* число топологических контактов текущей конформации
+    long int E = 0; // -1* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     long int current_H_counts = 0;
 
     std::map <long int, long long int> count_E;
