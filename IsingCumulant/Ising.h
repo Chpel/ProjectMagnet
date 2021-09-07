@@ -19,6 +19,7 @@ public:
     std::vector<std::pair<int, int>> get_neighbors(const std::pair<int, int>& index, std::string lattice_type="open") const;
     std::vector<std::vector<int>> get_lattice() {return lattice;};
     double magnetism();
+    double energy(double J, std::string lattice_type="open");
 private:
     int size;
     int Xsize;

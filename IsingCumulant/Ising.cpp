@@ -103,3 +103,27 @@ double Ising::magnetism() {
     }
     return s*1.0 / (Xsize * Ysize);
 }
+
+double Ising::energy(double J, std::string lattice_type) {
+    std::vector<std::vector<bool>> used;
+    std::pair<int, int> curr;
+    std::vector<std::pair<int, int>> neighbors;
+    double E = 0;
+    for (int i = 0; i < Ysize; i++) {
+        used.emplace_back(Xsize, false);
+    }
+    for (int i = 0; i < Ysize; i++) {
+        curr.first = i;
+        for (int j = 0; j < Xsize; j++) {
+            curr.second = j;
+            neighbors = get_neighbors(curr, lattice_type);
+            for (auto n : neighbors) {
+                if (!used[n.first][n.second]) {
+                    E -= J * lattice[curr.first][curr.second] * lattice[n.first][n.second];
+                }
+            }
+            used[curr.first][curr.second] = true;
+        }
+    }
+    return E / (Xsize * Ysize) * 1.0;
+}
