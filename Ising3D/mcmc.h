@@ -1,4 +1,4 @@
-//
+﻿//
 // Created by kamilla on 13.10.2019.
 //
 #ifndef MC_CPP_MCMC_H
@@ -59,6 +59,8 @@ public:
     void count_contacts();
     bool CheckAndFlipNodes(long int& coord, int& sign);
 
+    void calc_bulk();
+
 public:
 
     Lattice lattice;
@@ -86,9 +88,16 @@ public:
     mc_stats::ScalarObservable<long double> magnetization_sq;
     mc_stats::ScalarObservable<long double> magnetization_4;
 
+    mc_stats::ScalarObservable<double> bulk6;
+    mc_stats::ScalarObservable<double> bulk5;
+    mc_stats::ScalarObservable<double> bulk4; //доля узлов с 4 соседами
+    mc_stats::ScalarObservable<double> bulk3;
+    mc_stats::ScalarObservable<double> bulk2;
+
     long int number_of_monomers = 0;
     long int E = 0; // -1* ����� �������������� ��������� ������� �����������
     long int current_H_counts = 0;
+    int bulk6_now = 0, bulk5_now = 0, bulk4_now = 0, bulk3_now = 0, bulk2_now = 0;
 
     std::map <long int, long long int> count_E;
     std::map <long int, long long int> count_M;
