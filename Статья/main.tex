@@ -56,7 +56,13 @@ For comparing magnetic properties of models with similar geometric ones we also 
     Q_{N,\alpha\beta} = \frac{1}{N+1} \sum^{N}_{i=0}(w_{i,\alpha} - w_{c, \alpha})(w_{i,\beta} - w_{c, \beta})
 \end{equation}
 
-where $N$ is length of the system (number of monomers in conformations of Ising-ISAW models and number of spins in the lattice in rectangular Ising), and  $\alpha,\beta$ are coordinates (so, $Q_{N, xx}$ and $Q_{N,yy}$ can be defined as mean squares of coordinates of the points of the model in the cartesian coordinate system with the center in the center of model). Eugen values $q1$, $q2$ of given tensor are used in enumerating another important shape factor - mean asphericity[REF PELLISETTO]:
+where $N$ is length of the system (number of monomers in conformations of Ising-ISAW models and number of spins in the lattice in rectangular Ising), and  $\alpha,\beta$ are coordinates (so, $Q_{N, xx}$ and $Q_{N,yy}$ can be defined as mean squares of coordinates of the points of the model in the cartesian coordinate system with the center in the center of model). Eugen values $q1$, $q2$ of given tensor can be interpreted as $Q_{N, xx}$ and $Q_{N,yy}$ in the coordinate system of eugen vectors, or more important - as square of semi-axes of ellipse of inertia of given system. The proportion of them for systems with length $N$ will be[REF PELLISSETTO]: 
+
+\begin{equation}
+    r = \sqrt{\frac{\langle q_{1}\rangle_{N}}{\langle q_{2} \rangle_{N}}}
+\end{equation}
+
+Eugen values $q1$, $q2$ are also used in enumerating another important shape factor - mean asphericity[REF PELLISETTO]:
 
 \begin{equation}
 \label{eq:Asphericity}
@@ -118,28 +124,40 @@ We are interested in comparing models in their respective critical regions. For 
 %пока только рисунки, для хронологии
 %более подробное объяснение добавлю позже
 
+We attempted to learn how magnetic properties of Ising-like models depend on their geometrical ones and to define their comparability in critical region, where observable values of models don't depend on the length of conformation $N$. As we know, in the Ising model on rectangular lattice shape factors like aspect ratio $r$ are the parameters, not observable values. Therefore, we can find value of asphericity $\mathcal{A}$ for any aspect ratio.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\columnwidth]{Images/A_r.png}
+    \caption{Asphericity as function of aspect ratio $r$ of the rectangular lattice}
+    \label{fig:A_r}
+\end{figure}
+
+% следует ли добавить расчёты оценки зависимости асферичности 
+% прямоугольника от стороны? Или это лучше добавить в models and methods?
+
+ We found values of aspericity of Ising-ISAW and ISAW models in their respective critical regions. They are used to enumerate aspect ratio of the rectangular lattice with the same value of asphericity.
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=\columnwidth]{Images/Ising_ISAW_A_J_Full.png}
-    \caption{Caption}
-    \label{fig:my_label}
+    \caption{Asphericity of Ising-ISAW (empty squares) and ISAW-only models (stars) as function of $J=1/T$, varying lengths of conformations $N$ = 1000 (blue), 2500 (yellow), 3600 (green) and 4900 (red)}
+    \label{fig:Ising&ISAW_A_J}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\columnwidth]{Images/Ising_A_J_Close.png}
-    \caption{Caption}
-    \label{fig:my_label}
+    \caption{Asphericity of Ising-ISAW model as function of zoomed in the critical region (red vertical lines), varying lengths of conformations N = 1000 (blue), 2500 (yellow), 3600 (green) and 4900 (red)}
+    \label{fig:Ising_A_J}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\columnwidth]{Images/ISAW_A_J_Close.png}
-    \caption{Caption}
-    \label{fig:my_label}
+    \caption{Asphericity of ISAW model as function of zoomed in the critical region (red vertical lines), varying lengths of conformations N = 1000 (blue), 2500 (yellow), 3600 (green) and 4900 (red)}
+    \label{fig:ISAW_A_J}
 \end{figure}
-
-
 
 \begin{table}[h!]
     \centering
@@ -154,7 +172,7 @@ We are interested in comparing models in their respective critical regions. For 
          0.667 & 0.375 & 0.49 & $0.349 \pm 0.006$ \\ \hline
     \end{tabular}
     \caption{Values of critical cumulant for Ising model on rectangular lattice with mean asphericity related to models ISAW and Ising-ISAW in their critical regions}
-    \label{tab:my_label}
+    \label{tab:A_r_U}
 \end{table}
 
 \subsection{Bulk}
