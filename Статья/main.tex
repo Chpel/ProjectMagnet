@@ -28,7 +28,12 @@
 \maketitle
 
 \section{Introduction}
-This is cite-checking.\cite{Papale2018}
+
+A linear polymer in thermal equilibrium in a solvent can be either extended (``swollen''), or collapsed into a dense globule, depending on the interplay between the excluded volume effects, van der Waals attraction between monomers and its screening by the solvent \cite{deGennes1979}. The physics of the phase transition between these two states, the so-called globule-coil transition or $\theta$-transition, is well captured by a simple lattice model of an interacting self-avoiding walk (ISAW), with an attractive interaction between monomers on the nearest neighboring sites of the lattice \cite{Vanderzande1998}.
+
+For magnetic polymers, where monomers carry magnetic moments (``spins''), the key parameter is the ratio of the relaxation times of magnetic and conformational degrees of freedom \cite{Aerstens1992}: if spins are fast, conformations generate a quenched disorder for the magnetic subsystem  \cite{Aerstens1992, Chakrabarti1983, Chakrabarti1985, Papale2018}; in the opposite limit, the chain with quenched spins is qualitatively equivalent to a disordered copolymer; several models of this kind have been discussed in the literature \cite{Shakhnovich1994, KHOKHLOV1998, KHOKHLOV2012, Blavatska2014}.
+
+In previous studies\cite{faizullina2021critical}, it was established that Ising model on the self-avoiding walk conformations (SAWs) has a continious type of phase transition. In this work, we continue study geometric properties of this model and compare them with "papent" models and its modifications, such as Ising model on the rectangular lattice\cite{Selke2006} and two-dimensional interacting self-avoiding walks exactly in their respective critical regions. We suggest that models with similar geometric properties will also have same magnetic propertries, what we suggest to observe in comparing values of Binder cumulants in the $\theta$-transition of models with the equal values of asphericities.
 
 \section{Models and Methods}
 In the paper we consider several models: the first one is Ising model on interacting self-avoiding walk from the \cite{faizullina2021critical}, on three different lattices: 2D-square lattice, 3D-square lattice and 2D-triangle lattice. The main difference between square and triangle lattice in defining two additional diagonal monomers on lattice as nearest too, see [FIGURE FOR 2D-SQUARE AND 2D-TRIANGLE LATTICE]. Considering the case of lack of outer magnetic field in this work, the Hamiltonian of the model of fixed conformation $u$ with length $N$ and strength of nearest-neighbors interaction $J$ reads:
@@ -146,7 +151,8 @@ We are interested in comparing models in their respective critical regions. For 
 %пока только рисунки, для хронологии
 %более подробное объяснение добавлю позже
 
-We attempted to learn how magnetic properties of Ising-like models depend on their geometrical ones and to define their comparability in critical region, where observable values of models don't depend on the length of conformation $N$. The idea is to compare critical cumulants $U_{4}$ \eqref{eq:Cumulant} of both models of Ising having equal asphericities. Both models are considered to have open boundary conditions (OBC). As we know, in the Ising model on rectangular lattice shape factors like aspect ratio $r$ are the parameters, not observable values. Therefore, we can find \eqref{fig:A_r} value of the aspect ratio of lattice for any asphericity $\mathcal{A}$ \eqref{eq:Asphericity}. Moreover, we know that value of Binder cumulant in Rectangular Ising\cite{Selke2006} in critical region depends on aspect ratio $r$. % добавить графики зависимости значений кумулянта от R%. 
+We attempted to learn how magnetic properties of Ising-like models depend on their geometrical ones and to define their comparability in critical region, where observable values of models don't depend on the length of conformation $N$. The idea is to compare critical cumulants $U_{4}$ \eqref{eq:Cumulant} of both models of Ising having equal asphericities. Both models are considered to have open boundary conditions (OBC). As we know, in the Ising model on rectangular lattice shape factors like aspect ratio $r$ are the parameters, not observable values. Therefore, we can find \eqref{fig:A_r} value of the aspect ratio of lattice for any asphericity $\mathcal{A}$ \eqref{eq:Asphericity}. Moreover, we know that value of Binder cumulant in Rectangular Ising\cite{Selke2006} in critical region depends on aspect ratio $r$. 
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=\columnwidth]{Images/CumulantOBC.png}
@@ -164,14 +170,14 @@ We attempted to learn how magnetic properties of Ising-like models depend on the
 % следует ли добавить расчёты оценки зависимости асферичности 
 % прямоугольника от стороны? Или это лучше добавить в models and methods?
 
+We enumerated values of asphericity \eqref{eq:Asphericity} of Ising-ISAW model on 2D-square lattice in its critical region \ref{tab:Ising_T_c} for lengths N = 1000-4900. (See figure \ref{fig:Ising&ISAW_A_J}) For simulations of this model we used method described in \cite{faizullina2021critical}. Vertical lines on figures define borders (according to statistical errors of known values\ref{tab:Ising_T_c}) of critical regions of Ising-ISAW (red lines) and ISAW models (black line). Horizontal line define value of critical asphericity of ISAW model, which is known from Ref. \cite{Caracciolo_2011}. 
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\columnwidth]{Images/Ising_ISAW_A_J_Full.png}
     \caption{Asphericity of Ising-ISAW (empty squares) and ISAW-only models (stars) as function of $J=1/T$, varying lengths of conformations $N$ = 1000 (blue), 2500 (yellow), 3600 (green) and 4900 (red)}
     \label{fig:Ising&ISAW_A_J}
 \end{figure}
-
-We enumerated values of asphericity \eqref{eq:Asphericity} of Ising-ISAW model on 2D-square lattice in its critical region \ref{tab:Ising_T_c} for lengths N = 1000-4900. For simulations of this model we used method described in \cite{faizullina2021critical}. Vertical lines on figures define borders (according to statistical errors of known values\ref{tab:Ising_T_c}) of critical regions of Ising-ISAW (red lines) and ISAW models (black line). Horizontal line define value of critical asphericity of ISAW model, which is known from \cite{Caracciolo_2011}.
 
 \begin{figure}[h!]
     \centering
@@ -180,9 +186,9 @@ We enumerated values of asphericity \eqref{eq:Asphericity} of Ising-ISAW model o
     \label{fig:Ising_A_J}
 \end{figure}
 
-We took mean values of asphericity of Ising-ISAW model in the borders of critical region and in the point of the best crossing of plots where we observe phase transition according to our numerical results. All these points are marked as black in zoomed figures \ref{fig:Ising_A_J} and \ref{fig:ISAW_A_J}. Our following steps was to pick up values of aspect ratio, so the Rectangular Ising had the same asphericity and to enumerate critical cumulant of the model with the same shape factors. For simulations we used cluster update based on Wolff algorithm\cite{newmanb99}.
+We took mean values of asphericity of Ising-ISAW model in the borders of critical region and in the point of the best crossing of plots where we observe phase transition according to our numerical results. All these points are marked as black in zoomed figures \ref{fig:Ising_A_J} and \ref{fig:ISAW_A_J}. Our following steps was to pick up values of aspect ratio, so the Rectangular Ising had the same asphericity and to enumerate critical cumulant of the model with the same shape factors. For simulations we used cluster update based on Wolff algorithm \cite{newmanb99}.\\
 
-\begin{table}[h!]
+\begin{table}[h]
     \centering
     \begin{tabular}{|c|c|c|c|}
         \hline
@@ -195,6 +201,7 @@ We took mean values of asphericity of Ising-ISAW model in the borders of critica
     \caption{Values of critical cumulant for Ising model on rectangular lattice with mean asphericity related to Ising-ISAW model in its critical region}
     \label{tab:A_r_U}
 \end{table}
+
 
 As a result, comparison with critical cumulant of Ising-ISAW model, which was enumerated in \cite{faizullina2021critical} ($U_{4} = 0.308(8)$) showed significant mismatch of values, which means that we had not took into account some other geometrical properties - for example, which will be considered in the next part - proportions of monomers with different quantities of nearest neighbors. It is obvious that in Ising model on the rectangular lattice most of monomers located inside the lattice and have 4 nearest neighbors, while monomers spread around the perimeter of the lattice have at least 2 (corners) and 3 nearest neighbors. Proportions in Ising-ISAW conformations are completely different.
 
