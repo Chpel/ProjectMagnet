@@ -11,7 +11,7 @@
 
 \begin{document}
 
-\title{[NO NAME ARTICLE]}
+\title{Geometric Properties of Ising model on an Interacting Self-Avoiding Walks}
 
 \author{Ilya Pchelintsev}
 \author{Kamilla Faizullina}
@@ -30,29 +30,14 @@
 
 \section{Introduction}
 
-A linear polymer in two-and-more dimensions in thermal equilibrium in a solvent has one of two opposite states. If excluded volume effects stronger than van der Waals attraction between monomers, the polymer can be either extended (``swollen''). And the opposite, with interplay between monomers strengthening polymer has more chances of being collapsed into a dense globule. The phase transition between these two states is called globule-coil transition or $\theta$-transition. The processes near the transition were described using a model of an interacting self-avoiding walk (ISAW), with an attractive interaction between monomers on the nearest neighboring sites of the lattice. \cite{Vanderzande1998, Caracciolo_2011}.
+The model of self-avoiding walks is one of extensively studied examples of linear polymers. Moreover, it is the simplest model to study critical behaviour while other models polymer chains have different states in the thermal equilibrium in various solvent conditions. By adding interaction between nearest neighbors of monomers of the walk, we are allowed to study phase transition fixed between solvent conditions, so the given polymer in the thermal equilibrium become extended in good-solvent conditions and collapsed in poor-solvent one. This tricritical nature was described in Ref. \cite{deGennes1979}.
 
-Magnetic polymers is more complex type of polymer - every monomer carries a magnetic moment, called ''spin'', which makes interaction between neighbor monomers more sophisticated. From the point of view of simulations of these kind of models, the most important parameter is the relaxation times of magnetic and conformational degrees of freedom, which defines order or disorder of magnetic part of the model. The example of model with both magnetic and conformational properties is Ising model on a interacted self-avoiding walk, described in literature \cite{faizullina2021critical, Foster2021} (further, Ising-ISAW).
+The impact of close-range interaction was studied precisely in models of magnetic polymers, where interaction between monomers became more complex after each monomer carried a spin and strength of nearest neighbors coupling became variable. This is so called Ising Model on a SAW conformation. In Ref. \cite{Garel1999}, the model was complicated by adding external magnetic field and all conclusions about magnetic properties were by comparing with mean-field model. However, there are some geometric properties which impact of magnetic properties is not clear while studying of require more brute methods. 
 
 In previous studies \cite{faizullina2021critical}, it was established that Ising model on the self-avoiding walk conformations (SAWs) has a continious type of phase transition. In this work, we continue study geometric properties of this model and compare them with "papent" models and its modifications, such as Ising model on the rectangular lattice\cite{Selke2006} and two-dimensional interacting self-avoiding walks exactly in their respective critical regions. We suggest that models with similar geometric properties will also have same magnetic propertries, what we suggest to observe in comparing values of Binder cumulants in the $\theta$-transition of models with the equal values of asphericities.
 
 \section{Models and Methods}
-In the paper we consider several models: the first one is Ising model on interacting self-avoiding walk from the \cite{faizullina2021critical}, on three different lattices: 2D-square lattice, 3D-square lattice and 2D-triangle lattice. The main difference between square and triangle lattice in defining two additional diagonal monomers on lattice as nearest too, see. Considering the case of lack of outer magnetic field in this work, the Hamiltonian of the model of fixed conformation $u$ with length $N$ and strength of nearest-neighbors interaction $J$ reads:
-
-\begin{figure}[h!]
-\begin{minipage}{0.45\columnwidth}
-    \includegraphics[width=\textwidth]{Images/SqLattice.png}
-    \caption{Connections of nearest neighbors interaction in two-dimensional square lattice}
-    \label{fig:ISAW_A_J_Zoom}
-\end{minipage}
-\hfill
-\begin{minipage}{0.45\columnwidth}
-    \includegraphics[width=\textwidth]{Images/TriLattice.png}
-    \caption{Connections of nearest neighbors interaction in two-dimensional triangular lattice}
-    \label{fig:Is_A_J_Zoom}
-\end{minipage}
-
-\end{figure}
+In the paper we consider several models: the first one is Ising model on interacting self-avoiding walk from the \cite{faizullina2021critical}, on three different lattices: 2D-square lattice, 3D-square lattice and 2D-triangle lattice. The main difference between square and triangle lattice in defining two additional diagonal monomers on lattice as nearest too. Considering the case of lack of outer magnetic field in this work, the Hamiltonian of the model of fixed conformation $u$ with length $N$ and strength of nearest-neighbors interaction $J$ reads:
 
 \begin{equation}\label{H_Ising_ISAW}
   H_{u, N, \{\sigma\}} = - \sum_{\langle i,j \rangle} J  \sigma_{i}  \sigma_{j},\ \ i,j \in u,\ |u| = N
@@ -66,27 +51,13 @@ The second model considered in this paper is the Ising model on the rectangular 
   H_{L, r, \{\sigma\}} = - \sum_{\langle i,j \rangle} J  \sigma_{i}  \sigma_{j}
 \end{equation}
 
-Here the $i$-th spin of the lattice has a pair of coordinates from $[1..L] \times [1..rL]$, so $j$-th spin can be called nearest neighbor in square or rectangular lattice, if one of the following conditions are true:
-
-\begin{equation*}
-\centering
-    \begin{cases}
-    x_{i} = x_{j} \\
-    |y_{i} - y_{j}| = 1\\
-    \end{cases} 
-    \begin{cases}
-    y_{i} = y_{j} \\
-    |x_{i} - x_{j}| = 1\\
-    \end{cases} 
-\end{equation*}
-
-For comparing magnetic properties of models with similar geometric ones we also define shape factors, such as gyration tensor \cite{Caracciolo_2011}:
+Here the $i$-th spin of the lattice has a pair of coordinates from $[1..L] \times [1..rL]$. For comparing magnetic properties of models with similar geometric ones we also define shape factors, such as gyration tensor of system with $N$ points $w_{i}$ \cite{Caracciolo_2011}:
 
 \begin{equation}\label{eq:Ten_G1}
-    Q_{N,\alpha\beta} = \frac{1}{N+1} \sum^{N}_{i=0}(w_{i,\alpha} - w_{c, \alpha})(w_{i,\beta} - w_{c, \beta})
+    Q_{N,\alpha\beta} = \frac{1}{N} \sum^{N}_{i=1}(w_{i,\alpha} - w_{c, \alpha})(w_{i,\beta} - w_{c, \beta})
 \end{equation}
 
-where $N$ is length of the system (number of monomers in conformations of Ising-ISAW models and number of spins in the lattice in rectangular Ising), and  $\alpha,\beta$ are coordinates (so, $Q_{N, xx}$ and $Q_{N,yy}$ can be defined as mean squares of coordinates of the points of the model in the cartesian coordinate system with the center in the center of model). Eugen values $q1$, $q2$ of given tensor can be interpreted as $Q_{N, xx}$ and $Q_{N,yy}$ in the coordinate system of eugen vectors, or more important - as square of semi-axes of ellipse of inertia of given system. The proportion of them for systems with length $N$ will be\cite{Caracciolo_2011}: 
+where $N$ is length of the system (number of monomers in conformations of Ising-ISAW models or number of spins in the lattice in rectangular Ising), and  $w_{i, \alpha},w_{i, \beta}$ are the coordinates of $i$-th point of conformation. $w_{c, \alpha},w_{c, \beta}$ are coordinates of the center of system (so, $Q_{N, xx}$ and $Q_{N,yy}$ can be defined as mean squares of coordinates of the points of the model in the cartesian coordinate system with the center in the center of model). Eugen values $q1$, $q2$ of given tensor can be interpreted as $Q_{N, xx}$ and $Q_{N,yy}$ in the coordinate system of eugen vectors, or more important - as square of semi-axes of ellipse of inertia of given system. The proportion of them for systems with length $N$ will be\cite{Caracciolo_2011}: 
 
 \begin{equation}
     r = \sqrt{\frac{\langle q_{1}\rangle_{N}}{\langle q_{2} \rangle_{N}}}
@@ -114,19 +85,31 @@ Where $\langle m^{4} \rangle$ and $\langle m^{2} \rangle$ are mean fourth and se
 
 We also need to define mean proportion of monomers with fixed number $i$ of nearest neighbors $\langle n_{i} \rangle$, which is counted directly for every monomer in every simulated conformation of walk.
 
-We are interested in comparing models in their respective critical regions. For each structure, critical temperatures of Ising models are known as \cite{Foster2021,Selke2006}:
+We are interested in comparing models in their respective critical regions. For each structure, critical temperatures of Ising models are known as \cite{faizullina2021critical,Foster2021,Selke2006}:
 
 \begin{table}[h]
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
-        Type of lattice & $T_{c}$ \\ \hline
-        2D-square & $1.199 \pm 0.003$\cite{Foster2021} \\ \hline
-        3D-square & $1.90 \pm 0.02$\cite{Foster2021}\\ \hline
-        Rectangular & 2.26918...\cite{Selke2006}\\ \hline
+        Structure & lattice & $T_{c}$ \\ \hline
+        ISAW conformation & Square & $1.198(9)$\cite{faizullina2021critical} \\ \hline
+        ISAW conformation & Cubic & $1.90 \pm 0.02$\cite{Foster2021}\\ \hline
+        Regular lattice & Rectangular & $2/\ln{(1 + \sqrt{2})}$\cite{Onsager}\\ \hline
     \end{tabular}
     \caption{Known values of critical temperature of different modifications of Ising-ISAW model and normal Ising on the rectangular lattice}
     \label{tab:Ising_T_c}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        lattice & $T_{c}$ \\ \hline
+        Square & $1.4986(12)$ \cite{Rensburg2015} \\ \hline
+        Cubic & $1.318(29)$\cite{Rensburg2015}\\ \hline
+    \end{tabular}
+    \caption{Known values of critical temperature of different modifications of ISAW model}
+    \label{tab:ISAW_T_c}
 \end{table}
 
 % сюда немного позже добавлю критические значения для модели SAW
@@ -145,7 +128,7 @@ We are interested in comparing models in their respective critical regions. For 
 % условный Conclusions или рассужждения о результате желательны здесь же 
 % перед частью Bulk.
 
-We attempted to learn how magnetic properties of Ising-like models depend on their geometrical ones and to define their comparability in critical region, where observable values of models don't depend on the length of conformation $N$. The idea is to compare critical cumulants $U_{4}$ \eqref{eq:Cumulant} of both models of Ising having equal asphericities. Both models are considered to have open boundary conditions (OBC). As we know, in the Ising model on rectangular lattice shape factors like aspect ratio $r$ are the parameters, not observable values. Therefore, we can find \eqref{fig:A_r} value of the aspect ratio of lattice for any asphericity $\mathcal{A}$ \eqref{eq:Asphericity}. Moreover, we know that value of Binder cumulant in Rectangular Ising\cite{Selke2006} in critical region depends on aspect ratio $r$. 
+We attempted to learn how magnetic properties of Ising-like models depend on their geometrical ones and to define their comparability in critical region, where observable values of models don't depend on the length of conformation $N$. The idea is to compare critical cumulants $U_{4}$ \eqref{eq:Cumulant} of both models of Ising having equal asphericities. Both models are considered to have open boundary conditions (OBC). As we know, in the Ising model on rectangular lattice shape factors like aspect ratio $r$ are the parameters, not observable values. Therefore, we can find \eqref{fig:A_r} value of the aspect ratio of lattice for any asphericity $\mathcal{A}$ \eqref{eq:Asphericity} (see \cref{fig:A_r}). For rectangular lattice, the leading correction term to the asphericity behave like $A^{*}(r) - A(r, L) \propto 1 / L^{2}$. Moreover, we know that value of Binder cumulant in Rectangular Ising\cite{Selke2006} in critical region depends on aspect ratio $r$. 
 
 \begin{figure}[h]
     \centering
@@ -168,7 +151,7 @@ Using Monte-Carlo simulations with steps of Wolff algorithm \cite{newmanb99}, we
 % следует ли добавить расчёты оценки зависимости асферичности 
 % прямоугольника от стороны? Или это лучше добавить в models and methods?
 
-We enumerated values of asphericity \eqref{eq:Asphericity} of Ising-ISAW model on 2D-square lattice in its critical region \ref{tab:Ising_T_c} for lengths N = 1000-4900. (See figure \ref{fig:Ising&ISAW_A_J}) For simulations of this model we used method described in \cite{faizullina2021critical}. Vertical lines on figures define borders (according to statistical errors of known values\ref{tab:Ising_T_c}) of critical regions of Ising-ISAW (red lines) and ISAW models (black line). Horizontal line define value of critical asphericity of ISAW model, which is known from Ref. \cite{Caracciolo_2011}. 
+We enumerated values of asphericity \eqref{eq:Asphericity} of Ising-ISAW model on 2D-square lattice in its critical region \ref{tab:Ising_T_c} for lengths N = 1000-4900. (See figure \ref{fig:Ising&ISAW_A_J}) For simulations of this model we used method described in \cite{faizullina2021critical}. Vertical lines on figures define borders (according to statistical errors of known values from \cite{Foster2021}, our value from \cite{faizullina2021critical} is comparable with it) of critical regions of Ising-ISAW (red lines) and ISAW models (black line). Horizontal line define value of critical asphericity of ISAW model, which is known from Ref. \cite{Caracciolo_2011}. 
 
 \begin{figure}[h!]
     \centering
@@ -180,11 +163,11 @@ We enumerated values of asphericity \eqref{eq:Asphericity} of Ising-ISAW model o
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\columnwidth]{Images/Ising_A_J_Close.png}
-    \caption{Asphericity of Ising-ISAW model as function of zoomed in the critical region (red vertical lines), varying lengths of conformations N = 1000 (blue), 2500 (yellow), 3600 (green) and 4900 (red)}
+    \caption{Asphericity of Ising-ISAW model as function of zoomed in the critical region (red vertical lines, according to Ref. \cite{Foster2021} and green vertical line, according to Ref. \cite{faizullina2021critical}), varying lengths of conformations N = 1000 (blue), 2500 (yellow), 3600 (green) and 4900 (red)}
     \label{fig:Ising_A_J}
 \end{figure}
 
-We took mean values of asphericity of Ising-ISAW model in the borders of critical region and in the point of the best crossing of plots where we observe phase transition according to our numerical results. All these points are marked as black in zoomed figures \ref{fig:Ising_A_J} and \ref{fig:ISAW_A_J}. Our following steps was to pick up values of aspect ratio, so the Rectangular Ising had the same asphericity and to enumerate critical cumulant of the model with the same shape factors. For simulations we used cluster update based on Wolff algorithm \cite{newmanb99}.\\
+We took mean values of asphericity of Ising-ISAW model in the borders of critical region and in the point of the best crossing of plots where we observe phase transition according to our numerical results. All these points are marked as black in zoomed figures \ref{fig:Ising_A_J}. Our following steps was to pick up values of aspect ratio, so the Rectangular Ising had the same asphericity and to enumerate critical cumulant of the model with the same shape factors. As it seen from \cref{fig:A_r}, it is enough to use lattice with length $N$ = 500 for picking up the aspect ratio. For simulations we used cluster update based on Wolff algorithm \cite{newmanb99} on a rectangular lattice with the same length.\\
 
 \begin{table}[h]
     \centering
@@ -211,43 +194,26 @@ In this section we studied proportions of monomers with fixed numbers of nearest
 
 Using method of MC simulations from Ref. \cite{faizullina2021critical}, we enumerated proportions of monomer with 2-6 nearest neighbors in Ising-ISAW model on a three-dimensional square (or cubic) lattice.
 
-\begin{figure*}
-    \centering
-    \includegraphics[keepaspectratio=True, width=0.99\textwidth]{Images/Ising3D_Complex.png}
-    \caption{Fractions of monomers of Ising-ISAW model on a 3D-square lattice with 2-6 nearest neighbors as function of $J$ with length of conformations $N = $ 100 (blue), 300 (black) and 600 (red)}
-    \label{fig:Ising3D}
-\end{figure*}
-
-As it is seen from  \Cref{fig:Ising3D}, increasing the strength of nearest-neighbors interaction J leads to conformation becoming more dense as proportions of monomers with higher numbers of close-range connections significantly increases after $\theta$-transition located between red vertical lines (see \Cref{tab:Ising_T_c}).
+As it is seen from left part of \Cref{fig:Ising_vs_ISAW}, increasing the strength of nearest-neighbors interaction J leads to conformation becoming more dense as proportions of monomers with higher numbers of close-range connections significantly increases after $\theta$-transition located between blue vertical lines (see \Cref{tab:Ising_T_c}).
 
 We also repeated MC simulations for two-dimensional triangular lattice. Unlike the 3D-square lattice, the 5-th and 6-th possible neighbors located on the same plane as the first four, so conformations are expected to be more dense on this lattice.
 
+% здесь был TrIsing_complex
+
 \begin{figure*}
     \centering
-    \includegraphics[keepaspectratio=True, width=0.99\textwidth]{Images/TrIsing_Complex.png}
-    \caption{Fractions of monomers of Ising-ISAW model on a 2D-triangular lattice with 2-6 nearest neighbors as function of $J$ with length of conformations $N = $ 100 (blue), 300 (black) and 600 (red)}
-    \label{fig:TrIsing}
+    \includegraphics[width=0.99\textwidth, height=24cm]{Images/Ising_vs_ISAW.png}
+    \caption{Fractions of monomers of Ising-ISAW model (stars) and ISAW model (open squares) on a cubic lattice (left column) and 2D-triangle lattice (right column) with 2-6 nearest neighbors as function of $J$ with length of conformations $N = $ 100 (green), 300 (blue) and 600 (red)}
+    \label{fig:Ising_vs_ISAW}
 \end{figure*}
 
-Critical region of the model on a triangular lattice was not enumerated yet. But as it was suggested, density of conformations becomes higher as nearest-neighbors interaction $J$ strengthen. Moreover, proportion of monomers with six neighbors on a triangular lattice is far higher than on a cubic one (See \cref{fig:TrIsing}). It is also significant that "triangular" conformations with no inner interaction have almost twice shorter one-dimensional chains than conformations on a cubic lattice in the same conditions.
+Critical region of the model on a triangular lattice was not enumerated yet. But as it was suggested, density of conformations becomes higher as nearest-neighbors interaction $J$ strengthen. Moreover, proportion of monomers with six neighbors on a triangular lattice is far higher than on a cubic one. It is also significant that "triangular" conformations with no inner interaction have almost twice shorter one-dimensional chains than conformations on a cubic lattice in the same conditions.
 
 \subsubsection{ISAW model}
 
-To understand how the presence of magnetic properties affects on density of models, we also performed Monte-Carlo simulations on a parental model of self-avoiding walks on the same lattices. Results was similar to Ising-ISAW model, as suggested from "parent" model.
+To understand how the presence of magnetic properties affects on density of models, we also performed Monte-Carlo simulations on a parental model of self-avoiding walks on the same lattices. Results was similar to Ising-ISAW model, as suggested from "parent" model. \Cref{fig:Ising_vs_ISAW} shows that geometric aspects of phase transitions in ISAW model manifect earlier than in Ising-ISAW ones, despite the fact that the ISAW's $\theta$-point (black vertical line) is significantly above the Ising-ISAW one (blue vertical dashed lines) (see \Cref{tab:ISAW_T_c}).  
 
-\begin{figure*}
-    \centering
-    \includegraphics[keepaspectratio=True, width=0.99\textwidth]{Images/ISAW_3D_Complex.png}
-    \caption{Fractions of monomers of ISAW model on a 3D-square lattice with 2-6 nearest neighbors as function of $J$ with length of conformations $N = $ 100 (blue), 300 (black) and 600 (red)}
-    \label{fig:ISAW3D}
-\end{figure*}
-
-\begin{figure*}
-    \centering
-    \includegraphics[keepaspectratio=True, width=0.99\textwidth]{Images/TrISAW_Complex.png}
-    \caption{Fractions of monomers of ISAW model on a 2D-triangular lattice with 2-6 nearest neighbors as function of $J$ with length of conformations $N = $ 100 (blue), 300 (black) and 600 (red)}
-    \label{fig:ISAW3D}
-\end{figure*}
+% здесь были графики по ISAW
 
 \section{Discussion}
 
