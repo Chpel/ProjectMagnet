@@ -100,10 +100,10 @@ We are interested in comparing models in their respective critical regions. For 
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
-        Structure & lattice & $T_{c}$ \\ \hline
-        ISAW conformation & Square & $1.198(9)$\cite{faizullina2021critical} \\ \hline
-        ISAW conformation & Cubic & $1.90 \pm 0.02$\cite{Foster2021}\\ \hline
-        Regular lattice & Rectangular & $2/\ln{(1 + \sqrt{2})}$\cite{Onsager}\\ \hline
+        Structure & lattice & $J_{c}$ \\ \hline
+        ISAW conformation & Square & $0.8340(5)$\cite{faizullina2021critical} \\ \hline
+        ISAW conformation & Cubic & $0.5263 \pm 0.055$\cite{Foster2021}\\ \hline
+        Regular lattice & Rectangular & $\ln{(1 + \sqrt{2}) / 2}$\cite{Onsager}\\ \hline
     \end{tabular}
     \caption{Known values of critical temperature of different modifications of Ising-ISAW model and normal Ising on the rectangular lattice}
     \label{tab:Ising_T_c}
@@ -114,9 +114,9 @@ We are interested in comparing models in their respective critical regions. For 
     \begin{tabular}{|c|c|}
         \hline
         lattice & $T_{c}$ \\ \hline
-        Square & $1.4986(12)$ \cite{Caracciolo2011} \\ \hline
-        Cubic & $3.598 \pm 0.05 $\cite{Tesi1996} \\ \hline
-        Triangle & $2.466 \pm 0.506 $\cite{Privman1986} \\ \hline
+        Square & $0.6673(5)$ \cite{Caracciolo2011} \\ \hline
+        Cubic & $0.2779 \pm 0.0041$\cite{Tesi1996} \\ \hline
+        Triangle & $ 0.405 \pm 0.07$\cite{Privman1986} \\ \hline
     \end{tabular}
     \caption{Known values of critical temperature of different modifications of ISAW model}
     \label{tab:ISAW_T_c}
@@ -147,7 +147,7 @@ We attempted to learn how magnetic properties of Ising-like models depend on the
     \label{fig:A_r}
 \end{figure}
 
-Performing Monte-Carlo simulations with steps of Wolff algorithm \cite{Newmanb1999} on Ising model on a rectangular lattice with open boundary conditions in $\theta$-point ($T_{c} = 2/\ln{(1 + \sqrt{2})} =  2.26918... $), we collected statistics for Binder cumulant $U_{4}$ with respect to aspect ratio $r$ (see \cref{tab:Ising_T_c}). Our results matched with known values from Ref. \cite{Selke2006}.
+Performing Monte-Carlo simulations with steps of Wolff algorithm \cite{Newmanb1999} on Ising model on a rectangular lattice with open boundary conditions in $\theta$-point ($J_{c} = \ln{(1 + \sqrt{2}) / 2} =  0.44068... $), we collected statistics for Binder cumulant $U_{4}$ with respect to aspect ratio $r$ (see \cref{tab:Ising_T_c}). Our results matched with known values from Ref. \cite{Selke2006}.
 
 %стоит ли добавить сюда таблицу значений кумулянта в r = 0.5 и 1??
 \begin{figure}[h]
@@ -165,8 +165,8 @@ We used method described in \cite{faizullina2021critical}.
 Our simulations were performed for $0 < J < 1$, focusing on areas near respective critical regions.
 
 \Cref{fig:Ising&ISAW_A_J} shows results of our simulations for asphericity \eqref{eq:Asphericity} as function of J. 
-For ISAW model $T_{c} = 1.4986(12)$, and our result are matching to known values from  Ref. \cite{Caracciolo2011}, where critical region was also enumerated.
-For Ising-ISAW model we used our value from previous work: $T_{c} = 1.198(9)$ \cite{faizullina2021critical} and for border values we used values from Ref.\cite{Foster2021} ($T_{c} = 1.199 \pm 0.003$). 
+For ISAW model $J_{c} = 0.6673(5)$, and our result are matching to known values from  Ref. \cite{Caracciolo2011}, where critical region was also enumerated.
+For Ising-ISAW model we used our value from previous work: $J_{c} = 0.8340(5)$ \cite{faizullina2021critical} and for border values we used values from Ref.\cite{Foster2021} ($J_{c} = 0.8340 \pm 0.0021$). 
 Both values were marked as black vertical lines with blue zone around, which will define all statistical errors of critical regions. 
 Horizontal line define value of critical asphericity of ISAW model, which is known from Ref. \cite{Caracciolo2011}, which our results for ISAW model matches with.
 
@@ -190,7 +190,7 @@ Horizontal line define value of critical asphericity of ISAW model, which is kno
     
 \end{figure}
 
-We took mean values of asphericity of Ising-ISAW model in the borders of critical region and in the point of the best crossing of plots where we observe phase transition according to our numerical results. All these points are marked as black in zoomed figures \ref{fig:Ising_A_J}. Our following steps was to pick up values of aspect ratio, to perform simulations of the Rectangular Ising with the same ratio and, consequently, asphericity and to find critical cumulant of the model with the same shape factors. As it seen from \cref{fig:A_r}, it is enough to use lattice with length $N$ = 500 for picking up the aspect ratio. For simulations we used cluster update based on Wolff algorithm \cite{newmanb99} on a rectangular lattice with the same length.\\
+We took mean values of asphericity of Ising-ISAW model in the borders of critical region and in the point of the best crossing of plots where we observe phase transition according to our numerical results. All these points are marked as black in zoomed figures \ref{fig:Ising_A_J}. Our following steps was to pick up values of aspect ratio, to perform simulations of the Rectangular Ising with the same ratio and, consequently, asphericity and to find critical cumulant of the model with the same shape factors. As it seen from \cref{fig:A_r}, it is enough to use lattice with length $N$ = 500 for picking up the aspect ratio. For simulations we used cluster update based on Wolff algorithm \cite{Newmanb1999} on a rectangular lattice with the same length.\\
 
 \begin{table}[h]
     \centering
@@ -211,8 +211,8 @@ As a result, comparison with critical cumulant of Ising-ISAW model, which value 
 
 \begin{figure*}
     \centering
-    \includegraphics[width=0.99\textwidth]{Images/bulk2-4.png}
-    \caption{Fractions of monomers of Ising-ISAW model (squares) and ISAW model (stars) on a square lattice with 2-4 nearest neighbors as function of $J$ with length of conformations $N = $ 1000 (blue), 2500 (yellow), 3600 (green), 4900 (red). Plot on the lower row are zoomed in critical region of Ising-ISAW model}
+    \includegraphics[width=0.99\textwidth]{Images/bulk2-4_inset.png}
+    \caption{Fractions of monomers of Ising-ISAW model (squares) and ISAW model (stars) on a square lattice with 2-4 nearest neighbors as function of $J$ with length of conformations $N = $ 1000 (blue), 2500 (yellow), 3600 (green), 4900 (red). Black vertical line define point of $\theta$-transition for ISAW model \cite{Caracciolo2011}, red line - for Ising-ISAW model \cite{faizullina2021critical, Foster2021}. Reproduced from Ref.\cite{faizullina2021critical}}
     \label{fig:Ising_vs_ISAW2D}
 \end{figure*}
 
@@ -224,8 +224,8 @@ To begin with, we performed simulations of ISAW model on square lattice on lengt
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/ISAWJ0_Bulk2-4.png}
-    \caption{Fractions of monomers of ISAW model on a square lattice with 2-4 nearest neighbors at $J=0$ as function of reversed length of conformation $1/N$}
+    \includegraphics[width=0.99\textwidth]{Images/ISAWJ0_Bulk2-4.png}
+    \caption{Fractions of monomers of ISAW model on a square lattice with 2-4 nearest neighbors at $J=0$ as function of $1/N$, from $N = 5$ to $3600$ for MC simulations (empty squares) and from $N = 5$ to $11$ for enumerations (black dots)}
     \label{fig:Ising_vs_ISAW}
 \end{figure}
 
@@ -233,7 +233,7 @@ To begin with, we performed simulations of ISAW model on square lattice on lengt
 
 Using method of MC simulations from Ref. \cite{faizullina2021critical}, we enumerated proportions of monomer with 2-6 nearest neighbors in Ising-ISAW model on a three-dimensional square (or cubic) lattice.
 
-As it is seen from left part of \Cref{fig:Ising_vs_ISAW}, increasing the strength of nearest-neighbors interaction J leads to conformation becoming more dense as proportions of monomers with higher numbers of close-range connections significantly increases after $\theta$-transition located in a blue zone (for Ising-ISAW model on a cubic lattice $T_{c} = 1.90 \pm 0.02$\cite{Foster2021}) (see \Cref{tab:Ising_T_c}).
+As it is seen from left part of \Cref{fig:Ising_vs_ISAW}, increasing the strength of nearest-neighbors interaction J leads to conformation becoming more dense as proportions of monomers with higher numbers of close-range connections significantly increases after $\theta$-transition located in a blue zone (for Ising-ISAW model on a cubic lattice $T_{c} = 0.5263 \pm 0.055$\cite{Foster2021}) (see \Cref{tab:Ising_T_c}).
 
 We also repeated MC simulations for two-dimensional triangular lattice. Unlike the 3D-square lattice, the 5-th and 6-th possible neighbors located on the same plane as the first four, so conformations are expected to be more dense on this lattice.
 
@@ -243,14 +243,14 @@ Critical region of the model on a triangular lattice was not enumerated yet. But
 
 \subsubsection{ISAW model}
 
-To understand how the presence of magnetic properties affects on density of models, we also performed Monte-Carlo simulations on a parental model of self-avoiding walks on the same lattices. Results was similar to Ising-ISAW model, as suggested from "parent" model. For cubic lattice $T_{c} = 3.598 \pm 0.05 $\cite{Tesi1996}. For triangle lattice $T_{c} = 2.466 \pm 0.506 $\cite{Privman1986}. \Cref{fig:Ising_vs_ISAW} shows that geometric aspects of phase transition in ISAW model manifect earlier than in Ising-ISAW ones.  
+To understand how the presence of magnetic properties affects on density of models, we also performed Monte-Carlo simulations on a parental model of self-avoiding walks on the same lattices. Results was similar to Ising-ISAW model, as suggested from "parent" model. For cubic lattice $T_{c} = 0.2779\pm 0.0041 $\cite{Tesi1996}. For triangle lattice $J_{c} = 0.405 \pm 0.07 $\cite{Privman1986}. \Cref{fig:Ising_vs_ISAW} shows that geometric aspects of phase transition in ISAW model manifect earlier than in Ising-ISAW ones.  
 
-\begin{figure*}
+\begin{figure}
     \centering
-    \includegraphics[width=0.99\textwidth, height=20cm]{Images/Ising_vs_ISAW.png}
-    \caption{Fractions of monomers of Ising-ISAW model (stars) and ISAW model (open squares) on a cubic lattice (left column) and 2D-triangle lattice (right column) with 2-6 nearest neighbors as function of $J$ with length of conformations $N = $ 100 (green), 300 (blue) and 600 (red)}
+    \includegraphics[width=0.95\textwidth, height=22.5cm]{Images/Ising_vs_ISAW.png}
+    \caption{Fractions of monomers of Ising-ISAW model (stars) and ISAW model (open squares) on a cubic lattice (left column) and 2D-triangle lattice (right column) with 2-6 nearest neighbors as function of $J$ with length of conformations $N = $ 100 (green), 300 (blue) and 600 (red). Vertical lines define points of $\theta$-transition (For cubic lattice: black line for ISAW model \cite{Tesi1996} and blue line for Ising-ISAW model \cite{Foster2021}; for triangle lattice: blue line for ISAW model \cite{Privman1986})}
     \label{fig:Ising_vs_ISAW}
-\end{figure*}
+\end{figure}
 
 % здесь были графики по ISAW
 
