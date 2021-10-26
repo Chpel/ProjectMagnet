@@ -1,13 +1,26 @@
-\documentclass[aps,pre,amssymb,amsmath,twocolumn,floatfix]{revtex4-2}
+\documentclass[a4paper]{jpconf}
 \usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{dcolumn}
+
+\usepackage{amsmath}        % extensions for typesetting of math
+\usepackage{amsfonts}       % math fonts
+\usepackage{amsthm}         % theorems, definitions, etc.
+\usepackage{amssymb}
+
+\usepackage{fancyvrb}       % improved verbatim environment
+%\usepackage{natbib}         % citation style AUTHOR (YEAR), or AUTHOR [NUMBER]
+%\usepackage[nottoc]{tocbibind} % makes sure that bibliography and the lists
+ \usepackage{subfig}
+
+\bibliographystyle{iopart-num}
+%\usepackage{citesort}
+%% \usepackage[square,sort&compress]{natbib}
+\usepackage{iopams}
+%\newcommand{\BibTeX}{Bib\TeX}
+\newcommand{\REVTeX}{REV\TeX}
 \usepackage{bm}
 \usepackage{cleveref}
 
 \graphicspath{ {./img/} }
-\bibliographystyle{unsrt}     %% [number]
-\renewcommand{\bibname}{Bibliography}
 
 \begin{document}
 
@@ -16,7 +29,9 @@
 \author{Ilya Pchelintsev}
 \author{Kamilla Faizullina}
 \author{Evgeni Burovski}
-\affiliation{HSE University, 101000 Moscow, Russia}
+
+
+\address{National Research University Higher School of Economics, 101000 Moscow, Russia}
 
 
 % абстракт и введение я напишу немного позже, когда будет более полное
@@ -25,8 +40,6 @@
 \begin{abstract}
     This is an abstract and that's really abstract.
 \end{abstract}
-
-\maketitle
 
 \section{Introduction}
 
@@ -129,7 +142,7 @@ We attempted to learn how magnetic properties of Ising-like models depend on the
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\columnwidth]{Images/CumulantOBC.png}
+    \includegraphics[width=100mm]{Images/CumulantOBC.png}
     \caption{Critical cumulant $U_{4}$\eqref{eq:Cumulant} of Ising model on a rectangular lattice with open boundary conditions as function of aspect ratio $r$ with side length $L$ = 50 (blue), 100 (yellow), 200 (green) and 400 (red). Black markers define values from \cite{Selke2006}}
     \label{fig:A_r}
 \end{figure}
@@ -139,7 +152,7 @@ Performing Monte-Carlo simulations with steps of Wolff algorithm \cite{Newmanb19
 %стоит ли добавить сюда таблицу значений кумулянта в r = 0.5 и 1??
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\columnwidth]{Images/A_r.png}
+    \includegraphics[width=100mm]{Images/A_r.png}
     \caption{Asphericity as function of aspect ratio $r$ of the rectangular lattice with side length = 500 and approximate values for rectangular lattice with infinitely long side}
     \label{fig:A_r}
 \end{figure}
@@ -147,22 +160,34 @@ Performing Monte-Carlo simulations with steps of Wolff algorithm \cite{Newmanb19
 % следует ли добавить расчёты оценки зависимости асферичности 
 % прямоугольника от стороны? Или это лучше добавить в models and methods?
 
-We also simulated Ising-ISAW and ISAW model on 2D-square lattice for lengths N = 1000-4900. We used method described in \cite{faizullina2021critical}. Our simulations were performed for $0 < J < 1$, focusing on areas near respective critical regions with aim was to collect statistics for values of asphericity \eqref{eq:Asphericity} there. For ISAW model $T_{c} = 1.4986(12)$, and our result are matching to known values from  Ref. \cite{Caracciolo2011}, where critical region was also enumerated. For Ising-ISAW model we used our value from previous work: $T_{c} = 1.198(9)$ \cite{faizullina2021critical} and for border values we used values from Ref.\cite{Foster2021} ($T_{c} = 1.199 \pm 0.003$). 
+We also simulated Ising-ISAW and ISAW model on 2D-square lattice for lengths N = 1000-4900.  
+We used method described in \cite{faizullina2021critical}. 
+Our simulations were performed for $0 < J < 1$, focusing on areas near respective critical regions.
 
-Both values were marked as black vertical lines with blue zone around, which will define all statistical errors of critical regions. Horizontal line define value of critical asphericity of ISAW model, which is known from Ref. \cite{Caracciolo_2011}, which our results for ISAW model matches with (see \cref{fig:Ising&ISAW_A_J}.
+\Cref{fig:Ising&ISAW_A_J} shows results of our simulations for asphericity \eqref{eq:Asphericity} as function of J. 
+For ISAW model $T_{c} = 1.4986(12)$, and our result are matching to known values from  Ref. \cite{Caracciolo2011}, where critical region was also enumerated.
+For Ising-ISAW model we used our value from previous work: $T_{c} = 1.198(9)$ \cite{faizullina2021critical} and for border values we used values from Ref.\cite{Foster2021} ($T_{c} = 1.199 \pm 0.003$). 
+Both values were marked as black vertical lines with blue zone around, which will define all statistical errors of critical regions. 
+Horizontal line define value of critical asphericity of ISAW model, which is known from Ref. \cite{Caracciolo2011}, which our results for ISAW model matches with.
+
 
 \begin{figure}[h!]
-    \centering
-    \includegraphics[width=\columnwidth]{Images/Ising_ISAW_A_J_Full.png}
-    \caption{Asphericity of Ising-ISAW (empty squares) and ISAW-only models (stars) as function of $J=1/T$, varying lengths of conformations $N$ = 1000 (blue), 2500 (yellow), 3600 (green) and 4900 (red)}
-    \label{fig:Ising&ISAW_A_J}
+    \begin{minipage}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{Images/Ising_ISAW_A_J_Full.png}
+        \caption{Asphericity of Ising-ISAW (empty squares) and ISAW-only models (stars) as function of $J=1/T$, varying lengths of conformations $N$ = 1000 (blue), 2500 (yellow), 3600 (green) and 4900 (red)}
+        \label{fig:Ising&ISAW_A_J}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{Images/Ising_A_J_Close.png}
+        \caption{Asphericity of Ising-ISAW model as function of zoomed in the critical region (blue zone, according to Ref. \cite{Foster2021} and black vertical line, according to Ref. \cite{faizullina2021critical}), varying lengths of conformations N = 1000 (blue), 2500 (yellow), 3600 (green) and 4900 (red)}
+        \label{fig:Ising_A_J}
+    \end{minipage}
 \end{figure}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\columnwidth]{Images/Ising_A_J_Close.png}
-    \caption{Asphericity of Ising-ISAW model as function of zoomed in the critical region (blue zone, according to Ref. \cite{Foster2021} and black vertical line, according to Ref. \cite{faizullina2021critical}), varying lengths of conformations N = 1000 (blue), 2500 (yellow), 3600 (green) and 4900 (red)}
-    \label{fig:Ising_A_J}
+    
 \end{figure}
 
 We took mean values of asphericity of Ising-ISAW model in the borders of critical region and in the point of the best crossing of plots where we observe phase transition according to our numerical results. All these points are marked as black in zoomed figures \ref{fig:Ising_A_J}. Our following steps was to pick up values of aspect ratio, to perform simulations of the Rectangular Ising with the same ratio and, consequently, asphericity and to find critical cumulant of the model with the same shape factors. As it seen from \cref{fig:A_r}, it is enough to use lattice with length $N$ = 500 for picking up the aspect ratio. For simulations we used cluster update based on Wolff algorithm \cite{newmanb99} on a rectangular lattice with the same length.\\
@@ -199,7 +224,7 @@ To begin with, we performed simulations of ISAW model on square lattice on lengt
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\columnwidth]{Images/ISAWJ0_Bulk2-4.png}
+    \includegraphics[width=0.9\textwidth]{Images/ISAWJ0_Bulk2-4.png}
     \caption{Fractions of monomers of ISAW model on a square lattice with 2-4 nearest neighbors at $J=0$ as function of reversed length of conformation $1/N$}
     \label{fig:Ising_vs_ISAW}
 \end{figure}
@@ -222,7 +247,7 @@ To understand how the presence of magnetic properties affects on density of mode
 
 \begin{figure*}
     \centering
-    \includegraphics[width=0.99\textwidth, height=24cm]{Images/Ising_vs_ISAW.png}
+    \includegraphics[width=0.99\textwidth, height=20cm]{Images/Ising_vs_ISAW.png}
     \caption{Fractions of monomers of Ising-ISAW model (stars) and ISAW model (open squares) on a cubic lattice (left column) and 2D-triangle lattice (right column) with 2-6 nearest neighbors as function of $J$ with length of conformations $N = $ 100 (green), 300 (blue) and 600 (red)}
     \label{fig:Ising_vs_ISAW}
 \end{figure*}
