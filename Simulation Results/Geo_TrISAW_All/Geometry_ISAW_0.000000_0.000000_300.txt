@@ -1,0 +1,2 @@
+N J h bulk2 err_bulk2 bulk3 err_bulk3 bulk4 err_bulk4 bulk5 err_bulk5 bulk6 err_bulk6  steps
+300 0 0 0.36158 5.95637e-05 0.372398 4.44445e-05 0.188712 4.11888e-05 0.0622298 2.44853e-05 0.0118781 1.12402e-05 61804000000 
