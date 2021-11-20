@@ -1,0 +1,2 @@
+N J h mean_R_sq err_mean_R_sq mean_R_gyr_sq err_mean_R_gyr_sq lambda1 err_lambda1 lambda2 err_lambda2 acperical err_asphericalbulk2 err_bulk2 bulk3 err_bulk3 bulk4 err_bulk4 steps
+100 0.7 0 204 18 39.624 0.0185702 32.1014 0.0196775 7.52263 0.0029878 0.359027 0.000247821 0.318364 8.33268e-05 0.399884 5.34038e-05 0.274912 0.00010822 12050000000 

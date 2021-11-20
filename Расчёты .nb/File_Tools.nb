@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17857,        349]
-NotebookOptionsPosition[     16690,        322]
-NotebookOutlinePosition[     17033,        337]
-CellTagsIndexPosition[     16990,        334]
+NotebookDataLength[     14519,        302]
+NotebookOptionsPosition[     13354,        275]
+NotebookOutlinePosition[     13697,        290]
+CellTagsIndexPosition[     13654,        287]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -50,8 +50,8 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{
   "SetDirectory", "[", 
-   "\"\<C:\\\\Users\\\\user\\\\Documents\\\\\:041f\:0440\:043e\:0435\:043a\
-\:0442\\\\Simulation Results\\\\Geo_ISAW3D_All\>\"", "]"}], 
+   "\"\<C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\ProjectMagnet\\\\\
+Simulation Results\\\\Geo_ISAW_2D_All\>\"", "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"catalog", "=", 
   RowBox[{"FileNames", "[", "]"}]}]}], "Input",
@@ -68,124 +68,81 @@ Cell[BoxData[{
    3.844848954282774*^9}, {3.8448490007369785`*^9, 3.8448490024558563`*^9}, {
    3.844849397782235*^9, 3.8448494057982187`*^9}, {3.8458790641791677`*^9, 
    3.8458790715204134`*^9}, {3.8458791418548145`*^9, 3.845879142964774*^9}, {
-   3.846060149914651*^9, 3.8460601572271748`*^9}},
- CellLabel->"In[8]:=",ExpressionUUID->"390c09ba-ecb5-4d3c-84a3-7d3b77dfc651"],
+   3.846060149914651*^9, 3.8460601572271748`*^9}, {3.846297054707961*^9, 
+   3.846297074380218*^9}, {3.8462971070989127`*^9, 3.846297117391551*^9}, {
+   3.846297170543891*^9, 3.846297171356361*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"390c09ba-ecb5-4d3c-84a3-7d3b77dfc651"],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"\<\"Geometry_ISAW_3D_0.000000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.000000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.000000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.000000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.100000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.100000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.100000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.100000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.200000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.200000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.200000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.200000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.220000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.220000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.220000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.220000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.240000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.240000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.240000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.240000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.260000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.260000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.260000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.260000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.280000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.280000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.280000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.280000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.290000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.290000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.300000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.300000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.300000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.300000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.310000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.310000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.310000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.320000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.320000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.320000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.320000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.330000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.340000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.340000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.340000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.340000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.360000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.360000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.360000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.360000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.370000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.380000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.380000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.380000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.380000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.390000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.400000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.400000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.400000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.400000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.420000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.420000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.420000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.420000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.440000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.440000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.440000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.440000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.460000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.460000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.460000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.460000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.480000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.480000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.480000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.480000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.500000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.500000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.500000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.500000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.520000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.520000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.520000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.520000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.540000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.540000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.540000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.540000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.560000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.560000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.560000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.560000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.580000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.580000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.580000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.580000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.600000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.600000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.600000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.600000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.700000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.700000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.700000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.700000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.800000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.800000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.800000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.800000_0.000000_600.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.900000_0.000000_100.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.900000_0.000000_1200.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.900000_0.000000_300.txt\"\>", 
-   ",", "\<\"Geometry_ISAW_3D_0.900000_0.000000_600.txt\"\>"}], 
-  "}"}]], "Output",
+  RowBox[{"\<\"Geometry_ISAW_0.500000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.500000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.510000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.510000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.520000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.520000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.530000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.530000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.540000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.540000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.550000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.550000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.560000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.560000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.570000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.570000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.580000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.580000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.590000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.590000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.590000_0.000000_4900.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.600000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.600000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.610000_0.000000_1000.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.610000_0.000000_2500.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.610000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.610000_0.000000_3600.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.610000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.610000_0.000000_4900.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.620000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.620000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.630000_0.000000_1000.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.630000_0.000000_2500.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.630000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.630000_0.000000_3600.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.630000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.640000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.640000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.650000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.650000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.660000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.660000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.670000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.670000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.680000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.680000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.690000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.690000_0.000000_400.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.700000_0.000000_100.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.700000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.710000_0.000000_100.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.710000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.720000_0.000000_100.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.720000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.730000_0.000000_100.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.730000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.740000_0.000000_100.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.740000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.750000_0.000000_100.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.750000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.760000_0.000000_100.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.760000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.770000_0.000000_100.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.770000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.780000_0.000000_100.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.780000_0.000000_250.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.790000_0.000000_100.txt\"\>", 
+   ",", "\<\"Geometry_ISAW_0.790000_0.000000_250.txt\"\>"}], "}"}]], "Output",
  CellChangeTimes->{
   3.8399931875950837`*^9, 3.839993839404207*^9, {3.8399942604708695`*^9, 
    3.839994287862121*^9}, 3.8404261023518524`*^9, 3.840633163571834*^9, {
@@ -197,8 +154,9 @@ Cell[BoxData[
    3.8446961247234683`*^9, 3.84484888004753*^9, {3.8448489459542522`*^9, 
    3.8448489554232764`*^9}, 3.8448490029714775`*^9, 3.844849351749545*^9, {
    3.8448494011572433`*^9, 3.844849406188783*^9}, 3.8458790723847914`*^9, 
-   3.845879143464859*^9, {3.846060131086082*^9, 3.8460601576803017`*^9}},
- CellLabel->"Out[9]=",ExpressionUUID->"af6eceb8-1651-40b2-82d7-9044dd4471eb"]
+   3.845879143464859*^9, {3.846060131086082*^9, 3.8460601576803017`*^9}, 
+   3.8462971181883087`*^9, 3.846297172012595*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"9a008d9e-7386-4241-b753-44ba609927e4"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -279,7 +237,7 @@ b90dd137bd3a"],
 Cell[BoxData[{
  RowBox[{
   RowBox[{"Res", "=", 
-   RowBox[{"OpenWrite", "[", "\"\<Geometry_ISAW_3D_All.txt\>\"", "]"}]}], 
+   RowBox[{"OpenWrite", "[", "\"\<Geometry_ISAW_2D_All.txt\>\"", "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Do", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -299,20 +257,15 @@ Cell[BoxData[{
     RowBox[{"cat", ",", "catalog"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Close", "[", "Res", "]"}], ";"}]}], "Input",
- CellChangeTimes->{{3.8385423200454493`*^9, 3.8385423272016125`*^9}, {
-  3.838542450558579*^9, 3.8385425048073897`*^9}, {3.838542840046648*^9, 
-  3.838542896291093*^9}, {3.8385429425564156`*^9, 3.838542963556003*^9}, {
-  3.8385430234215136`*^9, 3.838543067608536*^9}, {3.8417554982946835`*^9, 
-  3.8417554987946796`*^9}, {3.842712388947689*^9, 3.8427123915570397`*^9}, {
-  3.8437444417485046`*^9, 3.8437444437798605`*^9}, {3.843744528049938*^9, 
-  3.843744529831065*^9}, {3.844000938132595*^9, 3.844000950133006*^9}, {
-  3.844696039723276*^9, 3.8446960433951764`*^9}, {3.844696087732145*^9, 
-  3.844696131301783*^9}, {3.8448489606891804`*^9, 3.8448489620641937`*^9}, {
-  3.8448493432025957`*^9, 3.8448493472182865`*^9}, {3.844849412266963*^9, 
-  3.8448494140325966`*^9}, {3.8458791026919885`*^9, 3.845879109785898*^9}, {
-  3.84587915517749*^9, 3.8458791559725313`*^9}, {3.8460601681804857`*^9, 
-  3.8460601688992395`*^9}},
- CellLabel->"In[10]:=",ExpressionUUID->"2cfa952a-5071-49b1-9241-ceb098b2c0f8"],
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQAWIQHVTCaFcw843jnOJnYPrh/UA/EK18TTIURKvUMdaD
+6EUBnG0gWuPcxW4QffxUYR+I5qp9OxVEK1QWzwbRPHmeuhPnv3FkyYsE0xXB
+8zJSFr5xdL38EUwf+GweHrP4jeO8LxVgWmImYxKIFpthBaYt7Fym3gTS0xyP
+TAPRIqrf/+gsfePouTTnL4jenfudSRdIm67I5ADRR3jFVpQD6Qe8TmB6VfWz
+6yDa5E/aDRD9ravjAYjm4D4Ipo+qXFuetxxortrOFSCaYV3qOhD9S64eTHcd
+YxU8DqQnHZMB04fYC49arXjjOL99G5huyFA6DaL5XjiAaQDn8Kax
+  "],
+ CellLabel->"In[8]:=",ExpressionUUID->"2cfa952a-5071-49b1-9241-ceb098b2c0f8"],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.838543087646947*^9, 
@@ -340,16 +293,16 @@ Cell[CellGroupData[{
 Cell[580, 22, 382, 6, 44, "Subsubsection",ExpressionUUID->"be84671b-6035-43d7-baab-4a06d36ff0c2"],
 Cell[965, 30, 786, 14, 78, "Text",ExpressionUUID->"495d7f44-7969-4183-a095-4eb0fb33e401"],
 Cell[CellGroupData[{
-Cell[1776, 48, 1382, 23, 82, "Input",ExpressionUUID->"390c09ba-ecb5-4d3c-84a3-7d3b77dfc651"],
-Cell[3161, 73, 8058, 127, 546, "Output",ExpressionUUID->"af6eceb8-1651-40b2-82d7-9044dd4471eb"]
+Cell[1776, 48, 1518, 25, 82, "Input",ExpressionUUID->"390c09ba-ecb5-4d3c-84a3-7d3b77dfc651"],
+Cell[3297, 75, 5109, 83, 337, "Output",ExpressionUUID->"9a008d9e-7386-4241-b753-44ba609927e4"]
 }, Open  ]],
-Cell[11234, 203, 2080, 44, 381, "Input",ExpressionUUID->"f6926770-2daa-47bd-88e5-f43fb8b23503"]
+Cell[8421, 161, 2080, 44, 381, "Input",ExpressionUUID->"f6926770-2daa-47bd-88e5-f43fb8b23503"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13351, 252, 316, 5, 44, "Subsubsection",ExpressionUUID->"f73dcb1b-80fa-451a-8ca0-810bf4dfcd72"],
-Cell[13670, 259, 882, 17, 166, "Text",ExpressionUUID->"9cff7fa2-0d7e-4f65-87a7-b90dd137bd3a"],
-Cell[14555, 278, 1964, 36, 360, "Input",ExpressionUUID->"2cfa952a-5071-49b1-9241-ceb098b2c0f8"],
-Cell[16522, 316, 152, 3, 28, "Input",ExpressionUUID->"4b4f0727-57e5-4d24-b310-b966b9250b08"]
+Cell[10538, 210, 316, 5, 44, "Subsubsection",ExpressionUUID->"f73dcb1b-80fa-451a-8ca0-810bf4dfcd72"],
+Cell[10857, 217, 882, 17, 166, "Text",ExpressionUUID->"9cff7fa2-0d7e-4f65-87a7-b90dd137bd3a"],
+Cell[11742, 236, 1441, 31, 360, "Input",ExpressionUUID->"2cfa952a-5071-49b1-9241-ceb098b2c0f8"],
+Cell[13186, 269, 152, 3, 28, "Input",ExpressionUUID->"4b4f0727-57e5-4d24-b310-b966b9250b08"]
 }, Open  ]]
 }
 ]
