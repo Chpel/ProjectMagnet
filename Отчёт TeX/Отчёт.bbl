@@ -1,0 +1,92 @@
+\begin{thebibliography}{10}
+
+\bibitem{web:ProjectMagnetRepos}
+Github repository: Chpel/projectmagnet.
+
+\bibitem{web:sawRepos}
+Github repository: kamilla0503/saw.
+
+\bibitem{web:SAWsRepos}
+Github repository: kamilla0503/saws.
+
+\bibitem{web:SchroedingercatRepos}
+Github repository: Shroedingercat/self-learning-monte-carlo-algorithm.
+
+\bibitem{web:PrellbergPrivate}
+Prellberg private communication 2021.
+
+\bibitem{arkin2013gyration}
+Handan Ark{\i}n and Wolfhard Janke.
+\newblock Gyration tensor based analysis of the shapes of polymer chains in an
+  attractive spherical cage.
+\newblock {\em The Journal of chemical physics}, 138(5):054904, 2013.
+
+\bibitem{caracciolo2011geometrical}
+Sergio Caracciolo, Marco Gherardi, Mauro Papinutto, and Andrea Pelissetto.
+\newblock Geometrical properties of two-dimensional interacting self-avoiding
+  walks at the $\theta$-point.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  44(11):115004, 2011.
+
+\bibitem{faizullina2021critical}
+Kamilla Faizullina, Ilya Pchelintsev, and Evgeni Burovski.
+\newblock Critical and geometric properties of magnetic polymers across the
+  globule-coil transition.
+\newblock {\em Phys. Rev. E}, 104:054501, Nov 2021.
+
+\bibitem{foster2021critical}
+Damien~Paul Foster and Debjyoti Majumdar.
+\newblock Critical behavior of magnetic polymers in two and three dimensions.
+\newblock {\em Physical Review E}, 104(2):024122, 2021.
+
+\bibitem{LivneSAW1988}
+Shelly Livne and Hagai Meirovitch.
+\newblock Computer simulation of long polymers adsorbed on a surface. i.
+  corrections to scaling in an ideal chain.
+\newblock {\em The Journal of Chemical Physics}, 88(7):4498--4506, 1988.
+
+\bibitem{madras1988pivot}
+Neal Madras and Alan~D Sokal.
+\newblock The pivot algorithm: a highly efficient monte carlo method for the
+  self-avoiding walk.
+\newblock {\em Journal of Statistical Physics}, 50(1):109--186, 1988.
+
+\bibitem{Newmanb1999}
+M.~E.~J. Newman and G.~T. Barkema.
+\newblock {\em Monte Carlo methods in statistical physics}.
+\newblock Clarendon Press, Oxford, 1999.
+
+\bibitem{owczarek2008scaling}
+AL~Owczarek and Thomas Prellberg.
+\newblock Scaling of the atmosphere of self-avoiding walks.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  41(37):375004, 2008.
+
+\bibitem{Privman1986}
+V~Privman.
+\newblock Study of the {\texttheta} point by enumeration of self-avoiding walks
+  on the triangular lattice.
+\newblock 19(16):3287--3297, nov 1986.
+
+\bibitem{selke2006critical}
+Walter Selke.
+\newblock Critical binder cumulant of two-dimensional ising models.
+\newblock {\em The European Physical Journal B-Condensed Matter and Complex
+  Systems}, 51(2):223--228, 2006.
+
+\bibitem{swendsen2020introduction}
+Robert Swendsen.
+\newblock {\em An introduction to statistical mechanics and thermodynamics}.
+\newblock Oxford University Press, USA, 2020.
+
+\bibitem{Tesi1996}
+M~C Tesi, E~J~Janse van Rensburg, E~Orlandini, and S~G Whittington.
+\newblock Interacting self-avoiding walks and polygons in three dimensions.
+\newblock 29(10):2451--2463, may 1996.
+
+\bibitem{Spitser1969}
+Ф~Спицер.
+\newblock {\em Принципы случайного блуждания}.
+\newblock М.: Мир, 1969.
+
+\end{thebibliography}

@@ -1,0 +1,60 @@
+\babel@toc {russian}{}\relax 
+\contentsline {chapter}{\numberline {1}2 курс}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Введение}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Одномерная модель Изинга}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Cтатсумма цепи Изинга общего случая ($h, J \neq 0 $) : периодич. гран. условия и Трансфер-матрица}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Диагонализация Трансфер-матрицы}{5}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Cтатсумма цепи Изинга общего случая ($h, J \neq 0 $) : открытые гран. условия}{5}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Итоги}{6}{subsection.1.1.5}%
+\contentsline {section}{\numberline {1.2}Средняя намагнинченность случая h = 0}{7}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Периодичные гран. условия}{7}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Открытые гран. условия}{7}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Магнитная воприимчивость}{8}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Средняя энергия}{9}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Проверка случая J = 0}{9}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Случай h = 0}{10}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Сравнение средней энергии моделей с периодичным и открытым гран. условиями}{10}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Теплоёмкость на спин при h = 0}{11}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Открытое гран. условие}{11}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Периодическое гран. условие}{11}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Свободная энергия}{13}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Разница между открытым и периодичным случаем}{14}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Средняя энергия системы (равное число спинов)}{14}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Средняя энергия системы (равное число рёбер)}{15}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Теплоёмкость системы (равное число рёбер)}{15}{subsection.1.6.3}%
+\contentsline {subsection}{\numberline {1.6.4}Квадрат намагниченности системы (равное число рёбер)}{16}{subsection.1.6.4}%
+\contentsline {section}{\numberline {1.7}Сравнение решения одномерной модели Изинга с расчётами Монте-Карло}{17}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Поведение модели Изинга на блужданиях без самопересечений вблизи крит. температуры}{18}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Расчёты крит. экспонент при наблюдении коллапса данных}{19}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Определение погрешностей измерений экспонент}{19}{subsection.1.8.2}%
+\contentsline {section}{\numberline {1.9}Модель Изинга на прямоугольной решётке}{21}{section.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}Расчёт критических кумулянтов для модели прямоугольного Изинга}{21}{subsection.1.9.1}%
+\contentsline {subsection}{\numberline {1.9.2}Сравнение модели Изинга и модели взаимодействующих непересекающихся блужданий}{23}{subsection.1.9.2}%
+\contentsline {subsection}{\numberline {1.9.3}Связь тензора инерции и тензора вращения}{24}{subsection.1.9.3}%
+\contentsline {subsection}{\numberline {1.9.4}Показатели формы блуждания из тензора вращения}{25}{subsection.1.9.4}%
+\contentsline {subsection}{\numberline {1.9.5}Асферичность прямоугольных решёток}{26}{subsection.1.9.5}%
+\contentsline {subsection}{\numberline {1.9.6}Свойства моделей вблизи фазового перехода с учётом показателей формы}{28}{subsection.1.9.6}%
+\contentsline {section}{\numberline {1.10}Оценка работы алгоритма для трёхмерной модели Изинга}{31}{section.1.10}%
+\contentsline {subsection}{\numberline {1.10.1}Расчёт магнитных свойств}{31}{subsection.1.10.1}%
+\contentsline {chapter}{\numberline {2}3 курс}{32}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Геометрические свойства модели Ising-ISAW с точки зрения числа соседей в узлах}{33}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Введение}{33}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Особенности ранних результатов на квадратной решётке}{33}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Сравнение модели Изинга и полимерной цепочки в решетках с 2-6 возможными соседями мономеров}{34}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Алгоритм исследования характера зависимости значения долей узлов от длины при J=0}{37}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Сравнение геометрических свойств модели Изинга на треугольной решётке с квадратной в J=0}{39}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Сравнение геометрических свойств модели Изинга на решётках с большим числом соседей в J=0}{41}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}Обобщение до случайных блужданий с самопересечениями}{41}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.8}Число соседей в атмосферах Преллберга}{42}{subsection.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.9}Атмосферы Преллберга в возвратных случайных блужданиях}{45}{subsection.2.1.9}%
+\contentsline {chapter}{\numberline {3}Приложение}{47}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Литературный обзор}{48}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Livne, Meirovich: Polymers Adsorbed on a surface}{48}{subsection.3.1.1}%
+\contentsline {subsubsection}{Особенности модели блуждания}{48}{section*.2}%
+\contentsline {subsubsection}{Подробнее о статсумме и методе Сканирования }{48}{section*.3}%
+\contentsline {subsubsection}{Результаты работы}{48}{section*.4}%
+\contentsline {subsection}{\numberline {3.1.2}Madras, Sokal: The Pivot Algorithm}{49}{subsection.3.1.2}%
+\contentsline {subsubsection}{Основные принципы алгоритма}{49}{section*.5}%
+\contentsline {subsection}{\numberline {3.1.3}Спицер, Основные принципы случайного блуждания, глава 3}{49}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Программно-техническое приложение}{50}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Применение jit-компиляции при программировании на языке Python}{50}{subsection.3.2.1}%
