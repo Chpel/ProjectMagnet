@@ -1,0 +1,54 @@
+\providecommand{\newblock}{}
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+% Bibliography created with iopart-num v2.1
+% /biblio/bibtex/contrib/iopart-num
+
+\bibitem{Gennes1979}
+de~Gennes P~G 1979 {\em Scaling concepts in polymer physics\/} (Cornell
+  University Press)
+
+\bibitem{Garel1999}
+Garel T, Orland H and Orlandini E 1999 {\em Eur. Phys. J. B\/} {\bf 12}
+  261--268
+
+\bibitem{faizullina2021critical}
+Faizullina K, Pchelintsev I and Burovski E 2021  (\textit{Preprint}
+  \eprint{2107.11830})
+
+\bibitem{Selke2006}
+Selke W 2006 {\em Eur. Phys. J. B\/} {\bf 51} 223--228 ISSN 14346028
+  (\textit{Preprint} \eprint{0603411})
+
+\bibitem{Caracciolo2011}
+Caracciolo S, Gherardi M, Papinutto M and Pelissetto A 2011 {\em J. Phys. A:
+  Math. Theor.\/} {\bf 44} 1--24 ISSN 17518113 (\textit{Preprint}
+  \eprint{1012.1177})
+
+\bibitem{Binder1981_Ising}
+Binder K 1981 {\em Z. Phys. B\/} {\bf 43} 119
+
+\bibitem{Foster2021}
+Foster D and Majumdar D 2021 {\em Phys. Rev. E\/} {\bf 104}(2) 024122
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevE.104.024122}
+
+\bibitem{Onsager}
+Onsager L 1944 {\em Phys. Rev.\/} {\bf 65}(3-4) 117--149
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRev.65.117}
+
+\bibitem{Tesi1996}
+Tesi M~C, van Rensburg E~J~J, Orlandini E and Whittington S~G 1996  {\bf 29}
+  2451--2463 \urlprefix\url{https://doi.org/10.1088/0305-4470/29/10/023}
+
+\bibitem{Privman1986}
+Privman V 1986  {\bf 19} 3287--3297
+  \urlprefix\url{https://doi.org/10.1088/0305-4470/19/16/027}
+
+\bibitem{Newmanb1999}
+Newman M~E~J and Barkema G~T 1999 {\em Monte Carlo methods in statistical
+  physics\/} (Oxford: Clarendon Press)
+
+\end{thebibliography}
