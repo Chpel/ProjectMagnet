@@ -45,16 +45,17 @@
 \contentsline {subsection}{\numberline {2.1.5}Сравнение геометрических свойств модели Изинга на треугольной решётке с квадратной в J=0}{39}{subsection.2.1.5}%
 \contentsline {subsection}{\numberline {2.1.6}Сравнение геометрических свойств модели Изинга на решётках с большим числом соседей в J=0}{41}{subsection.2.1.6}%
 \contentsline {subsection}{\numberline {2.1.7}Обобщение до случайных блужданий с самопересечениями}{41}{subsection.2.1.7}%
-\contentsline {subsection}{\numberline {2.1.8}Число соседей в атмосферах Преллберга}{42}{subsection.2.1.8}%
-\contentsline {subsection}{\numberline {2.1.9}Атмосферы Преллберга в возвратных случайных блужданиях}{45}{subsection.2.1.9}%
-\contentsline {chapter}{\numberline {3}Приложение}{47}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Литературный обзор}{48}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Livne, Meirovich: Polymers Adsorbed on a surface}{48}{subsection.3.1.1}%
-\contentsline {subsubsection}{Особенности модели блуждания}{48}{section*.2}%
-\contentsline {subsubsection}{Подробнее о статсумме и методе Сканирования }{48}{section*.3}%
-\contentsline {subsubsection}{Результаты работы}{48}{section*.4}%
-\contentsline {subsection}{\numberline {3.1.2}Madras, Sokal: The Pivot Algorithm}{49}{subsection.3.1.2}%
-\contentsline {subsubsection}{Основные принципы алгоритма}{49}{section*.5}%
-\contentsline {subsection}{\numberline {3.1.3}Спицер, Основные принципы случайного блуждания, глава 3}{49}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Программно-техническое приложение}{50}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Применение jit-компиляции при программировании на языке Python}{50}{subsection.3.2.1}%
+\contentsline {subsubsection}{Погрешности результатов}{44}{section*.2}%
+\contentsline {subsection}{\numberline {2.1.8}Число соседей в атмосферах Преллберга}{44}{subsection.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.9}Атмосферы Преллберга в возвратных случайных блужданиях}{47}{subsection.2.1.9}%
+\contentsline {chapter}{\numberline {3}Приложение}{48}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Литературный обзор}{49}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Livne, Meirovich: Polymers Adsorbed on a surface}{49}{subsection.3.1.1}%
+\contentsline {subsubsection}{Особенности модели блуждания}{49}{section*.3}%
+\contentsline {subsubsection}{Подробнее о статсумме и методе Сканирования }{49}{section*.4}%
+\contentsline {subsubsection}{Результаты работы}{49}{section*.5}%
+\contentsline {subsection}{\numberline {3.1.2}Madras, Sokal: The Pivot Algorithm}{50}{subsection.3.1.2}%
+\contentsline {subsubsection}{Основные принципы алгоритма}{50}{section*.6}%
+\contentsline {subsection}{\numberline {3.1.3}Спицер, Основные принципы случайного блуждания, глава 3}{50}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Программно-техническое приложение}{51}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Применение jit-компиляции при программировании на языке Python}{51}{subsection.3.2.1}%
