@@ -1,0 +1,415 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.14)  23 JUN 2022 18:53
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2022-06-01> pre-release-0 (develop 2022-6-14 branch)
+L3 programming layer <2022-06-02> (./jpconf.cls
+Document Class: jpconf 2007/03/07 v1.1 LaTeX class for Journal of Physics: Conf
+erence Series
+(./jpconf11.clo
+File: jpconf11.clo 2005/05/04 v1.0 LaTeX2e file (size option)
+)
+\indentedwidth=\skip47
+\mathindent=\dimen138
+\c@oldftnote=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen139
+\c@eqnval=\count193
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen140
+\Gin@req@width=\dimen141
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen142
+))
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen143
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count194
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count195
+\leftroot@=\count196
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count197
+\DOTSCASE@=\count198
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen144
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count199
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count266
+\dotsspace@=\muskip16
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
+\tag@help=\toks18
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
+\andhelp@=\toks19
+\eqnshift@=\dimen145
+\alignsep@=\dimen146
+\tagshift@=\dimen147
+\tagwidth@=\dimen148
+\totwidth@=\dimen149
+\lineht@=\dimen150
+\@envbody=\toks20
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks22
+\thm@bodyfont=\toks23
+\thm@headfont=\toks24
+\thm@notefont=\toks25
+\thm@headpunct=\toks26
+\thm@preskip=\skip53
+\thm@postskip=\skip54
+\thm@headsep=\skip55
+\dth@everypar=\toks27
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2022/06/06 4.5 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count272
+\FV@InFile=\read2
+\FV@TabBox=\box53
+\c@FancyVerbLine=\count273
+\FV@StepNumber=\count274
+\FV@OutFile=\write3
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen151
+\captionmargin=\dimen152
+\caption@leftmargin=\dimen153
+\caption@rightmargin=\dimen154
+\caption@width=\dimen155
+\caption@indent=\dimen156
+\caption@parindent=\dimen157
+\caption@hangindent=\dimen158
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionski
+p \sbox \@tempboxa {{\bf #1.} #2}\ifdim \wd \@tempboxa >\hsize {\bf #1.} #2\par
+ \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil }\fi
+ \vskip \belowcaptionskip  on input line 1176.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count275
+\c@continuedfloat=\count276
+)
+\c@KVtest=\count277
+\sf@farskip=\skip56
+\sf@captopadj=\dimen159
+\sf@capskip=\skip57
+\sf@nearskip=\skip58
+\c@subfigure=\count278
+\c@subfigure@save=\count279
+\c@lofdepth=\count280
+\c@subtable=\count281
+\c@subtable@save=\count282
+\c@lotdepth=\count283
+\sf@top=\skip59
+\sf@bottom=\skip60
+) (./iopams.sty
+Package: iopams 1997/02/13 v1.0
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2022/01/05 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+Package cleveref Info: `subfig' support loaded on input line 3164.
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
+ef
+File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count284
+\l__pdf_internal_box=\box54
+) (./main.aux
+
+LaTeX Warning: Label `fig:A_r' multiply defined.
+
+
+LaTeX Warning: Label `fig:A_r@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:Ising_vs_ISAW' multiply defined.
+
+
+LaTeX Warning: Label `fig:Ising_vs_ISAW@cref' multiply defined.
+
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+ (d:/ProgramFiles/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count285
+\scratchdimen=\dimen160
+\scratchbox=\box55
+\nofMPsegments=\count286
+\nofMParguments=\count287
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count288
+\MPscratchDim=\dimen161
+\MPnumerator=\count289
+\makeMPintoPDFobject=\count290
+\everyMPtoPDFconversion=\toks29
+)
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.s
+ty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18.06749> not available
+(Font)              size <17.28> substituted on input line 27.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <18.06749> not available
+(Font)              size <17.28> substituted on input line 27.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+
+
+(d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 1448) in paragraph at lines 47--48
+[]\OT1/cmr/m/n/10.95 In previous studies, it was established that Ising model o
+n the self-avoiding walk
+ []
+
+[1
+
+{d:/ProgramFiles/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2]
+<Images/CumulantOBC.png, id=20, 803.0pt x 378.41376pt>
+File: Images/CumulantOBC.png Graphic file (type png)
+<use Images/CumulantOBC.png>
+Package pdftex.def Info: Images/CumulantOBC.png  used on input line 142.
+(pdftex.def)             Requested size: 284.52756pt x 134.08664pt.
+ [3 <./Images/CumulantOBC.png (PNG copy)>]
+<Images/A_r.png, id=25, 939.51pt x 722.7pt>
+File: Images/A_r.png Graphic file (type png)
+<use Images/A_r.png>
+Package pdftex.def Info: Images/A_r.png  used on input line 152.
+(pdftex.def)             Requested size: 284.52756pt x 218.86278pt.
+<Images/Ising_ISAW_A_J_Full.png, id=27, 939.51pt x 722.7pt>
+File: Images/Ising_ISAW_A_J_Full.png Graphic file (type png)
+<use Images/Ising_ISAW_A_J_Full.png>
+Package pdftex.def Info: Images/Ising_ISAW_A_J_Full.png  used on input line 173
+.
+(pdftex.def)             Requested size: 218.51521pt x 168.08115pt.
+<Images/Ising_A_J_Close.png, id=28, 939.51pt x 722.7pt>
+File: Images/Ising_A_J_Close.png Graphic file (type png)
+<use Images/Ising_A_J_Close.png>
+Package pdftex.def Info: Images/Ising_A_J_Close.png  used on input line 179.
+(pdftex.def)             Requested size: 218.51521pt x 168.08115pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./Images/A_r.png>]
+<Images/bulk2-4_inset.png, id=33, 1445.4pt x 505.89pt>
+File: Images/bulk2-4_inset.png Graphic file (type png)
+<use Images/bulk2-4_inset.png>
+Package pdftex.def Info: Images/bulk2-4_inset.png  used on input line 211.
+(pdftex.def)             Requested size: 450.69414pt x 157.74286pt.
+ [5 <./Images/Ising_ISAW_A_J_Full.png> <./Images/Ising_A_J_Close.png>]
+<Images/ISAWJ0_Bulk2-4.png, id=39, 1300.86pt x 361.35pt>
+File: Images/ISAWJ0_Bulk2-4.png Graphic file (type png)
+<use Images/ISAWJ0_Bulk2-4.png>
+Package pdftex.def Info: Images/ISAWJ0_Bulk2-4.png  used on input line 224.
+(pdftex.def)             Requested size: 450.69414pt x 125.18968pt.
+ [6 <./Images/bulk2-4_inset.png> <./Images/ISAWJ0_Bulk2-4.png>]
+<Images/Ising_vs_ISAW.png, id=45, 1445.4pt x 2168.1pt>
+File: Images/Ising_vs_ISAW.png Graphic file (type png)
+<use Images/Ising_vs_ISAW.png>
+Package pdftex.def Info: Images/Ising_vs_ISAW.png  used on input line 247.
+(pdftex.def)             Requested size: 432.47649pt x 640.17946pt.
+
+
+LaTeX Warning: Float too large for page by 60.76608pt on input line 250.
+
+[7] [8 <./Images/Ising_vs_ISAW.png>] (./main.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
+[]\OT1/cmr/m/n/9 Foster D and Ma-jum-dar D 2021 \OT1/cmr/m/it/9 Phys. Rev. E \O
+T1/cmr/bx/n/9 104\OT1/cmr/m/n/9 (2) 024122 URL
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 43--45
+[]\OT1/cmr/m/n/9 Tesi M C, van Rensburg E J J, Orlandini E and Whittington S G 
+1996 \OT1/cmr/bx/n/9 29 \OT1/cmr/m/n/9 2451--2463 URL
+ []
+
+) [9] (./main.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.78749pt have occurred.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6628 strings out of 478040
+ 116992 string characters out of 5836632
+ 443130 words of memory out of 5000000
+ 25015 multiletter control sequences out of 15000+600000
+ 478748 words of font info for 62 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 69i,11n,79p,1166b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+0.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx9.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmex10.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr8.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr9.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti10.pfb><d:/ProgramFiles/texlive/2022/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti9.pfb><d:/ProgramFiles/texlive/2022/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on main.pdf (9 pages, 894046 bytes).
+PDF statistics:
+ 118 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+

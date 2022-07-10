@@ -1,0 +1,2 @@
+N  n1_mean  n2_mean  n3_mean  n4_mean  uni_mean  n1_std  n2_std  n3_std  n4_std  uni_std  steps
+ 100 0.067668 0.335173 0.357327 0.239832 0.490859 0.033173 0.087251 0.066925 0.092041 0.082426 2432000 
