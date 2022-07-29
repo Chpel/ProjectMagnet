@@ -1,0 +1,86 @@
+/home/iipchelintsev/Magnet_Code/Random_Walk/Drunken_Sailor_v2.py:41: NumbaWarning: 
+Compilation is falling back to object mode WITH looplifting enabled because Function "complex_experiment" failed type inference due to: Invalid use of type(CPUDispatcher(<function experiment at 0x7fc6c85a1830>)) with parameters (int64)
+
+During: resolving callee type: type(CPUDispatcher(<function experiment at 0x7fc6c85a1830>))
+During: typing of call at /home/iipchelintsev/Magnet_Code/Random_Walk/Drunken_Sailor_v2.py (45)
+
+
+File "../Magnet_Code/Random_Walk/Drunken_Sailor_v2.py", line 45:
+def complex_experiment(N, di):
+    <source elided>
+    for i in prange(di):
+        n1_new[i], n2_new[i], n3_new[i], n4_new[i], nU_new[i] = experiment(N)
+        ^
+
+  @jit(parallel=True)
+/home/iipchelintsev/Magnet_Code/Random_Walk/Drunken_Sailor_v2.py:41: NumbaWarning: 
+Compilation is falling back to object mode WITHOUT looplifting enabled because Function "complex_experiment" failed type inference due to: cannot determine Numba type of <class 'numba.core.dispatcher.LiftedLoop'>
+
+File "../Magnet_Code/Random_Walk/Drunken_Sailor_v2.py", line 44:
+def complex_experiment(N, di):
+    <source elided>
+    n1_new, n2_new, n3_new, n4_new, nU_new = np.zeros((5,di), dtype=np.float_)
+    for i in prange(di):
+    ^
+
+  @jit(parallel=True)
+/home/iipchelintsev/envs/colab/lib/python3.7/site-packages/numba/core/object_mode_passes.py:178: NumbaWarning: Function "complex_experiment" was compiled in object mode without forceobj=True, but has lifted loops.
+
+File "../Magnet_Code/Random_Walk/Drunken_Sailor_v2.py", line 43:
+def complex_experiment(N, di):
+    n1_new, n2_new, n3_new, n4_new, nU_new = np.zeros((5,di), dtype=np.float_)
+    ^
+
+  state.func_ir.loc))
+/home/iipchelintsev/envs/colab/lib/python3.7/site-packages/numba/core/object_mode_passes.py:188: NumbaDeprecationWarning: 
+Fall-back from the nopython compilation path to the object mode compilation path has been detected, this is deprecated behaviour.
+
+For more information visit https://numba.pydata.org/numba-doc/latest/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit
+
+File "../Magnet_Code/Random_Walk/Drunken_Sailor_v2.py", line 43:
+def complex_experiment(N, di):
+    n1_new, n2_new, n3_new, n4_new, nU_new = np.zeros((5,di), dtype=np.float_)
+    ^
+
+  state.func_ir.loc))
+/home/iipchelintsev/Magnet_Code/Random_Walk/Drunken_Sailor_v2.py:41: NumbaWarning: 
+Compilation is falling back to object mode WITHOUT looplifting enabled because Function "complex_experiment" failed type inference due to: Invalid use of type(CPUDispatcher(<function experiment at 0x7fc6c85a1830>)) with parameters (int64)
+
+During: resolving callee type: type(CPUDispatcher(<function experiment at 0x7fc6c85a1830>))
+During: typing of call at /home/iipchelintsev/Magnet_Code/Random_Walk/Drunken_Sailor_v2.py (45)
+
+
+File "../Magnet_Code/Random_Walk/Drunken_Sailor_v2.py", line 45:
+def complex_experiment(N, di):
+    <source elided>
+    for i in prange(di):
+        n1_new[i], n2_new[i], n3_new[i], n4_new[i], nU_new[i] = experiment(N)
+        ^
+
+  @jit(parallel=True)
+/home/iipchelintsev/envs/colab/lib/python3.7/site-packages/numba/core/object_mode_passes.py:178: NumbaWarning: Function "complex_experiment" was compiled in object mode without forceobj=True.
+
+File "../Magnet_Code/Random_Walk/Drunken_Sailor_v2.py", line 44:
+def complex_experiment(N, di):
+    <source elided>
+    n1_new, n2_new, n3_new, n4_new, nU_new = np.zeros((5,di), dtype=np.float_)
+    for i in prange(di):
+    ^
+
+  state.func_ir.loc))
+/home/iipchelintsev/envs/colab/lib/python3.7/site-packages/numba/core/object_mode_passes.py:188: NumbaDeprecationWarning: 
+Fall-back from the nopython compilation path to the object mode compilation path has been detected, this is deprecated behaviour.
+
+For more information visit https://numba.pydata.org/numba-doc/latest/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit
+
+File "../Magnet_Code/Random_Walk/Drunken_Sailor_v2.py", line 44:
+def complex_experiment(N, di):
+    <source elided>
+    n1_new, n2_new, n3_new, n4_new, nU_new = np.zeros((5,di), dtype=np.float_)
+    for i in prange(di):
+    ^
+
+  state.func_ir.loc))
+Время выполнения первого цикла из 10000 цепочек длины 500: 189.2263422012329
+/home/iipchelintsev/Magnet_Code/Random_Walk/Drunken_Sailor_v2.py:111: RuntimeWarning: divide by zero encountered in log2
+  bs = int(max(10, 5 + np.log2(steps)))
