@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.14)  29 JUN 2022 19:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.14)  5 AUG 2022 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -741,16 +741,8 @@ LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 1
 
 (d:/ProgramFiles/texlive/2022/texmf-dist/tex/latex/cyrillic/t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)<<t2a.cmap>> (./Sections/Introduction.aux) (./Sections/MeanMagn.aux)
-(./Sections/MeanEnergy.aux) (./Sections/HeatCapacity.aux)
-(./Sections/FreeEnergy.aux) (./Sections/OBCvsPBC.aux)
-(./Sections/1DComparison.aux) (./Sections/DatCollMeanMagn2.aux)
-(./Sections/RectanCumulant.aux
-
-LaTeX Warning: Label `tab:A_L_r' multiply defined.
-
-) (./Sections/3DTest.aux) (./Sections/Bulk.aux) (./Sections/Literature.aux)
-(./Sections/Technical.aux))
+)<<t2a.cmap>> (./Sections/Bulk.aux) (./Sections/Literature.aux) (./Sections/Tec
+hnical.aux))
 \openout1 = `РћС‚С‡С‘С‚.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -856,286 +848,27 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
 {d:/ProgramFiles/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./РћС‚С‡С‘С‚.toc
+(./РћС‚С‡С‘С‚.toc)
+\tf@toc=\write4
+\openout4 = `РћС‚С‡С‘С‚.toc'.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.43 ... РјРѕРЅРѕРјРµСЂРѕРІ}{34}{subsection.2.1.3}
-                                                  % [1
+l.28 \chapter
+             {3 РєСѓСЂСЃ} [1
 
-])
-\tf@toc=\write4
-\openout4 = `РћС‚С‡С‘С‚.toc'.
-
- [2]
+]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
-[3
-
-]
-\openout2 = `Sections/Introduction.aux'.
-
- (./Sections/Introduction.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\not' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 27.
-
-[4
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 109.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\not' on input line 109.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 109.
-
-[5]) [6]
-\openout2 = `Sections/MeanMagn.aux'.
-
- (./Sections/MeanMagn.tex [7
-
-
-
-]) [8]
-\openout2 = `Sections/MeanEnergy.aux'.
-
- (./Sections/MeanEnergy.tex [9
-
-
-
-]
-
-LaTeX Warning: Command \CYRA invalid in math mode on input line 61.
-
-Missing character: There is no А in font cmr10!
-) [10]
-\openout2 = `Sections/HeatCapacity.aux'.
-
- (./Sections/HeatCapacity.tex
-! Double superscript.
-l.47 ... (\lp)\vprpb) + (N-1)\lp^{N-2} (\lp)\prpb^
-                                                  {2} + \lm^{N-1} (\lm)\vprp...
-
-? 
-! Double superscript.
-l.47 ... (\lm)\vprpb) + (N-1)\lm^{N-2} (\lm)\prpb^
-                                                  {2}) = \]
-? 
-[11
-
-
-
-]) [12]
-\openout2 = `Sections/FreeEnergy.aux'.
-
- (./Sections/FreeEnergy.tex) [13
-
-
-
-]
-\openout2 = `Sections/OBCvsPBC.aux'.
-
- (./Sections/OBCvsPBC.tex [14
-
-
-
-]
-[15]) [16]
-\openout2 = `Sections/1DComparison.aux'.
-
- (./Sections/1DComparison.tex
-Overfull \hbox (20.06725pt too wide) in paragraph at lines 1--1
-[]\T2A/cmr/bx/n/14.4 Сравнение ре-ше-ния од-но-мер-ной мо-де-ли Изин-га с рас-ч
-ј-та-ми Монте-
- []
-
-) [17
-
-
-
-]
-\openout2 = `Sections/DatCollMeanMagn2.aux'.
-
- (./Sections/DatCollMeanMagn2.tex [18
-
-
-
-]
-<Sections/Images/DatColMagn2_3.png, id=490, 774.895pt x 440.64626pt>
-File: Sections/Images/DatColMagn2_3.png Graphic file (type png)
-<use Sections/Images/DatColMagn2_3.png>
-Package pdftex.def Info: Sections/Images/DatColMagn2_3.png  used on input line 
-88.
-(pdftex.def)             Requested size: 284.52756pt x 161.7994pt.
- [19 <./Sections/Images/DatColMagn2_3.png (PNG copy)>]
-<Sections/Images/DataCollLowExp.png, id=498, 767.86874pt x 448.67625pt>
-File: Sections/Images/DataCollLowExp.png Graphic file (type png)
-<use Sections/Images/DataCollLowExp.png>
-Package pdftex.def Info: Sections/Images/DataCollLowExp.png  used on input line
- 103.
-(pdftex.def)             Requested size: 225.21626pt x 131.59157pt.
-<Sections/Images/DataCollHighExp.png, id=499, 767.86874pt x 451.6875pt>
-File: Sections/Images/DataCollHighExp.png Graphic file (type png)
-<use Sections/Images/DataCollHighExp.png>
-Package pdftex.def Info: Sections/Images/DataCollHighExp.png  used on input lin
-e 107.
-(pdftex.def)             Requested size: 225.21626pt x 132.47473pt.
-
-Overfull \hbox (2.22166pt too wide) in paragraph at lines 102--109
-[]$[]$  $[]$ 
- []
-
-) [20 <./Sections/Images/DataCollLowExp.png (PNG copy)> <./Sections/Images/Data
-CollHighExp.png (PNG copy)>]
-\openout2 = `Sections/RectanCumulant.aux'.
-
- (./Sections/RectanCumulant.tex
-<Sections/Images/CumulantPBC.png, id=509, 803.0pt x 373.395pt>
-File: Sections/Images/CumulantPBC.png Graphic file (type png)
-<use Sections/Images/CumulantPBC.png>
-Package pdftex.def Info: Sections/Images/CumulantPBC.png  used on input line 26
-.
-(pdftex.def)             Requested size: 312.9803pt x 145.538pt.
-<Sections/Images/CumulantOBC.png, id=510, 803.0pt x 378.41376pt>
-File: Sections/Images/CumulantOBC.png Graphic file (type png)
-<use Sections/Images/CumulantOBC.png>
-Package pdftex.def Info: Sections/Images/CumulantOBC.png  used on input line 28
-.
-(pdftex.def)             Requested size: 312.9803pt x 147.49416pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 36.
-
-[21
-
-
-
- <./Sections/Images/CumulantPBC.png (PNG copy)> <./Sections/Images/CumulantOBC.
-png (PNG copy)>]
-<Sections/Images/CumulantOBCL.png, id=535, 789.95125pt x 449.68pt>
-File: Sections/Images/CumulantOBCL.png Graphic file (type png)
-<use Sections/Images/CumulantOBCL.png>
-Package pdftex.def Info: Sections/Images/CumulantOBCL.png  used on input line 5
-3.
-(pdftex.def)             Requested size: 284.52756pt x 161.96701pt.
-<Sections/Images/CumulantPBCL.png, id=536, 789.95125pt x 449.68pt>
-File: Sections/Images/CumulantPBCL.png Graphic file (type png)
-<use Sections/Images/CumulantPBCL.png>
-Package pdftex.def Info: Sections/Images/CumulantPBCL.png  used on input line 6
-0.
-(pdftex.def)             Requested size: 284.52756pt x 161.96701pt.
-
-Overfull \hbox (1.1724pt too wide) in paragraph at lines 69--70
-\T2A/cmr/m/n/10 Здесь мы рас-смот-рим ос-нов-ные по-ня-тия в мо-де-ли вза-и-мо-
-дей-ству-ю-щих блуж-да-ний (Self-Avoiding Walks, SAWs),
- []
-
-[22 <./Sections/Images/CumulantOBCL.png (PNG copy)> <./Sections/Images/Cumulant
-PBCL.png (PNG copy)>] [23] [24] [25]
-<Sections/Images/RectanGrid.png, id=589, 385.44pt x 185.69376pt>
-File: Sections/Images/RectanGrid.png Graphic file (type png)
-<use Sections/Images/RectanGrid.png>
-Package pdftex.def Info: Sections/Images/RectanGrid.png  used on input line 231
-.
-(pdftex.def)             Requested size: 225.21626pt x 108.50148pt.
-<Sections/Images/A_r.png, id=594, 939.51pt x 722.7pt>
-File: Sections/Images/A_r.png Graphic file (type png)
-<use Sections/Images/A_r.png>
-Package pdftex.def Info: Sections/Images/A_r.png  used on input line 236.
-(pdftex.def)             Requested size: 250.24199pt x 192.485pt.
-
-Underfull \hbox (badness 3758) in paragraph at lines 262--262
-[]\T2A/cmr/m/n/10 Таблица 1.3: []Таблица за-ви-си-мо-сти зна-че-ния
- []
-
-
-Underfull \hbox (badness 3758) in paragraph at lines 281--281
-[]\T2A/cmr/m/n/10 Таблица 1.4: []Таблица за-ви-си-мо-сти зна-че-ния
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[26 <./Sections/Images/RectanGrid.png (PNG copy)> <./Sections/Images/A_r.png>]
-<Sections/Images/RectanGrid2.png, id=613, 702.625pt x 449.68pt>
-File: Sections/Images/RectanGrid2.png Graphic file (type png)
-<use Sections/Images/RectanGrid2.png>
-Package pdftex.def Info: Sections/Images/RectanGrid2.png  used on input line 30
-0.
-(pdftex.def)             Requested size: 284.52756pt x 182.09882pt.
-
-[27 <./Sections/Images/RectanGrid2.png (PNG copy)>] [28]
-<Sections/Images/Ising_ISAW_A_J_Full.png, id=634, 939.51pt x 722.7pt>
-File: Sections/Images/Ising_ISAW_A_J_Full.png Graphic file (type png)
-<use Sections/Images/Ising_ISAW_A_J_Full.png>
-Package pdftex.def Info: Sections/Images/Ising_ISAW_A_J_Full.png  used on input
- line 354.
-(pdftex.def)             Requested size: 426.79134pt x 328.29968pt.
-<Sections/Images/ISAW_A_J_Close.png, id=638, 939.51pt x 722.7pt>
-File: Sections/Images/ISAW_A_J_Close.png Graphic file (type png)
-<use Sections/Images/ISAW_A_J_Close.png>
-Package pdftex.def Info: Sections/Images/ISAW_A_J_Close.png  used on input line
- 363.
-(pdftex.def)             Requested size: 225.21626pt x 173.24202pt.
-<Sections/Images/Ising_A_J_Close.png, id=641, 939.51pt x 722.7pt>
-File: Sections/Images/Ising_A_J_Close.png Graphic file (type png)
-<use Sections/Images/Ising_A_J_Close.png>
-Package pdftex.def Info: Sections/Images/Ising_A_J_Close.png  used on input lin
-e 369.
-(pdftex.def)             Requested size: 225.21626pt x 173.24202pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[29 <./Sections/Images/Ising_ISAW_A_J_Full.png>]) [30 <./Sections/Images/ISAW_A
-_J_Close.png> <./Sections/Images/Ising_A_J_Close.png>]
-\openout2 = `Sections/3DTest.aux'.
-
- (./Sections/3DTest.tex
-<Sections/Images/m2_3D_50to60.png, id=665, 759.83875pt x 450.68375pt>
-File: Sections/Images/m2_3D_50to60.png Graphic file (type png)
-<use Sections/Images/m2_3D_50to60.png>
-Package pdftex.def Info: Sections/Images/m2_3D_50to60.png  used on input line 9
-.
-(pdftex.def)             Requested size: 284.52756pt x 168.76529pt.
-<Sections/Images/U4_3D_50to60.png, id=666, 759.83875pt x 444.66125pt>
-File: Sections/Images/U4_3D_50to60.png Graphic file (type png)
-<use Sections/Images/U4_3D_50to60.png>
-Package pdftex.def Info: Sections/Images/U4_3D_50to60.png  used on input line 1
-6.
-(pdftex.def)             Requested size: 284.52756pt x 166.51007pt.
-
-[31
-
-
-
- <./Sections/Images/m2_3D_50to60.png (PNG copy)> <./Sections/Images/U4_3D_50to6
-0.png (PNG copy)>])
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
-[32
-
-
+[2
 
 ]
 \openout2 = `Sections/Bulk.aux'.
 
  (./Sections/Bulk.tex
-<Sections/Images/update.png, id=679, 169.63374pt x 231.86626pt>
+<Sections/Images/update.png, id=124, 169.63374pt x 231.86626pt>
 File: Sections/Images/update.png Graphic file (type png)
 <use Sections/Images/update.png>
 Package pdftex.def Info: Sections/Images/update.png  used on input line 9.
@@ -1145,13 +878,13 @@ Package pdftex.def Info: Sections/Images/update.png  used on input line 9.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 17.
 
-<Sections/Images/ISAWJ0_Bulk2-4.png, id=681, 1300.86pt x 361.35pt>
+<Sections/Images/ISAWJ0_Bulk2-4.png, id=127, 1300.86pt x 361.35pt>
 File: Sections/Images/ISAWJ0_Bulk2-4.png Graphic file (type png)
 <use Sections/Images/ISAWJ0_Bulk2-4.png>
 Package pdftex.def Info: Sections/Images/ISAWJ0_Bulk2-4.png  used on input line
  19.
 (pdftex.def)             Requested size: 475.45825pt x 132.07085pt.
-<Sections/Images/bulk2-4_inset.png, id=686, 1445.4pt x 505.89pt>
+<Sections/Images/bulk2-4_inset.png, id=132, 1445.4pt x 505.89pt>
 File: Sections/Images/bulk2-4_inset.png Graphic file (type png)
 <use Sections/Images/bulk2-4_inset.png>
 Package pdftex.def Info: Sections/Images/bulk2-4_inset.png  used on input line 
@@ -1160,15 +893,15 @@ Package pdftex.def Info: Sections/Images/bulk2-4_inset.png  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[33
+[3
 
  <./Sections/Images/ISAWJ0_Bulk2-4.png> <./Sections/Images/update.png>]
-<Sections/Images/SqLattice.png, id=703, 361.35pt x 361.35pt>
+<Sections/Images/SqLattice.png, id=155, 361.35pt x 361.35pt>
 File: Sections/Images/SqLattice.png Graphic file (type png)
 <use Sections/Images/SqLattice.png>
 Package pdftex.def Info: Sections/Images/SqLattice.png  used on input line 43.
 (pdftex.def)             Requested size: 100.09526pt x 100.0966pt.
-<Sections/Images/TriLattice.png, id=704, 361.35pt x 361.35pt>
+<Sections/Images/TriLattice.png, id=156, 361.35pt x 361.35pt>
 File: Sections/Images/TriLattice.png Graphic file (type png)
 <use Sections/Images/TriLattice.png>
 Package pdftex.def Info: Sections/Images/TriLattice.png  used on input line 44.
@@ -1176,11 +909,14 @@ Package pdftex.def Info: Sections/Images/TriLattice.png  used on input line 44.
 (pdftex.def)             Requested size: 100.09526pt x 100.0966pt.
 
 
+LaTeX Warning: Reference `eq:Ham' on page 4 undefined on input line 49.
+
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[34 <./Sections/Images/bulk2-4_inset.png> <./Sections/Images/SqLattice.png (PNG
- copy)> <./Sections/Images/TriLattice.png (PNG copy)>]
-<Sections/Images/Ising_vs_ISAW.png, id=721, 1445.4pt x 2168.1pt>
+[4 <./Sections/Images/bulk2-4_inset.png> <./Sections/Images/SqLattice.png (PNG 
+copy)> <./Sections/Images/TriLattice.png (PNG copy)>]
+<Sections/Images/Ising_vs_ISAW.png, id=174, 1445.4pt x 2168.1pt>
 File: Sections/Images/Ising_vs_ISAW.png Graphic file (type png)
 <use Sections/Images/Ising_vs_ISAW.png>
 Package pdftex.def Info: Sections/Images/Ising_vs_ISAW.png  used on input line 
@@ -1190,14 +926,14 @@ Package pdftex.def Info: Sections/Images/Ising_vs_ISAW.png  used on input line
 
 LaTeX Warning: Float too large for page by 7.52167pt on input line 77.
 
-[35] [36 <./Sections/Images/Ising_vs_ISAW.png>]
-<Sections/Images/square_n2_scaling.png, id=738, 939.51pt x 1228.59pt>
+[5] [6 <./Sections/Images/Ising_vs_ISAW.png>]
+<Sections/Images/square_n2_scaling.png, id=195, 939.51pt x 1228.59pt>
 File: Sections/Images/square_n2_scaling.png Graphic file (type png)
 <use Sections/Images/square_n2_scaling.png>
 Package pdftex.def Info: Sections/Images/square_n2_scaling.png  used on input l
 ine 106.
 (pdftex.def)             Requested size: 245.2399pt x 320.70064pt.
-<Sections/Images/square_n2_scaling2.png, id=739, 939.51pt x 1228.59pt>
+<Sections/Images/square_n2_scaling2.png, id=196, 939.51pt x 1228.59pt>
 File: Sections/Images/square_n2_scaling2.png Graphic file (type png)
 <use Sections/Images/square_n2_scaling2.png>
 Package pdftex.def Info: Sections/Images/square_n2_scaling2.png  used on input 
@@ -1207,9 +943,9 @@ line 112.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37] [38 <./Sections/Images/square_n2_scaling.png> <./Sections/Images/square_n2
-_scaling2.png>]
-<Sections/Images/n23_linear.png, id=770, 1084.05pt x 1156.32pt>
+[7] [8 <./Sections/Images/square_n2_scaling.png> <./Sections/Images/square_n2_s
+caling2.png>]
+<Sections/Images/n23_linear.png, id=228, 1084.05pt x 1156.32pt>
 File: Sections/Images/n23_linear.png Graphic file (type png)
 <use Sections/Images/n23_linear.png>
 Package pdftex.def Info: Sections/Images/n23_linear.png  used on input line 145
@@ -1224,12 +960,12 @@ Overfull \hbox (37.49742pt too wide) in paragraph at lines 182--190
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 202.
 
-[39] [40 <./Sections/Images/n23_linear.png>]
+[9] [10 <./Sections/Images/n23_linear.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 215.
 
-<Sections/Images/Rand_Path.png, id=813, 433.62pt x 289.08pt>
+<Sections/Images/Rand_Path.png, id=271, 433.62pt x 289.08pt>
 File: Sections/Images/Rand_Path.png Graphic file (type png)
 <use Sections/Images/Rand_Path.png>
 Package pdftex.def Info: Sections/Images/Rand_Path.png  used on input line 242.
@@ -1237,22 +973,22 @@ Package pdftex.def Info: Sections/Images/Rand_Path.png  used on input line 242.
 (pdftex.def)             Requested size: 245.2399pt x 163.4937pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 243--243
-[]\T2A/cmr/m/n/10 Рис. 2.9: []Пример сге-не-ри-ро-ван-но-го блуж-да-ния
+[]\T2A/cmr/m/n/10 Рис. 1.9: []Пример сге-не-ри-ро-ван-но-го блуж-да-ния
  []
 
-<Sections/Images/Rand_Path_Unique.png, id=814, 433.62pt x 289.08pt>
+<Sections/Images/Rand_Path_Unique.png, id=272, 433.62pt x 289.08pt>
 File: Sections/Images/Rand_Path_Unique.png Graphic file (type png)
 <use Sections/Images/Rand_Path_Unique.png>
 Package pdftex.def Info: Sections/Images/Rand_Path_Unique.png  used on input li
 ne 248.
 (pdftex.def)             Requested size: 245.2399pt x 163.4937pt.
-<Sections/Images/Rand_Path_Neigh.png, id=815, 722.7pt x 433.62pt>
+<Sections/Images/Rand_Path_Neigh.png, id=273, 722.7pt x 433.62pt>
 File: Sections/Images/Rand_Path_Neigh.png Graphic file (type png)
 <use Sections/Images/Rand_Path_Neigh.png>
 Package pdftex.def Info: Sections/Images/Rand_Path_Neigh.png  used on input lin
 e 253.
 (pdftex.def)             Requested size: 250.24199pt x 150.14162pt.
-[41]
+[11]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1260,7 +996,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 285.
 
-<Sections/Images/Rand_Path_N1-4_unique.png, id=829, 939.51pt x 1445.4pt>
+<Sections/Images/Rand_Path_N1-4_unique.png, id=287, 939.51pt x 1445.4pt>
 File: Sections/Images/Rand_Path_N1-4_unique.png Graphic file (type png)
 <use Sections/Images/Rand_Path_N1-4_unique.png>
 Package pdftex.def Info: Sections/Images/Rand_Path_N1-4_unique.png  used on inp
@@ -1269,16 +1005,16 @@ ut line 288.
 
 LaTeX Warning: Float too large for page by 72.70401pt on input line 290.
 
-[42 <./Sections/Images/Rand_Path.png> <./Sections/Images/Rand_Path_Unique.png> 
-<./Sections/Images/Rand_Path_Neigh.png>] [43 <./Sections/Images/Rand_Path_N1-4_
+[12 <./Sections/Images/Rand_Path.png> <./Sections/Images/Rand_Path_Unique.png> 
+<./Sections/Images/Rand_Path_Neigh.png>] [13 <./Sections/Images/Rand_Path_N1-4_
 unique.png>]
-<Sections/Images_2/DS_100_dists.png, id=854, 361.35pt x 1445.4pt>
+<Sections/Images_2/DS_100_dists.png, id=313, 361.35pt x 1445.4pt>
 File: Sections/Images_2/DS_100_dists.png Graphic file (type png)
 <use Sections/Images_2/DS_100_dists.png>
 Package pdftex.def Info: Sections/Images_2/DS_100_dists.png  used on input line
  308.
 (pdftex.def)             Requested size: 160.15854pt x 640.63158pt.
-<Sections/Images_2/DS_100_history.png, id=855, 722.7pt x 1445.4pt>
+<Sections/Images_2/DS_100_history.png, id=314, 722.7pt x 1445.4pt>
 File: Sections/Images_2/DS_100_history.png Graphic file (type png)
 <use Sections/Images_2/DS_100_history.png>
 Package pdftex.def Info: Sections/Images_2/DS_100_history.png  used on input li
@@ -1288,26 +1024,26 @@ ne 311.
 
 LaTeX Warning: Float too large for page by 73.82893pt on input line 314.
 
-<Sections/Images/Atmos_to_neibors_p3.png, id=857, 1011.78pt x 361.35pt>
+<Sections/Images/Atmos_to_neibors_p3.png, id=316, 1011.78pt x 361.35pt>
 File: Sections/Images/Atmos_to_neibors_p3.png Graphic file (type png)
 <use Sections/Images/Atmos_to_neibors_p3.png>
 Package pdftex.def Info: Sections/Images/Atmos_to_neibors_p3.png  used on input
  line 324.
 (pdftex.def)             Requested size: 250.24199pt x 89.37236pt.
-<Sections/Images/Atmos_to_neibors_p2.png, id=858, 1011.78pt x 361.35pt>
+<Sections/Images/Atmos_to_neibors_p2.png, id=317, 1011.78pt x 361.35pt>
 File: Sections/Images/Atmos_to_neibors_p2.png Graphic file (type png)
 <use Sections/Images/Atmos_to_neibors_p2.png>
 Package pdftex.def Info: Sections/Images/Atmos_to_neibors_p2.png  used on input
  line 325.
 (pdftex.def)             Requested size: 250.24199pt x 89.37236pt.
-<Sections/Images/Atmos_to_neibors_p1.png, id=859, 1011.78pt x 361.35pt>
+<Sections/Images/Atmos_to_neibors_p1.png, id=318, 1011.78pt x 361.35pt>
 File: Sections/Images/Atmos_to_neibors_p1.png Graphic file (type png)
 <use Sections/Images/Atmos_to_neibors_p1.png>
 Package pdftex.def Info: Sections/Images/Atmos_to_neibors_p1.png  used on input
  line 326.
 (pdftex.def)             Requested size: 250.24199pt x 89.37236pt.
-[44] [45 <./Sections/Images_2/DS_100_dists.png> <./Sections/Images_2/DS_100_his
-tory.png>] [46 <./Sections/Images/Atmos_to_neibors_p3.png> <./Sections/Images/A
+[14] [15 <./Sections/Images_2/DS_100_dists.png> <./Sections/Images_2/DS_100_his
+tory.png>] [16 <./Sections/Images/Atmos_to_neibors_p3.png> <./Sections/Images/A
 tmos_to_neibors_p2.png> <./Sections/Images/Atmos_to_neibors_p1.png>]
 ! Double superscript.
 <recently read> ^
@@ -1328,28 +1064,139 @@ l.380 Р Р°Р·РЅРёС†Р° РјРµР¶РґСѓ $p^{(3)}'
                                          $ Рё $(\la n_{2} \ra)$ СѓРІРµР»РёС‡...
 
 ? 
-) [47]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
-[48
+) [17]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
+[18
 
 
 
 ]
 \openout2 = `Sections/Literature.aux'.
 
- (./Sections/Literature.tex [49
+ (./Sections/Literature.tex [19
 
-]) [50]
+]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.85 ...ґРѕСЃС‚РёР¶РµРЅРёРµ РїСЂРѕС†РµСЃСЃРѕРј {x_
+                                                  i} СЃРѕСЃС‚РѕСЏРЅРёСЏ РёР·...
+
+? 
+! Extra }, or forgotten $.
+l.85 ...ѕСЃС‚РёР¶РµРЅРёРµ РїСЂРѕС†РµСЃСЃРѕРј {x_i}
+                                                   СЃРѕСЃС‚РѕСЏРЅРёСЏ РёР· Р...
+
+? 
+
+LaTeX Warning: Command \cyrs invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyro invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrs invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrt invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyro invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrya invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrn invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyri invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrya invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyri invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrz invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrp invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrr invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyro invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrs invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrt invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrr invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyra invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrn invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrs invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrt invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyrv invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \cyra invalid in math mode on input line 85.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.86 
+     
+? 
+Missing character: There is no с in font cmr10!
+Missing character: There is no о in font cmr10!
+Missing character: There is no с in font cmr10!
+Missing character: There is no т in font cmr10!
+Missing character: There is no о in font cmr10!
+Missing character: There is no я in font cmr10!
+Missing character: There is no н in font cmr10!
+Missing character: There is no и in font cmr10!
+Missing character: There is no я in font cmr10!
+Missing character: There is no и in font cmr10!
+Missing character: There is no з in font cmr10!
+Missing character: There is no п in font cmr10!
+Missing character: There is no р in font cmr10!
+Missing character: There is no о in font cmr10!
+Missing character: There is no с in font cmr10!
+Missing character: There is no т in font cmr10!
+Missing character: There is no р in font cmr10!
+Missing character: There is no а in font cmr10!
+Missing character: There is no н in font cmr10!
+Missing character: There is no с in font cmr10!
+Missing character: There is no т in font cmr10!
+Missing character: There is no в in font cmr10!
+Missing character: There is no а in font cmr10!
+[20]) [21]
 \openout2 = `Sections/Technical.aux'.
 
  (./Sections/Technical.tex
-<Sections/Images_2/experiment_time.png, id=931, 626.94225pt x 53.60025pt>
+<Sections/Images_2/experiment_time.png, id=403, 626.94225pt x 53.60025pt>
 File: Sections/Images_2/experiment_time.png Graphic file (type png)
 <use Sections/Images_2/experiment_time.png>
 Package pdftex.def Info: Sections/Images_2/experiment_time.png  used on input l
 ine 33.
 (pdftex.def)             Requested size: 475.45825pt x 40.64908pt.
-) [51
+) [22
 
 
 
@@ -1359,69 +1206,60 @@ l.67 \newblock Study of the {\texttheta
                                        } point by enumeration of self-avoidi...
 
 ? 
-) [52
+) [23
 
 
 
-] (./РћС‚С‡С‘С‚.aux (./Sections/Introduction.aux) (./Sections/MeanMagn.aux) (./
-Sections/MeanEnergy.aux) (./Sections/HeatCapacity.aux)
-(./Sections/FreeEnergy.aux) (./Sections/OBCvsPBC.aux)
-(./Sections/1DComparison.aux) (./Sections/DatCollMeanMagn2.aux)
-(./Sections/RectanCumulant.aux) (./Sections/3DTest.aux) (./Sections/Bulk.aux)
-(./Sections/Literature.aux) (./Sections/Technical.aux))
+] (./РћС‚С‡С‘С‚.aux (./Sections/Bulk.aux) (./Sections/Literature.aux)
+(./Sections/Technical.aux))
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `РћС‚С‡С‘С‚.out' has not changed.
-(rerunfilecheck)             Checksum: A0C2DCD8430F27ADF817149883DA975E;21780.
- ) 
+(rerunfilecheck)             Checksum: 0D1F1F6DACAB5DE6FCDD3232A23220D7;7891.
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 85 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 15239 strings out of 478040
- 250335 string characters out of 5836632
- 596997 words of memory out of 5000000
- 32985 multiletter control sequences out of 15000+600000
+ 14599 strings out of 478040
+ 232945 string characters out of 5836632
+ 582448 words of memory out of 5000000
+ 32582 multiletter control sequences out of 15000+600000
  490700 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,15n,91p,2224b,682s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{d:/ProgramFiles/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2
-a.enc}{d:/ProgramFiles/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-supe
-r-ts1.enc}<d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmex10.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi10.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi12.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi5.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi6.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi8.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><d:/ProgramFiles/texlive/2022/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr5.pfb><d:/ProgramFiles/texlive/2022/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/ProgramFiles/texlive/2022/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/ProgramFiles/texlive/2022/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/ProgramFiles/texlive/2022/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/ProgramFiles/texlive/20
-22/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><d:/ProgramFiles/texlive
-/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/ProgramFiles/texl
-ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/ProgramFiles/t
-exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/ProgramFile
-s/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/Pr
-ogramFiles/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><d:
-/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb>
-<d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.p
-fb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx207
-4.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx
-2488.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/cm-super/s
-frm0600.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/cm-supe
-r/sfrm0700.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/cm-s
-uper/sfrm0800.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/c
-m-super/sfrm1000.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/publi
-c/cm-super/sfrm1200.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/pu
-blic/cm-super/sfrm1728.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1
-/public/cm-super/sfti1000.pfb>
-Output written on РћС‚С‡С‘С‚.pdf (53 pages, 1984059 bytes).
+ 87i,10n,91p,2224b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{d:/ProgramFiles/texlive/2022/texmf-dist/fonts/enc/dvips/cm-sup
+er/cm-super-t2a.enc}{d:/ProgramFiles/texlive/2022/texmf-dist/fonts/enc/dvips/cm
+-super/cm-super-ts1.enc}<d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb><d:/ProgramFiles/texlive/2022/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/ProgramFiles/texlive/2022/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/ProgramFiles/texlive/2022/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/ProgramFiles/texlive/2022/te
+xmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><d:/ProgramFiles/texlive/2022
+/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/ProgramFiles/texlive/2
+022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/ProgramFiles/texliv
+e/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><d:/ProgramFiles/tex
+live/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><d:/ProgramFiles/
+texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><d:/ProgramFil
+es/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><d:/Program
+Files/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><d:/Prog
+ramFiles/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><d:/P
+rogramFiles/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d
+:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb
+><d:/ProgramFiles/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.
+pfb>
+Output written on РћС‚С‡С‘С‚.pdf (24 pages, 1406630 bytes).
 PDF statistics:
- 1109 PDF objects out of 1200 (max. 8388607)
- 922 compressed objects within 10 object streams
- 263 named destinations out of 1000 (max. 500000)
- 635 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 516 PDF objects out of 1000 (max. 8388607)
+ 407 compressed objects within 5 object streams
+ 111 named destinations out of 1000 (max. 500000)
+ 264 words of extra memory for PDF output out of 10000 (max. 10000000)
 
