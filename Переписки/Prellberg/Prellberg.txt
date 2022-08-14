@@ -1,0 +1,45 @@
+https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.603.1106&rep=rep1&type=pdf
+
+
+
+(Prellberg Private Communication 2021)
+
+
+Hi Evgeni,
+
+ 
+
+The below is all for J=0:
+
+ 
+
+I’ve done some simple number crunching that leads me to ask you the following: can you exclude from your simulations the estimates
+
+n_2=0.7177, n_3=0.2271, and n_4=0.0553 for the fraction of monomers with 2, 3, and 4 neighbours, respectively, in the thermodynamic limit?
+
+ 
+
+My simulations indicate that the finite-size estimates for the first of these would decrease, and for the second and third would increase as length becomes larger. I don’t see how you would get n_2=0.75.
+
+ 
+
+But to some extend I’m comparing apples with pears here: I take my end-point estimates p_k, disregard p_0 and compute as a proxy
+
+ 
+
+n_2=p_3/(p_1+p_2+p_3)
+
+n_3=p_2/(p_1+p_2+p_3)
+
+n_4=p_1/(p_1+p_2+p_3)
+
+ 
+
+However, I don’t see why this would be that wrong for very long walks.
+
+ 
+
+Finally, one can prove (using pattern theorems) that n_4 is strictly positive in the thermodynamic limit. For a reference see
+
+https://link.springer.com/book/10.1007/978-1-4612-4132-4. Briefly, the pattern th
+

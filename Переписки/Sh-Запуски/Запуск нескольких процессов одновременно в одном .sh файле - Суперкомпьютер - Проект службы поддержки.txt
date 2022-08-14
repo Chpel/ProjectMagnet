@@ -1,0 +1,190 @@
+{"xsrfToken":"BJMA-3MSU-MYLN-E7FK_743c0cfd3eef9ca05636a8c8ff06e7d7b99841ae_lin","user":{"key":"JIRAUSER168205","userName":"iipchelintsev@edu.hse.ru","avatars":{"xsmall":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=16","small":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=24","medium":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=32","large":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=48","xlarge":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=48"},"displayName":"Пчелинцев Илья Игоревич","email":"iipchelintsev@edu.hse.ru","timezone":{"id":"JIRA","regionKey":"JIRA","city":"Москва","gmtOffset":"(GMT+03:00)"},"calendarResource":"jira.webresources:calendar-ru","language":{"key":"ru_RU","displayName":"русский (Россия) [По умолчанию]"},"canChangePassword":false,"canUpdateUser":false,"allOpenRequestsCount":0,"pendingApprovalsCount":0,"approvalsCount":0,"customMenuLinks":[],"notificationType":"html","canAdministerJIRA":false,"agentForPortal":false},"branding":{"id":"34","key":"supcompsd","name":"Суперкомпьютер","portalBaseUrl":"/servicedesk/customer/portal/34"},"helpCenterBranding":{"headerBGColor":"#005dab","headerLinkColor":"#ffffff","headerLinkHoverColor":"#ffffff","headerLinkHoverBGColor":"#0a74cf","logoUrl":"/rest/servicedesk/1/customer/viewport-resources/global-logo?_=6474f0089deacaa4926309e20672cfe2","logoId":2,"helpCenterTitle":"Help center","sharedPortalName":"Help center"},"portal":{"id":"34","key":"supcompsd","projectId":13500,"serviceDeskId":34,"name":"Суперкомпьютер","description":"<p>На сайте Отдела суперкомпьютерного моделирования НИУ ВШЭ: <a href=\"https://hpc.hse.ru\" class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://hpc.hse.ru</a> Вы можете изучить характеристики вычислительного кластера, правила доступа, форму регистрации, инструкции и список установленного программного обеспечения. </p> \n<p>Создайте запрос в техническую поддержку, мы постараемся его выполнить в кратчайшие сроки.</p>","portalBaseUrl":"/servicedesk/customer/portal/34","onlyPortal":false,"createPermission":true,"openRequestCount":0,"announcement":{"header":"","headerWiki":"","message":"","messageWiki":"","canEditAnnouncement":false,"portalId":34}},"reqDetails":{"reporter":{"key":"JIRAUSER168205","username":"iipchelintsev@edu.hse.ru","email":"iipchelintsev@edu.hse.ru","displayName":"Пчелинцев Илья Игоревич","avatarUrl":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=24"},"participants":[],"organisations":[],"requestTypeName":"Консультация по запуску задачи","key":"HPCSD-347","issueType":"10500","issueTypeName":"Консультация","issue":{"id":365887,"key":"HPCSD-347","creator":"iipchelintsev@edu.hse.ru","reporter":{"key":"JIRAUSER168205","username":"iipchelintsev@edu.hse.ru","email":"iipchelintsev@edu.hse.ru","displayName":"Пчелинцев Илья Игоревич","avatarUrl":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=24"},"assignee":{"key":"JIRAUSER30410","username":"vikozyrev","email":"vikozyrev@hse.ru","displayName":"Козырев Вячеслав Иванович","avatarUrl":"https://pmo.hse.ru/rest/servicedesk/1/servicedesk/customer/avatar/13500?size=small"},"participants":[],"organisations":[],"sequence":347,"serviceDeskKey":"supcompsd","formKey":"1c734f18-2ee1-43a3-893f-f92b2e48c6f6","requestTypeName":"Консультация по запуску задачи","requestTypeId":292,"summary":"Производительность кода на Python+jit","isNew":false,"status":"Решен","resolution":"Готово","date":"2022-05-04T12:33:25+0300","friendlyDate":"04.05.2022 12:33","fields":[{"id":"description","label":"Содержание запроса","value":{"html":"<p>Добрый день, </p>\n\n<p>Недавно столкнулся к проблемой производительности одного и того же кода на языке Python на разных платформах - на Google Colab и на кластере.</p>\n\n<p>На кластере выполнение программы на 10000 шагов заняло 6.5 дней (результат выводился в файл с шагом в 1000 шагов), в то время так google colab оценивал время выполнения в несколько часов (см. скриншот), при том, что код выполняется с графическим отслеживанием пакетом tqdm, то есть, ещё и немного замедлен. Я бы хотел узнать, возможно ли добиться такой же скорости на кластере, и чем может быть вызвано технически такое различие во времени выполнения.</p>\n\n<p>Код возможно ускорить с помощью компиляции в numba с параметром parallel, однако в руководстве пользования не прописано как выделить на один процесс несколько ядер (не чтобы каждое выполняло по процессу, а чтобы все работали над одним-единым процессом).</p>"}},{"id":"customfield_12313","label":"Название и версия запускаемого ПО","value":{"html":"Python"}},{"id":"customfield_12322","label":"ID проблемных задач в очереди","value":{"html":"552483-552489"}},{"id":"customfield_12323","label":"Путь к папке программы","value":{"html":"/home/iipchelintsev/Drunken_Sailor.py"}},{"id":"customfield_12324","label":"Путь к output-файлу задачи, содержащему ошибку","value":{"html":"/home/iipchelintsev/Drunk_Sailor_N_10000.txt"}},{"id":"customfield_12325","label":"Команда запуска","value":{"html":"sbatch -w cn-011 Ran_Walk.sh"}},{"id":"customfield_12326","label":"Какая технология параллельного программирования применяется? На каких языках написана программа?","value":{"html":"Python+numba (jit), без распараллеливания"}},{"id":"customfield_12327","label":"Содержание скрипта запуска или путь к нему","value":{"html":"/home/iipchelintsev/Ran_Walk.sh"}},{"id":"customfield_12328","label":"Подключенные модули","value":{"html":"Python/Anaconda_v11.2021 "}}],"activityStream":[{"type":"resolution-update","activityText":"Решен","date":"2022-05-16T17:46:25+0300","friendlyDate":"16.05.2022 17:46","resolution":"Готово","status":"Решен"},{"type":"worker-comment","activityText":"","date":"2022-05-16T17:46:18+0300","friendlyDate":"16.05.2022 17:46","author":"Козырев Вячеслав Иванович","avatarUrl":"https://pmo.hse.ru/rest/servicedesk/1/servicedesk/customer/avatar/13500","commentId":750654,"comment":"<p>Добрый день.<br>\nnumpy для многих операций вызывает функции из сторонней библиотеки линейной алгебры. Наиболее широко распространены библиотеки BLAS (OpenBLAS) и Intel MKL.<br>\nНа разных задачах может быть ускорение как с одной, так и с другой библиотекой.<br>\nНапример, здесь быстрее MKL - <a href=\"https://towardsdatascience.com/is-your-numpy-optimized-for-speed-c1d2b2ba515\" class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://towardsdatascience.com/is-your-numpy-optimized-for-speed-c1d2b2ba515</a><br>\nА здесь - OpenBLAS - <a href=\"https://shaalltime.medium.com/benchmark-numpy-with-openblas-and-mkl-library-on-amd-ryzen-3950x-cpu-96184f91057f\" class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://shaalltime.medium.com/benchmark-numpy-with-openblas-and-mkl-library-on-amd-ryzen-3950x-cpu-96184f91057f</a></p>\n\n<p>Привязка numpy к используемой библиотеке происходит в момент сборки модуля.<br>\nВ каталоге <a href=\"https://pypi.org/\" class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://pypi.org/</a> модуль numpy собран с использованием OpenBLAS, а в каталоге Anaconda - с использованием Intel MKL.<br>\nПосмотреть с какой библиотекой собран numpy можно и в консоли Python с помощью функции numpy.show_config()</p>\n\n<p>Без проведения дополнительных тестов, я бы сказал, что именно разные библиотеки линейной алгебры повлияли на скорость выполнения расчёта.</p>","rawComment":"Добрый день.\nnumpy для многих операций вызывает функции из сторонней библиотеки линейной алгебры. Наиболее широко распространены библиотеки BLAS (OpenBLAS) и Intel MKL.\nНа разных задачах может быть ускорение как с одной, так и с другой библиотекой.\nНапример, здесь быстрее MKL - https://towardsdatascience.com/is-your-numpy-optimized-for-speed-c1d2b2ba515\nА здесь - OpenBLAS - https://shaalltime.medium.com/benchmark-numpy-with-openblas-and-mkl-library-on-amd-ryzen-3950x-cpu-96184f91057f\n\nПривязка numpy к используемой библиотеке происходит в момент сборки модуля.\nВ каталоге https://pypi.org/ модуль numpy собран с использованием OpenBLAS, а в каталоге Anaconda - с использованием Intel MKL.\nПосмотреть с какой библиотекой собран numpy можно и в консоли Python с помощью функции numpy.show_config()\n\nБез проведения дополнительных тестов, я бы сказал, что именно разные библиотеки линейной алгебры повлияли на скорость выполнения расчёта.","invisibleToReporter":false,"outsiderComment":false,"authorKey":"JIRAUSER30410","authorUsername":"vikozyrev","canAddAuthorAsParticipant":false},{"type":"status-update","activityText":"Ожидание поддержки","date":"2022-05-14T18:18:51+0300","friendlyDate":"14.05.2022 18:18","status":"Ожидание поддержки"},{"type":"requester-comment","activityText":"","date":"2022-05-14T18:18:51+0300","friendlyDate":"14.05.2022 18:18","author":"Пчелинцев Илья Игоревич","avatarUrl":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=48","comment":"<p>Добрый вечер! </p>\n\n<p>Прошу прощения за беспокойство из решенного запроса, но дело в том, что в рамках отчётности по проекту мне понадобилось описать отличие в используемых окружениях и уточнить причину почему то или иное окружение работает с разной скоростью выполнения - просто я увидел, что numpy в окружении colab новее, чем в Anaconda_v11.2021, а вот numba наоборот - версией старше. Может ли быть дело в перегруженности окружения Anaconda_v11.2021 или же конкретные версии используемых пакетов работают на конкретном \"железе\" лучше?</p>\n\n<p>С уважением,<br>\nПчелинцев Илья</p>","rawComment":"Добрый вечер! \n\nПрошу прощения за беспокойство из решенного запроса, но дело в том, что в рамках отчётности по проекту мне понадобилось описать отличие в используемых окружениях и уточнить причину почему то или иное окружение работает с разной скоростью выполнения - просто я увидел, что numpy в окружении colab новее, чем в Anaconda_v11.2021, а вот numba наоборот - версией старше. Может ли быть дело в перегруженности окружения Anaconda_v11.2021 или же конкретные версии используемых пакетов работают на конкретном \"железе\" лучше?\n\nС уважением,\nПчелинцев Илья"},{"type":"resolution-update","activityText":"Решен","date":"2022-05-09T00:46:32+0300","friendlyDate":"09.05.2022 00:46","resolution":"Готово","status":"Решен"},{"type":"status-update","activityText":"Ожидание поддержки","date":"2022-05-08T10:05:16+0300","friendlyDate":"08.05.2022 10:05","status":"Ожидание поддержки"},{"type":"requester-comment","activityText":"","date":"2022-05-08T10:05:15+0300","friendlyDate":"08.05.2022 10:05","author":"Пчелинцев Илья Игоревич","avatarUrl":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=48","comment":"<p>Добрый день!</p>\n\n<p>Посмотрел сейчас результаты - всё работает! Спасибо огромное за помощь!</p>","rawComment":"Добрый день!\n\nПосмотрел сейчас результаты - всё работает! Спасибо огромное за помощь!"},{"type":"status-update","activityText":"Ожидание клиента","date":"2022-05-06T18:43:08+0300","friendlyDate":"06.05.2022 18:43","status":"Ожидание клиента"},{"type":"worker-comment","activityText":"","date":"2022-05-06T18:42:53+0300","friendlyDate":"06.05.2022 18:42","author":"Козырев Вячеслав Иванович","avatarUrl":"https://pmo.hse.ru/rest/servicedesk/1/servicedesk/customer/avatar/13500","commentId":738889,"comment":"<p>Вероятно, урезанная функциональность и была причиной столь большого ускорения вычислений.</p>\n\n<p>Протестировал ещё один вариант с набором модулей, идентичным тому, что установлены в облаке. Собрал окружение в&nbsp;/home/iipchelintsev/envs/colab/</p>\n\n<p>Для активации необходимо выполнить:&nbsp;source activate ~/envs/colab/bin/activate</p>\n\n<p>Прогресс в tqdm на 10000 показывает производительность, сравнимую с google colab:&nbsp;38/10000 <span class=\"error\">[01:23&lt;5:32:41, 2.00s/it]</span></p>\n\n<p>Также запустил задачу через скрипт&nbsp;/home/iipchelintsev/Ran_Walk_colab.sh</p>\n\n<p>Ожидаем результатов.</p>","rawComment":"Вероятно, урезанная функциональность и была причиной столь большого ускорения вычислений.\n\nПротестировал ещё один вариант с набором модулей, идентичным тому, что установлены в облаке. Собрал окружение в /home/iipchelintsev/envs/colab/\n\nДля активации необходимо выполнить: source activate ~/envs/colab/bin/activate\n\nПрогресс в tqdm на 10000 показывает производительность, сравнимую с google colab: 38/10000 [01:23<5:32:41, 2.00s/it]\n\nТакже запустил задачу через скрипт /home/iipchelintsev/Ran_Walk_colab.sh\n\nОжидаем результатов.","invisibleToReporter":false,"outsiderComment":false,"authorKey":"JIRAUSER30410","authorUsername":"vikozyrev","canAddAuthorAsParticipant":false},{"type":"requester-comment","activityText":"","date":"2022-05-06T15:29:15+0300","friendlyDate":"06.05.2022 15:29","author":"Пчелинцев Илья Игоревич","avatarUrl":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=48","comment":"<p>UPD: Ускорение с module load Python произошло и значительное, но часть данных обнулена. Пока не знаю, в чём может быть причина - возможно, в данном пакете деление на целочисленный тип нехорошо работает (выводится лишь информация, введенная отдельной командой: вторая в скриншоте).</p>\n\n<p><span class=\"image-wrap\" style=\"\"><a id=\"271940_thumb\" href=\"https://pmo.hse.ru/servicedesk/customershim/secure/attachment/271940/271940_image.png?fromIssue=365887\" title=\"image.png\" file-preview-type=\"image\" file-preview-id=\"271940\" file-preview-title=\"image.png\"><img src=\"https://pmo.hse.ru/servicedesk/customershim/secure/thumbnail/271940/_thumb_271940.png?fromIssue=365887\" style=\"border: 0px solid black\" role=\"presentation\"></a></span></p>","rawComment":"UPD: Ускорение с module load Python произошло и значительное, но часть данных обнулена. Пока не знаю, в чём может быть причина - возможно, в данном пакете деление на целочисленный тип нехорошо работает (выводится лишь информация, введенная отдельной командой: вторая в скриншоте).\n\n!image.png|thumbnail!"},{"type":"status-update","activityText":"Ожидание поддержки","date":"2022-05-06T14:49:48+0300","friendlyDate":"06.05.2022 14:49","status":"Ожидание поддержки"},{"type":"requester-comment","activityText":"","date":"2022-05-06T14:49:48+0300","friendlyDate":"06.05.2022 14:49","author":"Пчелинцев Илья Игоревич","avatarUrl":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=48","comment":"<p>Добрый день! </p>\n\n<p>Большое спасибо! Посмотрел сейчас результаты - действительно, для длин 100-200 результаты значительно лучше - 2361000 и 1332000 за 24 часа против 7661000 и 5865000 за 7 дней соответственно. Однако для последующих длин улучшение не столь заметно, по крайней мере судя по времени вывода - для длины 10000 тысяча шагов заняла столько же, столько и в прошлый раз - примерно полдня.</p>\n\n<p>Меня поразила скорость выполняемого кода на ipynb-файле, подключенном к суперкомпьютеру - может ли такое быть, что jupyter оптимизирован лучше для работы с питоном, нежели sbatch-запуск? Или же это может быть проблема самого механизма вывода в файл? </p>\n\n<p>Сейчас, к сожалению, ускорения в 22 раза увидеть не получается.</p>\n\n<p>P.S.: В .sh скрипте перед вызовом окружения jit_mkl был использовал модуль Python/Anaconda_v11.2021, сейчас попробую просто Python как в вашем ответе.</p>","rawComment":"Добрый день! \n\nБольшое спасибо! Посмотрел сейчас результаты - действительно, для длин 100-200 результаты значительно лучше - 2361000 и 1332000 за 24 часа против 7661000 и 5865000 за 7 дней соответственно. Однако для последующих длин улучшение не столь заметно, по крайней мере судя по времени вывода - для длины 10000 тысяча шагов заняла столько же, столько и в прошлый раз - примерно полдня.\n\nМеня поразила скорость выполняемого кода на ipynb-файле, подключенном к суперкомпьютеру - может ли такое быть, что jupyter оптимизирован лучше для работы с питоном, нежели sbatch-запуск? Или же это может быть проблема самого механизма вывода в файл? \n\nСейчас, к сожалению, ускорения в 22 раза увидеть не получается.\n\nP.S.: В .sh скрипте перед вызовом окружения jit_mkl был использовал модуль Python/Anaconda_v11.2021, сейчас попробую просто Python как в вашем ответе."},{"type":"status-update","activityText":"Ожидание клиента","date":"2022-05-05T15:04:19+0300","friendlyDate":"05.05.2022 15:04","status":"Ожидание клиента"},{"type":"worker-comment","activityText":"","date":"2022-05-05T15:01:39+0300","friendlyDate":"05.05.2022 15:01","author":"Козырев Вячеслав Иванович","avatarUrl":"https://pmo.hse.ru/rest/servicedesk/1/servicedesk/customer/avatar/13500","commentId":736810,"comment":"<p>Добрый день!</p>\n\n<p>Создал в вашем каталоге окружение jit_mkl для python с оптимизированной библиотекой линейной алгебры Intel MKL.</p>\n\n<p>Для использования необходимо выполнить команды:&nbsp;</p>\n<div class=\"code panel\" style=\"border-width: 1px;\"><div class=\"codeContent panelContent\">\n<pre class=\"code-java\">module load Python\nsource activate jit_mkl\n</pre>\n</div></div>\n<p>&nbsp;numpy с этой библиотекой показывает значительно большую производительность на коде из вашего ноутбука:</p>\n\n<p>~45 итераций в сек. на суперкомпьютере vs 2.3 итерации в сек. в Google Colab</p>\n\n<p><span class=\"image-wrap\" style=\"\"><img src=\"https://pmo.hse.ru/servicedesk/customershim/secure/attachment/271312/271312_image-2022-05-05-15-02-07-824.png?fromIssue=365887\" height=\"74\" width=\"351\" style=\"border: 0px solid black\"></span></p>\n\n<p>Я запустил задачу №631960 через sbatch-скрипт&nbsp;/home/iipchelintsev/Ran_Walk_mkl.sh</p>\n\n<p>Вычисления пока продолжаются, но какие-то результаты уже записываются. Посмотрите, пожалуйста.</p>","rawComment":"Добрый день!\n\nСоздал в вашем каталоге окружение jit_mkl для python с оптимизированной библиотекой линейной алгебры Intel MKL.\n\nДля использования необходимо выполнить команды: \n{code:java}\nmodule load Python\nsource activate jit_mkl\n{code}\n numpy с этой библиотекой показывает значительно большую производительность на коде из вашего ноутбука:\n\n~45 итераций в сек. на суперкомпьютере vs 2.3 итерации в сек. в Google Colab\n\n!image-2022-05-05-15-02-07-824.png|width=351,height=74!\n\nЯ запустил задачу №631960 через sbatch-скрипт /home/iipchelintsev/Ran_Walk_mkl.sh\n\nВычисления пока продолжаются, но какие-то результаты уже записываются. Посмотрите, пожалуйста.","invisibleToReporter":false,"outsiderComment":false,"authorKey":"JIRAUSER30410","authorUsername":"vikozyrev","canAddAuthorAsParticipant":false},{"type":"status-update","activityText":"В работе","date":"2022-05-04T20:31:24+0300","friendlyDate":"04.05.2022 20:31","status":"В работе"},{"type":"requester-comment","activityText":"","date":"2022-05-04T19:40:27+0300","friendlyDate":"04.05.2022 19:40","author":"Пчелинцев Илья Игоревич","avatarUrl":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=48","comment":"<p>По поводу numba и axis=0: данная особенность возникает при компиляции njit'ом, при jit же возможно применить axis=0 для np.unique, хоть и ускорение получается слабое - я пытался сделать собственный unique_axis_0 (можно увидеть в разделе \"распараллеленный алгоритм\"), но вышло ещё медленнее даже при njit.</p>","rawComment":"По поводу numba и axis=0: данная особенность возникает при компиляции njit'ом, при jit же возможно применить axis=0 для np.unique, хоть и ускорение получается слабое - я пытался сделать собственный unique_axis_0 (можно увидеть в разделе \"распараллеленный алгоритм\"), но вышло ещё медленнее даже при njit."},{"type":"requester-comment","activityText":"","date":"2022-05-04T19:36:38+0300","friendlyDate":"04.05.2022 19:36","author":"Пчелинцев Илья Игоревич","avatarUrl":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=48","comment":"<p>И благодарю за подсказку про cpus-per-task - совсем забыл про этот параметр.</p>","rawComment":"И благодарю за подсказку про cpus-per-task - совсем забыл про этот параметр."},{"type":"status-update","activityText":"Ожидание поддержки","date":"2022-05-04T19:35:28+0300","friendlyDate":"04.05.2022 19:35","status":"Ожидание поддержки"},{"type":"requester-comment","activityText":"","date":"2022-05-04T19:35:27+0300","friendlyDate":"04.05.2022 19:35","author":"Пчелинцев Илья Игоревич","avatarUrl":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=48","comment":"<p>Это ссылка на ноутбук с кодом - достаточно запустить импорты с начиная с \"Итогового алгоритма\"</p>\n\n<p><a href=\"https://colab.research.google.com/drive/17dJLX0MSglg0CV1vm6dG5tiLpV8yCz1S?usp=sharing\" class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://colab.research.google.com/drive/17dJLX0MSglg0CV1vm6dG5tiLpV8yCz1S?usp=sharing</a></p>","rawComment":"Это ссылка на ноутбук с кодом - достаточно запустить импорты с начиная с \"Итогового алгоритма\"\n\nhttps://colab.research.google.com/drive/17dJLX0MSglg0CV1vm6dG5tiLpV8yCz1S?usp=sharing\n"},{"type":"status-update","activityText":"Ожидание клиента","date":"2022-05-04T17:14:47+0300","friendlyDate":"04.05.2022 17:14","status":"Ожидание клиента"},{"type":"worker-comment","activityText":"","date":"2022-05-04T17:14:30+0300","friendlyDate":"04.05.2022 17:14","author":"Козырев Вячеслав Иванович","avatarUrl":"https://pmo.hse.ru/rest/servicedesk/1/servicedesk/customer/avatar/13500","commentId":734978,"comment":"<p>Добрый день!</p>\n\n<p>Пришлите, пожалуйста, ноутбук с кодом, в котором есть&nbsp;tqdm.</p>\n\n<p>Для указания количества ядер на одну задачу используется параметр&nbsp;cpus-per-task (например,&nbsp;#SBATCH --cpus-per-task=8).</p>\n\n<p>Однако, обратите внимание, что numba поддерживает только первый аргумент функции&nbsp;np.unique (в коде у вас np.unique(walk_dots, axis=0)).</p>","rawComment":"Добрый день!\n\nПришлите, пожалуйста, ноутбук с кодом, в котором есть tqdm.\n\nДля указания количества ядер на одну задачу используется параметр cpus-per-task (например, #SBATCH --cpus-per-task=8).\n\nОднако, обратите внимание, что numba поддерживает только первый аргумент функции np.unique (в коде у вас np.unique(walk_dots, axis=0)).","invisibleToReporter":false,"outsiderComment":false,"authorKey":"JIRAUSER30410","authorUsername":"vikozyrev","canAddAuthorAsParticipant":false},{"type":"status-update","activityText":"В работе","date":"2022-05-04T14:05:43+0300","friendlyDate":"04.05.2022 14:05","status":"В работе"},{"type":"requester-comment","activityText":"","date":"2022-05-04T12:33:26+0300","friendlyDate":"04.05.2022 12:33","author":"Пчелинцев Илья Игоревич","avatarUrl":"https://www.gravatar.com/avatar/421e9a54e22ab2a1a40718477ee82c02?d=mm&s=48","comment":"\n\n<p><span class=\"image-wrap\" style=\"\"><a id=\"270576_thumb\" href=\"https://pmo.hse.ru/servicedesk/customershim/secure/attachment/270576/270576_%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA+%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0+2022-05-04+123119.png?fromIssue=365887\" title=\"Снимок экрана 2022-05-04 123119.png\" file-preview-type=\"image\" file-preview-id=\"270576\" file-preview-title=\"Снимок экрана 2022-05-04 123119.png\"><img src=\"https://pmo.hse.ru/servicedesk/customershim/secure/thumbnail/270576/_thumb_270576.png?fromIssue=365887\" style=\"border: 0px solid black\" role=\"presentation\"></a></span></p>","rawComment":"\n\n!Снимок экрана 2022-05-04 123119.png|thumbnail!"}],"requestIcon":10924,"canBrowse":true,"canAttach":true,"categoryKey":"done","archived":false},"canCreateAttachments":true,"canCreateIssues":true,"canAddComment":true,"canViewIssueInJIRA":false,"canAddParticipants":true,"canRemoveParticipants":true,"canSignupParticipants":false,"canSubmitWithEmailAddress":false,"topPanels":[],"optionPanels":[],"actionSections":[{"params":{"styleClass":"customer-request-actions"},"key":"com.atlassian.servicedesk:customer-request-actions","items":[{"key":"com.atlassian.servicedesk:cr-unsubscribe-notification","label":"Не уведомляйте меня","href":"#","params":{"iconClass":"watch"},"styleClass":"js-unsubscribe-notification"},{"key":"com.atlassian.servicedesk:cr-share-request","label":"Общий доступ","href":"#","params":{"iconClass":"share"},"styleClass":"js-share-request"},{"key":"com.atlassian.servicedesk:workflow-transition-931","label":"Вернуть в работу","href":"#","params":{"submitName":"Вернуть в работу","transitionId":"931","iconUrl":"/s/nmz7j7/822002/mib41y/4.14.0-REL-0010/_/download/resources/com.atlassian.servicedesk:img/transition-icon.svg"},"styleClass":"js-trigger-customer-transition"}]},{"params":{"styleClass":"customer-request-actions"},"key":"custom-customer-request-actions","label":"","items":[]}],"issueLinkUrl":"/browse/HPCSD-347","requestDetailsBaseUrl":"/servicedesk/customer/portal/34/HPCSD-347","customerInvited":false},"sharedPortal":{"name":"Help center","description":"<p>Добро пожаловать в центр поддержки - мы здесь чтобы Вам помочь! Создайте запрос, воспользовавшись предложенным опциями.</p>","kbs":{"kbEnabled":true,"appLinkUrl":"https://confluence.hse.ru"}},"organisations":{"organisations":[]},"portalWebFragments":{"headerPanels":[],"subheaderPanels":[],"footerPanels":[],"pagePanels":{"fieldPanels":[]}}}
+{"tourEnabled":false,"wacLink":"https://www.atlassian.com/software/jira/service-management?utm_medium=jira-in-product&utm_source=jira_service_desk_portal_footer&utm_campaign=service-desk_portal_server","serviceDeskVersion":"4.14.0","contextPath":"","xsrfToken":"BJMA-3MSU-MYLN-E7FK_743c0cfd3eef9ca05636a8c8ff06e7d7b99841ae_lin","baseUrl":"https://pmo.hse.ru/servicedesk/customer","relativeBaseUrl":"/servicedesk/customer","customerLoginEnabled":true,"maxAttachmentSize":"50000000","gravatarEnabled":true,"rteEnabled":false,"calendarDateData":{"months":["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"],"monthsShort":["янв","фев","мар","апр","мая","июн","июл","авг","сен","окт","ноя","дек"],"weekdaysShort":["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],"weekdays":["воскресенье","понедельник","вторник","среда","четверг","пятница","суббота"]}}
+
+
+  Help center <https://pmo.hse.ru/servicedesk/customer/portals>
+
+Запросы <#requests-nav-dropdown>
+
+  * Мои запросы
+    <https://pmo.hse.ru/servicedesk/customer/user/requests?status=open>
+  * Все запросы
+    <https://pmo.hse.ru/servicedesk/customer/user/requests?status=open&reporter=all>
+
+iipchelintsev@edu.hse.ru
+ <#dropdown2-header>
+
+  * Профиль <https://pmo.hse.ru/servicedesk/customer/user/profile>
+  * Выход <#>
+
+ 1. Help center <https://pmo.hse.ru/servicedesk/customer/portals>
+ 2. Суперкомпьютер <https://pmo.hse.ru/servicedesk/customer/portal/34>
+ 3. HPCSD-181
+
+
+    Запуск нескольких процессов одновременно в одном .sh файле Решен
+
+iipchelintsev@edu.hse.ru
+Прокомментировать запрос...
+
+ДобавитьОтмена
+Перетащите файлы, вставьте снимки экрана или
+обзор
+50000000
+
+
+        Активность
+
+  *
+    Статус Вашего запроса изменён на *Решен* с резолюцией *Готово*.
+    27.09.2021 12:36Последний
+
+  *
+    Статус вашего запроса изменен на *Ожидание поддержки*.
+    27.09.2021 12:35
+
+  *
+    Статус Вашего запроса изменён на *Решен* с резолюцией *Проблема
+    решена автором*.
+    27.09.2021 12:31
+
+  *
+    Статус вашего запроса изменен на *Ожидание поддержки*.
+    27.09.2021 12:31
+
+  *
+    Пчелинцев Илья Игоревич
+
+
+    Пчелинцев Илья Игоревич
+
+    27.09.2021 12:31
+
+    Добрый день!
+
+    Понял вас, спасибо большое за объяснение и примеры!
+
+  *
+    Козырев Вячеслав Иванович
+
+
+    Козырев Вячеслав Иванович
+
+    27.09.2021 11:32
+
+    Добрый день!
+
+    Для вашего случая идеально подходит запуск задач в режиме массива
+    <https://hpc.hse.ru/instructions/run#array>. В этом режиме вам
+    необходимо указать в sbatch-файле только одну строку запуска, в
+    которой задаются различные входные параметры через переменную
+    $SLURM_ARRAY_TASK_ID.
+
+    Например, входные параметры можно захардкодить в sbatch-файле:
+
+    #!/bin/bash
+    #SBATCH --time=01:00:00
+    #SBATCH --job-name=array-hardcoded
+    #SBATCH --output=array-hardcoded_%a.out
+    #SBATCH --array=1-5
+
+    case $SLURM_ARRAY_TASK_ID in
+     1) SEED=123 ;;
+     2) SEED=38 ;;
+     3) SEED=22 ;;
+     4) SEED=60 ;;
+     5) SEED=432 ;;
+    esac
+
+    srun python3 pi.py 2500000 --seed=$SEED > pi_hardcoded_$SEED.json
+
+    Можно читать входные параметры построково из файла: 
+
+    #!/bin/bash
+    #SBATCH --time=01:00:00
+    #SBATCH --job-name=pi-array-file
+    #SBATCH --output=pi-array-file_%a.out
+    #SBATCH --array=1-5
+
+    LINE=$(sed -n "$SLURM_ARRAY_TASK_ID"p file.txt)
+    echo $LINE
+
+    srun python3 pi.py 2500000 --seed=$LINE > pi_file_$LINE.json
+
+    Либо производить арифметические операции с
+    переменной SLURM_ARRAY_TASK_ID:
+
+    #!/bin/bash
+    #SBATCH --time=01:00:00
+    #SBATCH --job-name=pi-array-mul
+    #SBATCH --output=pi-array-mul_%a.out
+    #SBATCH --array=1-5
+
+    NUMBER=100
+    INPUT=$((SLURM_ARRAY_TASK_ID*NUMBER))
+
+    srun python3 pi.py 2500000 --seed=$INPUT > pi_mul_$INPUT.json
+
+    Будет создано 5 задач с одинаковыми требованиями к ресурсам. Каждая
+    задача получит свой порядковый номер, на основе которого запустит
+    вычисления с разными входными параметрами.
+
+  *
+    Статус вашего запроса изменен на *Ожидание клиента*.
+    27.09.2021 11:32
+
+  *
+    Статус вашего запроса изменен на *В работе*.
+    26.09.2021 12:25
+
+  *
+
+
+    Подробности
+
+    25.09.2021 18:40
+
+    Содержание запроса
+
+        Добрый вечер,
+        Дело в том, что мне необходимо запустить несколько процессов с
+        разными начальными параметрами в одном .sh-файле - скажите
+        пожалуйста, каким образом можно задать кол-во требуемых ресурсов
+        для такого типа задач? Узел, который по умолчанию выполняет мои
+        процессы, сейчас не имеет достаточно свободных ресурсов
+        (процессов 10, а выполнял только один). Насколько я понял,
+        параметр -n x приведёт лишь в умножению всех процессов в x раз,
+        что мне не подходит. Или в таком случае лучше будет запустить по
+        одному процессу на файл?
+
+        С уважением, Пчелинцев Илья
+
+    Название и версия запускаемого ПО
+        C++
+
+    Путь к output-файлу задачи, содержащему ошибку
+        /home/iipchelintsev/TrIsing_Short.txt
+
+    Команда запуска
+        sbatch TrIsing.sh
+
+    Содержание скрипта запуска или путь к нему
+        /home/iipchelintsev/TrIsing.sh
+
+Решен
+
+  * Не уведомляйте меня <#>
+  * Общий доступ <#>
+  * Вернуть в работу <#>
+
+
+          Передано
+
+  * Пчелинцев Илья ИгоревичИнициатор
+
+Работает на базе Jira Service Management
+<https://www.atlassian.com/software/jira/service-management?utm_medium=jira-in-product&utm_source=jira_service_desk_portal_footer&utm_campaign=service-desk_portal_server>
+
+<javascript:;><javascript:;>
+
+Перетащите файлы, чтобы вложить их в запрос
