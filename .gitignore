@@ -1,2 +1,9 @@
 
 *.bak
+*.aux
+*.log
+Отчёт TeX/Отчёт.out
+Отчёт TeX/Отчёт.synctex.gz
+Отчёт TeX/Отчёт.toc
+Отчёт TeX/Отчёт.pdf
+Отчёт TeX/Отчёт.pdf
