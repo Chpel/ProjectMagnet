@@ -8,3 +8,7 @@
 Отчёт TeX/Отчёт.pdf
 Отчёт TeX/Отчёт.pdf
 Отчёт TeX/Отчёт.bbl
+*.blg
+*.gz
+*.bbl
+*.synctex(busy)
