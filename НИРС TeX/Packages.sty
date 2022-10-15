@@ -1,0 +1,56 @@
+\ProvidesPackage{Packages}
+
+\usepackage{cmap}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures={TeX}, Renderer=Basic}
+\setmainfont[Ligatures={TeX,Historic}]{Times New Roman}
+
+
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+\usepackage{geometry} % Простой способ задавать поля
+	\geometry{top=20mm}
+	\geometry{bottom=20mm}
+	\geometry{left=30mm}
+	\geometry{right=10mm}
+
+\parindent = 1.25 cm
+
+\linespread{1.5}
+
+%% Номера формул
+%\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+
+
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+
+
+
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\title{Проект №19455 "Решетчатые модели макромолекул"}
+\author{Пчелинцев Илья Игоревич, БПМ-192}
+\date{}
+
+\numberwithin{equation}{section}
