@@ -40,14 +40,62 @@
 
 \section{Introduction}
 
-The model of self-avoiding walks is one of extensively studied examples of linear polymers. Moreover, it is the simplest model to study critical behaviour while other models polymer chains have different states in the thermal equilibrium in various solvent conditions. By adding interaction between nearest neighbors of monomers of the walk, we are allowed to study phase transition fixed between solvent conditions, so the given polymer in the thermal equilibrium become extended in good-solvent conditions and collapsed in poor-solvent one. This tricritical nature was described in Ref.\cite{Gennes1979}.
+The model of self-avoiding walks is one of extensively studied examples of linear polymers. 
+Moreover, it is the simplest model to study critical behaviour while other models polymer chains have different states in the thermal equilibrium in various solvent conditions. 
+By adding interaction between nearest neighbors of monomers of the walk, we are allowed to study phase transition fixed between solvent conditions, so the given polymer in the thermal equilibrium become extended in good-solvent conditions and collapsed in poor-solvent one. 
+This tricritical nature was described in Ref.\cite{Gennes1979}.
 
-The impact of close-range interaction was studied precisely in models of magnetic polymers, where interaction between monomers became more complex after each monomer carried a spin and strength of nearest neighbors coupling became variable. This is so called Ising Model on a SAW conformation. In Ref.\cite{Garel1999}, the model was complicated by adding external magnetic field and all conclusions about magnetic properties were by comparing with mean-field model. However, there are some geometric properties which impact of magnetic properties is not clear while studying of require more brute methods. 
+The impact of close-range interaction was studied precisely in models of magnetic polymers, where interaction between monomers became more complex after each monomer carried a spin and strength of nearest neighbors coupling became variable. 
+This is so called Ising Model on a SAW conformation. 
+In Ref.\cite{Garel1999}, the model was complicated by adding external magnetic field and all conclusions about magnetic properties were by comparing with mean-field model. 
+However, there are some geometric properties which impact of magnetic properties is not clear while studying of require more brute methods. 
 
-In previous studies, it was established that Ising model on the self-avoiding walk conformations (SAWs) has a continious type of phase transition \cite{faizullina2021critical}. In this work, we continue study geometric properties of this model and compare them with "papent" models and its modifications, such as Ising model on the rectangular lattice, considered in Ref.\cite{Selke2006}, and two-dimensional interacting self-avoiding walks exactly in their respective critical regions. We suggest that models with similar geometric properties will also have same magnetic propertries, what we suggest to observe in comparing values of Binder cumulants in the $\theta$-transition of models with the equal values of asphericities.
+In previous studies, it was established that Ising model on the self-avoiding walk conformations (SAWs) has a continious type of phase transition \cite{faizullina2021critical}. 
+In this work, we continue study geometric properties of this model and compare them with "papent" models and its modifications, such as Ising model on the rectangular lattice, considered in Ref.\cite{Selke2006}, and two-dimensional interacting self-avoiding walks exactly in their respective critical regions. 
+We suggest that models with similar geometric properties will also have same magnetic propertries, what we suggest to observe in comparing values of Binder cumulants in the $\theta$-transition of models with the equal values of asphericities.
+
+\section{Introduction Fixed}
+
+The model of self-avoiding walks is one of the extensively studied examples of linear polymers. 
+Moreover, it is the simplest model to study critical behaviour while other models of polymer chains have different states in the thermal equilibrium in various solvent conditions. 
+By adding interaction between nearest neighbors of monomers of the walk, we are enabled to study the phase transition fixed between solvent conditions, so the given polymer in the thermal equilibrium becomes extended in the good-solvent conditions and collapses in the poor-solvent one. 
+This tricritical nature was described in [1].
+
+The impact of close-range interaction was studied precisely in models of magnetic polymers, where interaction between monomers became more complex after each monomer carried a spin and the strength of the nearest neighbors coupling became variable. 
+This is the so-called Ising Model on a SAW conformation. 
+In [2], the model was complicated by adding the external magnetic field and all conclusions about magnetic properties were made by comparing with the mean-field model. 
+However, there are some geometric properties whose impact on magnetic properties is not clear while their studying may require more brute methods.
+
+In the previous studies [3], it was established that the Ising model on the self-avoiding walk conformations (SAWs) has a continuous type of phase transition. 
+In this work, we continue to study geometric properties of this model and compare them with "parent" models and its modifications, such as the Ising model on the rectangular lattice, considered in [4], and two-dimensional interacting self-avoiding walks exactly in their respective critical regions. 
+We suggest that models with similar geometric properties will also have the same magnetic properties, which we suggest to observe in comparing values of Binder cumulants in the theta-transition of models with the equal values of asphericities.
+
+
+\section{Literature Review}
+
+There are many studies of self-avoiding walk models, including its interacting versions. 
+Some approaches have focused on critical behaviour of two-dimensional models and its geometrical [1] and magnetic [2] properties. 
+Researchers studied several shape factors, such as average asphericity and size ratios, which are essential in hydrodynamics, by using Monte-Carlo statistical methods. 
+They also verified their computations by mean-field theory [2], widely used in low-dimensional models. 
+As a result, they determined an elliptic average shape of the two-dimensional walks and calculated the average ratio of the two axes in the critical area.
+There also has been a growing interest in the critical magnetic and geometric properties of lattices with more available connections between single monomer, such as cubic and triangle Ising-ISAW models [3,4]. 
+There was also an amount of approaches to research the outer-interacting models [7,8]. 
+Variety of researched lattices prompts studying still underresearched universality of the properties among different models and lattices, particularly geometric ones, which is researched in this study. 
+One of the backbone directions of the work is the comparison of geometrical properties of Ising-ISAW model and ISAW model on the several lattices, such as square, triangle and cubic ones.
+
+With the significant development of technical characteristics of supercomputers, it became possible to simulate much longer conformations. 
+It also paved the way for more accurate research of approximate behaviour of infinite-sized conformations, so it is closer to research of the polymers of the real size. 
+Some approaches have already estimated the scaling of the geometrical properties [5,6]. 
+Researchers have determined the linear scaling of atmosphere probability of non-interacting SAWs and by linear regression, have calculated the asymptotic limits. 
+In this work, the particular attention is paid to analysis of the behaviour of more specific to the model properties. 
+The researched geometrical properties of Ising-ISAW models are the local coordination number as a fraction of the monomers with fixed number of neighbours and the atmosphere of the walks. 
+It also required the least-squares method to estimate non-linear scaling, which was found in simple random walk models.
+
 
 \section{Models and Methods}
-In the paper we consider several models: the first one is Ising model on interacting self-avoiding walk from Ref. \cite{faizullina2021critical}, on three different lattices: 2D-square lattice, 3D-square lattice and 2D-triangle lattice. The main difference between square and triangle lattice in defining two additional diagonal monomers on lattice as nearest too. Considering the case of lack of outer magnetic field in this work, the Hamiltonian of the model of fixed conformation $u$ with length $N$ and strength of nearest-neighbors interaction $J$ reads:
+
+
+The paper considers several models: the first one is Ising model on interacting self-avoiding walk from Ref. \cite{faizullina2021critical}, on three different lattices: 2D-square lattice, 3D-square lattice and 2D-triangle lattice. The main difference between square and triangle lattice is two additional diagonal monomers on lattice determined as nearest. This work considers the case of lack of outer magnetic field, the Hamiltonian of the model of fixed conformation $u$ with length $N$ and strength of nearest-neighbors interaction $J$ reads:
 
 \begin{equation}\label{H_Ising_ISAW}
   H_{u, N, \{\sigma\}} = - \sum_{\langle i,j \rangle} J  \sigma_{i}  \sigma_{j},\ \ i,j \in u,\ |u| = N
@@ -61,7 +109,7 @@ The second model considered in this paper is the Ising model on the rectangular 
   H_{L, r, \{\sigma\}} = - \sum_{\langle i,j \rangle} J  \sigma_{i}  \sigma_{j}
 \end{equation}
 
-Here the $i$-th spin of the lattice has a pair of coordinates from $[1..L] \times [1..rL]$. For comparing magnetic properties of models with similar geometric ones we also define shape factors, such as gyration tensor of system with $N$ points $w_{i}$ \cite{Caracciolo2011}:
+Here the $i$-th spin of the lattice has a pair of coordinates from $[1..L] \times [1..rL]$. For comparing magnetic properties of models with similar geometric ones, the shape factors are considered, such as gyration tensor of system with $N$ points $w_{i}$ \cite{Caracciolo2011}:
 
 \begin{equation}\label{eq:Ten_G1}
     Q_{N,\alpha\beta} = \frac{1}{N} \sum^{N}_{i=1}(w_{i,\alpha} - w_{c, \alpha})(w_{i,\beta} - w_{c, \beta})
@@ -89,9 +137,9 @@ U_{4} = 1 - \frac{\langle m^{4} \rangle}{3 \langle m^{2} \rangle^{2}}
 
 Where $\langle m^{4} \rangle$ and $\langle m^{2} \rangle$ are mean fourth and second order of mean magnetization per spin respectively.
 
-We also need to define mean proportion of monomers with fixed number $i$ of nearest neighbors $\langle n_{i} \rangle$, which is counted directly for every monomer in every simulated conformation of walk.
+It is also necessary to determine the mean proportion of monomers with fixed number $i$ of nearest neighbors $\langle n_{i} \rangle$, which is counted directly for every monomer in every simulated conformation of walk.
 
-We are interested in comparing models in their respective critical regions. For each structure, critical temperatures of Ising models are known as:
+One of the aims is to compare models in their respective critical regions. For each structure, critical temperatures of Ising models are known as:
 
 \begin{table}[h]
     \centering
@@ -119,23 +167,11 @@ We are interested in comparing models in their respective critical regions. For 
     \label{tab:ISAW_T_c}
 \end{table}
 
-% сюда немного позже добавлю критические значения для модели SAW
-
-% Стоит ли добавлять рисунок шага алгоритма 
-% и более подробное объяснение методов?? Поскольку ничего не было добавлено, % я решил не расписывать, но описание методов получилось крайне немногословным))
-
 \section{Results}
 
 \subsection{Mean Asphericity and Critical Cumulant}
 
-% если я правильно понимаю, данную подсекцию можно полностью взять из отчёта
-% (9.6), как раз данная часть больше всего похожа по содержанию на Results -
-% план действий (какие длины были взяты, под какую модель и т.д.), описания
-% графиков, таблицы; только с заключением вопрос - его стоит добавить в 
-% условный Conclusions или рассужждения о результате желательны здесь же 
-% перед частью Bulk.
-
-We attempted to learn how magnetic properties of Ising-like models depend on their geometrical ones and to define their comparability in critical region, where dependence of observable values of models with the length of conformation $N$ is the weakest. The idea is to compare critical cumulants $U_{4}$ \eqref{eq:Cumulant} of both models of Ising having equal asphericities. Both models are considered to have open boundary conditions (OBC). As we know, in the Ising model on rectangular lattice shape factors like aspect ratio $r$ are the parameters, not observable values. Therefore, we can find value of the aspect ratio of lattice for any asphericity $\mathcal{A}$ \eqref{eq:Asphericity} (see \cref{fig:A_r}). For rectangular lattice, the leading correction term to the asphericity behave like $A^{*}(r) - A(r, L) \propto 1 / L^{2}$. Moreover, we know that value of Binder cumulant in Rectangular Ising in critical region depends on aspect ratio $r$ \cite{Selke2006}. 
+The mail goal of this section is to learn how magnetic properties of Ising-like models depend on their geometrical ones and to determine their comparability in critical region, where dependence of observable values of models with the length of conformation $N$ is the weakest. The idea is to compare critical cumulants $U_{4}$ \eqref{eq:Cumulant} of both models of Ising having equal asphericities. Both models are considered to have open boundary conditions (OBC). To the best of the author’s knowledge, in the Ising model on rectangular lattice shape factors like aspect ratio $r$ are the parameters, not observable values. Therefore, it became possible to find value of the aspect ratio of lattice for any asphericity $\mathcal{A}$ \eqref{eq:Asphericity} (see \cref{fig:A_r}). For rectangular lattice, the leading correction term to the asphericity behave like $A^{*}(r) - A(r, L) \propto 1 / L^{2}$. Moreover, the value of Binder cumulant in Rectangular Ising in critical region depends on aspect ratio $r$ \cite{Selke2006}.
 
 \begin{figure}[h]
     \centering
@@ -234,8 +270,6 @@ As it is seen from left part of \Cref{fig:Ising_vs_ISAW}, increasing the strengt
 
 We also repeated MC simulations for two-dimensional triangular lattice. Unlike the 3D-square lattice, the 5-th and 6-th possible neighbors located on the same plane as the first four, so conformations are expected to be more dense on this lattice.
 
-% здесь был TrIsing_complex
-
 Critical region of the model on a triangular lattice was not enumerated yet. But as it was suggested, density of conformations becomes higher as nearest-neighbors interaction $J$ strengthen. Moreover, proportion of monomers with six neighbors on a triangular lattice is far higher than on a cubic one. It is also significant that "triangular" conformations with no inner interaction have almost twice shorter one-dimensional chains than conformations on a cubic lattice in the same conditions.
 
 \subsubsection{ISAW model}
@@ -249,13 +283,15 @@ To understand how the presence of magnetic properties affects on density of mode
     \label{fig:Ising_vs_ISAW}
 \end{figure}
 
-% здесь были графики по ISAW
+\section{Conclusion}
 
-\section{Discussion}
+In this paper we researched geometrical properties of simple random walk (further, SRW model) on the square lattice, such as fraction of monomers with fixed number of neighbours and probability of conformation with fixed atmosphere as functions of the length. We also compared them with the previous results of research of Ising-ISAW model, located on the square lattice, in attempt to find universal properties of the whole random walk model family. We defined the power-law nature of the approximation of the functions for SRW-model in the area of infinity sized walks, while in the non-interacted Ising-ISAW model these functions are linear-scaled. According to different natures of the approximations between model functions, the only comparable coefficients were asymptotic limits in the area of infinite walk length, which turned out to be compeletely dissimilar.
 
-\section{Acknowledgments}
+For more particular analysis of properties, functions were took with different arguments – as functions of walk-length, and functions of number of unique monomers. It was found out that power coefficients of “unified” functions were much bigger than of usual ones, so it became clear that number of unique monomers is more informative for RW-model than simple walk length.
 
-\newpage
+Found differencies between models showed that both models can be equally useful, so they cannot be interchangeable in random walk based algorithms with accent on local coordination number. However, in sociology both models can be applied as different strategies for analysis of connections in social networks.
+
+Further work can be directed in parallel research using more dimensional lattices which are theoretically closer to reality as physical and social models.
 
 \bibliography{bibliography}
 
