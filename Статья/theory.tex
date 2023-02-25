@@ -1,0 +1,74 @@
+\section{Models and Methods}
+
+
+The paper considers several models: the first one is Ising model on interacting self-avoiding walk from Ref. \cite{faizullina2021critical}, on three different lattices: 2D-square lattice, 3D-square lattice and 2D-triangle lattice. The main difference between square and triangle lattice is two additional diagonal monomers on lattice determined as nearest. This work considers the case of lack of outer magnetic field, the Hamiltonian of the model of fixed conformation $u$ with length $N$ and strength of nearest-neighbors interaction $J$ reads:
+
+\begin{equation}\label{H_Ising_ISAW}
+  H_{u, N, \{\sigma\}} = - \sum_{\langle i,j \rangle} J  \sigma_{i}  \sigma_{j},\ \ i,j \in u,\ |u| = N
+\end{equation}
+
+The summation runs through spins involved in conformation and only with the nearest neighbors. 
+
+The second model considered in this paper is the Ising model on the rectangular lattice from the Ref.\cite{Selke2006}. Simulated lattices has $L \times rL$ spins and the Hamiltonian is calculated through interaction between all spins and their nearest neighbors respectively:
+
+\begin{equation}\label{H_Ising_Rectan}
+  H_{L, r, \{\sigma\}} = - \sum_{\langle i,j \rangle} J  \sigma_{i}  \sigma_{j}
+\end{equation}
+
+Here the $i$-th spin of the lattice has a pair of coordinates from $[1..L] \times [1..rL]$. For comparing magnetic properties of models with similar geometric ones, the shape factors are considered, such as gyration tensor of system with $N$ points $w_{i}$ \cite{Caracciolo2011}:
+
+\begin{equation}\label{eq:Ten_G1}
+    Q_{N,\alpha\beta} = \frac{1}{N} \sum^{N}_{i=1}(w_{i,\alpha} - w_{c, \alpha})(w_{i,\beta} - w_{c, \beta})
+\end{equation}
+
+where $N$ is length of the system (number of monomers in conformations of Ising-ISAW models or number of spins in the lattice in rectangular Ising), and  $w_{i, \alpha},w_{i, \beta}$ are the coordinates of $i$-th point of conformation. $w_{c, \alpha},w_{c, \beta}$ are coordinates of the center of system (so, $Q_{N, xx}$ and $Q_{N,yy}$ can be defined as mean squares of coordinates of the points of the model in the cartesian coordinate system with the center in the center of model). Eugen values $q1$, $q2$ of given tensor can be interpreted as $Q_{N, xx}$ and $Q_{N,yy}$ in the coordinate system of eugen vectors, or more important - as square of semi-axes of ellipse of inertia of given system. The proportion of them for systems with length $N$ will be \cite{Caracciolo2011}: 
+
+\begin{equation}
+    r = \sqrt{\frac{\langle q_{1}\rangle_{N}}{\langle q_{2} \rangle_{N}}}
+\end{equation}
+
+Eugen values $q1$, $q2$ are also used in enumerating another important shape factor - mean asphericity \cite{Caracciolo2011}:
+
+\begin{equation}
+\label{eq:Asphericity}
+    \mathcal{A} = \left\langle \frac{(q_{1} - q_{2})^{2}}{(q_{1} + q_{2})^{2}} \right\rangle_{N}
+\end{equation}
+
+The compared magnetic property of our models is the fourth order cumulant of the magnetization of the Binder cumulant, defined as \cite{Binder1981_Ising}:
+
+\begin{equation}
+\label{eq:Cumulant}
+U_{4} = 1 - \frac{\langle m^{4} \rangle}{3 \langle m^{2} \rangle^{2}}
+\end{equation}
+
+Where $\langle m^{4} \rangle$ and $\langle m^{2} \rangle$ are mean fourth and second order of mean magnetization per spin respectively.
+
+It is also necessary to determine the mean proportion of monomers with fixed number $i$ of nearest neighbors $\langle n_{i} \rangle$, which is counted directly for every monomer in every simulated conformation of walk.
+
+One of the aims is to compare models in their respective critical regions. For each structure, critical temperatures of Ising models are known as:
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Structure & lattice & $J_{c}$ \\ \hline
+        ISAW conformation & Square & $0.8340(5)$\cite{faizullina2021critical} \\ \hline
+        ISAW conformation & Cubic & $0.5263 \pm 0.055$\cite{Foster2021}\\ \hline
+        Regular lattice & Rectangular & $\ln{(1 + \sqrt{2}) / 2}$\cite{Onsager}\\ \hline
+    \end{tabular}
+    \caption{Known values of critical temperature of different modifications of Ising-ISAW model and normal Ising on the rectangular lattice}
+    \label{tab:Ising_T_c}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        lattice & $T_{c}$ \\ \hline
+        Square & $0.6673(5)$ \cite{Caracciolo2011} \\ \hline
+        Cubic & $0.2779 \pm 0.0041$\cite{Tesi1996} \\ \hline
+        Triangle & $ 0.405 \pm 0.07$\cite{Privman1986} \\ \hline
+    \end{tabular}
+    \caption{Known values of critical temperature of different modifications of ISAW model}
+    \label{tab:ISAW_T_c}
+\end{table}
