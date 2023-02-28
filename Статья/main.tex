@@ -1,51 +1,59 @@
-\documentclass[a4paper]{jpconf}
-\usepackage{graphicx}
 
+\documentclass[conference]{IEEEtran}
+\usepackage{cite}
+
+\usepackage{graphicx}
 \usepackage{amsmath}        % extensions for typesetting of math
 \usepackage{amsfonts}       % math fonts
 \usepackage{amsthm}         % theorems, definitions, etc.
 \usepackage{amssymb}
 
-\usepackage{fancyvrb}       % improved verbatim environment
-%\usepackage{natbib}         % citation style AUTHOR (YEAR), or AUTHOR [NUMBER]
-%\usepackage[nottoc]{tocbibind} % makes sure that bibliography and the lists
- \usepackage{subfig}
+%\usepackage{fancyvrb}       % improved verbatim environment
+ %\usepackage{subfig}
 
-\bibliographystyle{iopart-num}
-%\usepackage{citesort}
-%% \usepackage[square,sort&compress]{natbib}
-\usepackage{iopams}
-%\newcommand{\BibTeX}{Bib\TeX}
-\newcommand{\REVTeX}{REV\TeX}
-\usepackage{bm}
+%\bibliographystyle{iopart-num}
+%\usepackage{iopams}
+%\newcommand{\REVTeX}{REV\TeX}
+%\usepackage{bm}
 \usepackage{cleveref} 
 
 \graphicspath{ {./img/} }
+\renewcommand\IEEEkeywordsname{Keywords}
+
+
+\title{Magnetic and Geometric Properties of the Ising Model on Lattice Random Walks}
+
+\author{Ilya Pchelintsev\\
+The Department of Applied Mathmatics\\
+National Research University "Higher School of Economics"\\
+The Moscow Institute of Electronics and Mathematics\\
+Moscow, Russia\\
+iipchelintsev@edu.hse.ru}
 
 \begin{document}
+\maketitle
 
-\title{Geometric Properties of Ising model on an Interacting Self-Avoiding Walks}
-
-\author{Ilya Pchelintsev}
-\author{Kamilla Faizullina}
-\author{Evgeni Burovski}
-
-
-\address{National Research University Higher School of Economics, 101000 Moscow, Russia}
+%\address{National Research University Higher School of Economics, 101000 Moscow, Russia}
 
 
 \begin{abstract}
 The study focuses on a model on a magnetic polymer chain with closely interacting Ising spins on a lattices with different numbers of dimensions d: square and triangular with d=2, and cubic with d=3. The studied model has dynamic disorder for both spins and conformations, and fixed length of a chain. The shape factors of conformations are considered as geometrical critical observables which can correlate with aspect ratio as a parameter of regular Ising model. The binder cumulant of both models in their respective critical areas with same shape factors are expected to be equal. The mean fraction of monomers on a chain with fixed number of neighbors (or bulks) are considered as a geometric measure of compaction of conformation. Using Monte-Carlo methods in Worm-Algorithm, we compare these measures between chains with respective spin-to-spin coupling constant J in lattices having equal number of highest possible number of monomers. 
 \end{abstract}
 
+\begin{IEEEkeywords}
+Statistical Physics, Supercomputer Modelling
+\end{IEEEkeywords}
 
-\include{intro}
-\include{litreview}
-\include{theory}
-\include{results}
-\include{conclusion}
 
-\bibliographystyle{plain}
+\input{intro}
+\input{litreview}
+\input{theory}
+\input{results}
+\input{conclusion}
+
+\bibliographystyle{IEEEtran}
 \bibliography{bibliography}
+
+\input{append}
 
 \end{document}
