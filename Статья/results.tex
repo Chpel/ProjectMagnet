@@ -2,7 +2,13 @@
 
 \subsection{Mean Asphericity and Critical Cumulant}
 
-The mail goal of this section is to learn how magnetic properties of Ising-like models depend on their geometrical ones and to determine their comparability in critical region, where dependence of observable values of models with the length of conformation $N$ is the weakest. The idea is to compare critical cumulants $U_{4}$ \eqref{eq:Cumulant} of both models of Ising having equal asphericities. Both models are considered to have open boundary conditions (OBC). To the best of the author’s knowledge, in the Ising model on rectangular lattice shape factors like aspect ratio $r$ are the parameters, not observable values. Therefore, it became possible to find value of the aspect ratio of lattice for any asphericity $\mathcal{A}$ \eqref{eq:Asphericity} (see \cref{fig:A_r}). For rectangular lattice, the leading correction term to the asphericity behave like $A^{*}(r) - A(r, L) \propto 1 / L^{2}$. Moreover, the value of Binder cumulant in Rectangular Ising in critical region depends on aspect ratio $r$ \cite{Selke2006}.
+The mail goal of this section is to learn how magnetic properties of Ising-like models depend on their geometrical ones and to determine their comparability in the critical region, where dependence of model observables from the length of conformation $N$ is the weakest. 
+The idea is to compare critical cumulants $U_{4}$ \eqref{eq:Cumulant} of both models of Ising having equal asphericities. 
+Both models are considered to have open boundary conditions (OBC). 
+To the best of the author’s knowledge, in the Ising model on rectangular lattice shape factors like aspect ratio $r$ are the parameters, not observable values. 
+Therefore, it became possible to find value of the aspect ratio of lattice for any asphericity $\mathcal{A}$ \eqref{eq:Asphericity} (see \cref{fig:A_r}). 
+For rectangular lattice, the leading correction term to the asphericity behave like $A^{*}(r) - A(r, L) \propto 1 / L^{2}$. 
+Moreover, the value of Binder cumulant in Rectangular Ising in critical region depends on aspect ratio $r$ \cite{Selke2006}.
 
 \begin{figure}[h]
     \centering
@@ -11,7 +17,7 @@ The mail goal of this section is to learn how magnetic properties of Ising-like 
     \label{fig:A_r}
 \end{figure} 
 
-Performing Monte-Carlo simulations with steps of Wolff algorithm \cite{Newmanb1999} on Ising model on a rectangular lattice with open boundary conditions in $\theta$-point ($J_{c} = \ln{(1 + \sqrt{2}) / 2} =  0.44068... $), the statistics for Binder cumulant $U_{4}$ were collected with respect to aspect ratio $r$ (see \cref{tab:Ising_T_c}). The results matched with known values from Ref. \cite{Selke2006}.
+By performing Monte-Carlo simulations with steps of Wolff algorithm \cite{Newmanb1999} on Ising model on a rectangular lattice with open boundary conditions in $\theta$-point ($J_{c} = \ln{(1 + \sqrt{2}) / 2} =  0.44068... $), the statistics for Binder cumulant $U_{4}$ were collected with respect to aspect ratio $r$ (see \cref{tab:Ising_T_c}). The results matched with known values from Ref. \cite{Selke2006}.
 
 \begin{figure}[h]
     \centering
@@ -21,8 +27,8 @@ Performing Monte-Carlo simulations with steps of Wolff algorithm \cite{Newmanb19
 \end{figure}
 
 
-Ising-ISAW and ISAW models were also simulated on the 2D-square lattice for lengths N = 1000-4900 with algorithm described in \cite{faizullina2021critical}. 
-The simulations were performed for $0 < J < 1$, focusing on areas near respective critical regions.
+Ising-ISAW and ISAW models were also simulated on the 2D-square lattice for lengths N = 1000-4900 with the algorithm described in \cite{faizullina2021critical}. 
+The simulations were performed for $0 < J < 1$, focusing on areas near the respective critical regions.
 
 \Cref{fig:Ising&ISAW_A_J} shows results of the simulations for asphericity \eqref{eq:Asphericity} as function of J. 
 For ISAW model $J_{c} = 0.6673(5)$, and the results are matching to known values from  Ref. \cite{Caracciolo2011}, where critical region was also enumerated.
@@ -71,8 +77,8 @@ Monomers of all four modified models can have from 2 to 6 close-range energy con
 Some types of monomers, according to number of connections they have, can be interpreted similarly: for example, parts of conformations with monomers with only two nearest neighbors represent 1D-conformations or chains whatever lattice was used in observed model. 
 And the opposite - regions where monomers have maximum number of close-range connections represent densely packed areas deep inside the globule. 
 In the case of conformations on cubic lattice, other types of monomers can be also interpreted: monomers with only three neighbors define "corners" on conformation, while only monomers on a cube edge (or it also can be on a isolated plane from other part of globule) can have four neighbors. 
-Presence on five neighbors belongs to the monomers on a surface of conformation. 
-Unfortunately, we cannot make similar interpretations for conformations on a triangular lattices.
+Presence of five neighbors belongs to the monomers on a surface of conformation. 
+Unfortunately, the similar interpretations cannot be defined for conformations on a triangular lattices.
 
 The first step was to perform simulations of ISAW model on square lattice on lengths from 5 to 3600 at $J=0$ with collecting statistics for fraction of monomers with 2 to 4 neighbors. 
 To understand the mechanics of calculating neighbors of monomers, it is required to manually enumerate fractions of monomers with these number of neighbors for short conformations (5 to 11). 
@@ -90,7 +96,7 @@ Unlike the 3D-square lattice, the 5-th and 6-th possible neighbors located on th
 
 The critical region of the model on a triangular lattice was not enumerated yet. 
 But as it was suggested, density of conformations becomes higher as nearest-neighbors interaction $J$ strengthen. 
-Moreover, proportion of monomers with six neighbors on a triangular lattice is far higher than on a cubic one. 
+Moreover, the proportion of monomers with six neighbors on a triangular lattice is far higher than on a cubic one. 
 It is also significant that "triangular" conformations with no inner interaction have almost twice shorter one-dimensional chains than conformations on a cubic lattice in the same conditions.
 
 \subsubsection{ISAW model}
