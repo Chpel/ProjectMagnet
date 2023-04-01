@@ -31,16 +31,15 @@
 \graphicspath{ {C:/Users/Admin/Documents/Github/ProjectMagnet/Расчёты .ipynb/Images/} }
 
 
-\title{Magnetic and Geometric Properties of the Ising Model on Lattice Random Walks}
+\title[]{Magnetic and Geometric Properties of the Ising Model on Lattice Random Walks}
 
-\author{Ilya Pchelintsev\\
-Scientific Adviser: Burovsky Evgeny Andreevich\\
-The Department of Applied Mathmatics\\
+\author[]{Ilya Pchelintsev\\
+Scientific Advisor: Burovsky Evgeny Andreevich}
+\institute[]{The Department of Applied Mathmatics\\
 National Research University "Higher School of Economics"\\
 The Moscow Institute of Electronics and Mathematics\\
-Moscow, Russia\\
-iipchelintsev@edu.hse.ru}
-\date{22nd of March, 2023}
+Moscow, Russia}
+\date{}
 
 \usetheme{Madrid}
 
@@ -50,9 +49,21 @@ iipchelintsev@edu.hse.ru}
 \titlepage
 \end{frame}
 
-\begin{frame}
-\frametitle{Table of contents}
-\tableofcontents
+\begin{frame}{Outline}
+\begin{itemize}
+	\item Introduction and the main directions of the work:
+	\begin{enumerate}
+		\item Ising model on a SAW conformation
+		\item Rectangular Ising model
+		\item Lattice modifications of the Ising-ISAW
+		\item Methods and observables
+	\end{enumerate}
+	\item Results
+	\begin{enumerate}
+		\item Critical asphericity research
+		\item Local coordination number reseacrh
+	\end{enumerate}
+\end{itemize}
 \end{frame}
 
 \section{Introduction}
@@ -79,13 +90,9 @@ iipchelintsev@edu.hse.ru}
   H_{u, N, \{\sigma\}} = - \sum_{\langle i,j \rangle} J  \sigma_{i}  \sigma_{j},\ \ i,j \in u,\ |u| = N
 \end{equation}
 \end{figure}
-
-
-
 \end{frame}
 
 \begin{frame}{Universality of critical properties of the regular Ising model}
-
 \begin{figure}
 \centering
 \begin{subfigure}{0.45\textwidth}
@@ -101,8 +108,6 @@ iipchelintsev@edu.hse.ru}
 \caption{Critical cumulant as a function of the lattice ratio \cite{Selke2006}}
 \end{subfigure}
 \end{figure}
-
-
 
 \begin{alertblock}{Question №1}
 Equal critical geometrical properties $\Rightarrow$ equal critical magnetic ones?
@@ -135,26 +140,36 @@ Universality of lattices with equal numbers of dimensions OR equal coordination 
 
 \end{frame}
 
-\begin{frame}{Observables}
-Critical cumulant:
-\begin{equation}
-\label{eq:Cumulant}
-U_{4} = 1 - \frac{\langle m^{4} \rangle}{3 \langle m^{2} \rangle^{2}}
-\end{equation}
-Gyration tensor of SAW-system \cite{Caracciolo2011}:
-\begin{equation}\label{eq:Ten_G1}
-    Q_{N,\alpha\beta} = \frac{1}{N} \sum^{N}_{i=1}(w_{i,\alpha} - w_{c, \alpha})(w_{i,\beta} - w_{c, \beta})
-\end{equation}
-Aspect ratio of the SAW-system:
-\begin{equation}
-    r = \sqrt{\frac{\langle q_{1}\rangle_{N}}{\langle q_{2} \rangle_{N}}}
-\end{equation}
-Asphericity:
-\begin{equation}
-\label{eq:Asphericity}
-    \mathcal{A} = \left\langle \frac{(q_{1} - q_{2})^{2}}{(q_{1} + q_{2})^{2}} \right\rangle_{N}
-\end{equation}
 
+\begin{frame}[allowframebreaks]{Methods and Observables}
+	SAW-confromations: Worm algorithm
+	\begin{itemize}
+	\item Gyration tensor of the SAW-system \cite{Caracciolo2011}:
+	\begin{equation}\label{eq:Ten_G1}
+	    Q_{N,\alpha\beta} = \frac{1}{N} \sum^{N}_{i=1}(w_{i,\alpha} - w_{c, \alpha})(w_{i,\beta} - w_{c, \beta})
+	\end{equation}
+	\item  Aspect ratio\cite{Caracciolo2011}:
+	\begin{equation}
+	    r = \sqrt{\frac{\langle q_{1}\rangle_{N}}{\langle q_{2} \rangle_{N}}}
+	\end{equation}
+	\item  Asphericity \cite{Caracciolo2011}:
+	\begin{equation}
+	\label{eq:Asphericity}
+	    \mathcal{A} = \left\langle \frac{(q_{1} - q_{2})^{2}}{(q_{1} + q_{2})^{2}} \right\rangle_{N}
+	\end{equation}
+	\end{itemize}
+\framebreak
+
+	Spin-subsystem / Regular Ising: cluster update of Wolff algorithm
+
+	\begin{itemize}
+		\item  Critical cumulant:
+		\begin{equation}
+		\label{eq:Cumulant}
+		U_{4} = 1 - \frac{\langle m^{4} \rangle}{3 \langle m^{2} \rangle^{2}}
+		\end{equation}
+	\end{itemize}
+	$\langle m^{4} \rangle$ and $\langle m^{2} \rangle$ - mean fourth/second order of spin magnetisation
 \end{frame}
 
 \section{Results}
@@ -199,25 +214,30 @@ Asphericity:
 \end{table}
 
 \begin{block}{Result}
-As for Ising-ISAW $U_4 = 0.308(8)$, critical cumulant showed \alert{complete mismatch}.
+As for Ising-ISAW $U_4 = 0.308(8)$ \cite{faizullina2021critical}, critical cumulant showed \alert{complete mismatch}.
 \end{block}
 
 \end{frame}
 
 
 \begin{frame}{Bulks of the Square lattice}
-\begin{wrapfigure}{r}{0.2\textwidth}
-    \centering
-    \includegraphics[width=0.2\textwidth]{count.png}
-    \label{fig:example_bulk}
-\end{wrapfigure}
-Monomers according to the number of interactions:
-\begin{itemize}
-\item 2 neighbors - 1D-chains
-\item 3 neighbors - boundaries of the cluster
-\item 4 neighbors - core of the cluster
-\end{itemize}
-\includegraphics[width=0.8\textwidth]{bulk2-4_inset.png}
+  \begin{columns}
+    \begin{column}{.45\textwidth}
+	Monomer classes according to the number of interactions:
+	\begin{itemize}
+	\item 2 neighbors - 1D-chains
+	\item 3 neighbors - boundaries of the cluster
+	\item 4 neighbors - core of the cluster
+	\end{itemize}
+    \end{column}
+    \begin{column}{.45\textwidth}
+	\centering
+    	\includegraphics[width=0.5\textwidth]{count.png}
+    \end{column}
+  \end{columns}
+
+\centering
+\includegraphics[width=0.9\textwidth]{bulk2-4_inset.png}
 \end{frame}
 
 \begin{frame}{Bulk results}
@@ -236,20 +256,23 @@ Monomers according to the number of interactions:
 
 \begin{frame}{Anticipated results}
 \begin{columns}[t]
-    \begin{column}{.45\textwidth}
+    \begin{column}{.5\textwidth}
       \adjincludegraphics[width=\textwidth, valign=t]{n23_linear.png}
     \end{column}
     \begin{column}{.45\textwidth}
-	\alert{J=0 case research}:
-      \begin{itemize}
-        \item fractions scaling nature as functions of the chain length?  
-        \item comparability of the lattice modifications
-      \end{itemize}
+	\begin{exampleblock}{J=0 case research}
+	\begin{itemize}
+       		 \item fractions scaling nature as functions of the chain length?  
+        		\item comparability of the lattice modifications
+      	\end{itemize}
+	\end{exampleblock}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{References}
+\begin{frame}[allowframebreaks]{References}
+
+\nocite{*}
 
 \bibliographystyle{IEEEtran}
 \bibliography{bibliography}
@@ -260,7 +283,7 @@ Monomers according to the number of interactions:
 
 \begin{center}
 
-\textit{ \LARGE Thanks for watching!}
+\textit{ \LARGE Thank you for your attention!}
 \end{center}
 
 \end{frame}
