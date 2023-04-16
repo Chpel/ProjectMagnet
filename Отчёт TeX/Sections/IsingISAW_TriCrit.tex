@@ -29,11 +29,13 @@
 \begin{figure}[h]
 \begin{subfigure}{0.49\textwidth}
 \includegraphics[width=\textwidth]{TrIsISAW_E.png}
+\caption{}
 \label{fig:TrIsISAW_E}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.49\textwidth}
 \includegraphics[width=\textwidth]{TrIsISAW_m2.png}
+\caption{}
 \label{fig:TrIsISAW_m2}
 \end{subfigure}
 \caption{Слева: удельная энергия узла \eqref{eq:TrIsISAW_E} модели TrIsingISAW (без учёта константы $J$).
@@ -60,11 +62,13 @@
 \begin{figure}[h]
 \begin{subfigure}{0.49\textwidth}
 \includegraphics[width=\textwidth]{TrIsISAW_U4.png}
+\caption{}
 \label{fig:TrIsISAW_U4}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.49\textwidth}
 \includegraphics[width=\textwidth]{TrIsISAW_m2_distr.png}
+\caption{}
 \label{fig:TrIsISAW_m2_distr}
 \end{subfigure}
 \caption{Слева: кумулянт Биндера модели TrIsingISAW с длиной конформации от 100 до 7200 (длины отмечены разными цветами).
@@ -83,11 +87,13 @@
 \begin{figure}[h]
 \begin{subfigure}{0.49\textwidth}
 \includegraphics[width=\textwidth]{TrIsISAW_R2log.png}
+\caption{}
 \label{fig:TrIsISAW_R2log}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.49\textwidth}
 \includegraphics[width=\textwidth]{TrIsISAW_R2toN2v.png}
+\caption{}
 \label{fig:TrIsISAW_R2toN2v}
 \end{subfigure}
 \caption{Слева: Расстояние между концами блужданий длины $N$ при $J \in [0.51,0.59]$ в логарифмическом масштабе. 
@@ -106,7 +112,7 @@
 График \ref{fig:TrIsISAW_R2toN2v} описывает ту же величину, но перешкалированную относительно $N^{2\nu}$ в зависимости от $J$.
 Результаты показывают, что вблизи точки $J = 0.543$ величина $R^2 / N^{2\nu}$ становится N-независимой. 
 
-Таким образом, на основании пронаблюдаемых магнитного (рисунки \ref{TrIsISAW_U4} и \ref{TrIsISAW_m2_distr}) и конформационного (рисунок \ref{TrIsISAW_R2log}) переходов,
+Таким образом, на основании пронаблюдаемых магнитного (рисунки \ref{fig:TrIsISAW_U4} и \ref{fig:TrIsISAW_m2_distr}) и конформационного (рисунок \ref{fig:TrIsISAW_R2log}) переходов,
 точка фазового перехода модели предполагается возле точки $J=0.545$. Считая погрешностью оценки расстояние между измерениями, итоговая оценка точки фазового перехода:
 
 \begin{equation}
@@ -116,18 +122,23 @@
 
 Для оценки критического кумулянта, ввиду слишком большой наблюдаемой погрешности, требуются более длительные симуляции длин $N > 5000$.
 
+
+\newpage
+
 \subsection{Критические экспоненты модели}
 
 В данном подразделе критическое поведение модели TrIsingISAW будет исследовано в сравнении с оригинальной модификацией модели IsingISAW на квадратной решётке, рассмотренной ранее в \cite{faizullina2021critical}.
 Прошкалируем наблюдаемые величины $\la R^2 \ra$ и $m^2$ относительно соотвествующих критических экспонент:
 так, величины вблизи предполагаемой точки фазового перехода рассматриваются как функции:
 
-\begin{eqarray}
+\begin{equation}
+\begin{array}{l}
 \label{eq:TrIsISAW_datcoll}
 \la R^2 \ra = N^{2\nu} f(x), \\
 \la m^2 \ra = N^{-2\beta\phi} g(x), \\
 x = (J-J_c) N^{\phi},
-\end{eqarray}
+\end{array}
+\end{equation}
 
 где $\nu$, $\phi$, $\beta$  - пространственный, переходный, и порядковый показатели соответственно, в то время как $f(x)$ и $g(x)$ - безразменные шкалирующие функции безразмерной величины.
 В рамках последующего анализа коллапса данных, подберём наилучшие критические показатели и точку фазового перехода, 
@@ -137,11 +148,13 @@ x = (J-J_c) N^{\phi},
 \begin{figure}[h]
 \begin{subfigure}{0.49\textwidth}
 \includegraphics[width=\textwidth]{TrIsISAW_R2_datcoll.png}
+\caption{}
 \label{fig:TrIsISAW_R2_datcoll}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.49\textwidth}
 \includegraphics[width=\textwidth]{TrIsISAW_m2_datcoll.png}
+\caption{}
 \label{fig:TrIsISAW_m2_datcoll}
 \end{subfigure}
 \caption{Коллапс данных наблюдаемых величин модели TrIsingISAW.
@@ -156,7 +169,6 @@ x = (J-J_c) N^{\phi},
 и ISAW 2D (взаимодействующее безспиновое случайное блуждание без самопересечений), из которых и были ранее взяты значения экспонент,
 а также согласуется с оценкой критической точки выше \eqref{eq:TrIsISAW_Jc}.
 
-\newpage
 
 \subsection{Вопросы}
 
