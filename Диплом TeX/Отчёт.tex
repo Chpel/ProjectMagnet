@@ -1,0 +1,23 @@
+\documentclass[14pt]{article}
+
+\usepackage{Packages}
+\usepackage{Commands}
+
+\begin{document}
+
+\includepdf[pages={1}]{вкр_титул.pdf}
+\thispagestyle{empty} % нумерация выкл.
+\tableofcontents
+
+
+\include{Sections/Introduction}
+%\include{Sections/RectanCumulant}
+%\include{Sections/Bulk}
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}
+
+
+
